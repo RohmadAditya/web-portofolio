@@ -4,290 +4,517 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohmad Aditya - Portfolio</title>
-    <!-- Bootstrap CSS -->
+    <title>Rohmad Aditya | Full Stack Web Developer</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Google Fonts: Poppins -->
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
+        rel="stylesheet">
     <style>
-        body {
-            font-family: 'Poppins', Arial, sans-serif;
-            background: #0F172A;
-            color: #F1F5F9;
-        }
-
         :root {
-            --primary: #22D3EE;
-            /* cyan */
-            --primary-dark: #0891b2;
-            /* cyan dark */
-            --accent: #38BDF8;
-            /* biru muda */
-            --accent-light: #164e63;
-            /* biru gelap/transparan */
-            --secondary: #38BDF8;
-            /* biru muda */
-            --bg-gradient: linear-gradient(90deg, #0F172A 0%, #164e63 100%);
-            --bg-section: #0F172A;
-            --bg-alt: #1e293b;
-            --text-main: #F1F5F9;
-            --text-light: #F1F5F9;
-            --border-radius: 1.2rem;
+            --bg: #f3f6fb;
+            --surface: #ffffff;
+            --surface-alt: #eaf0f8;
+            --ink: #142033;
+            --muted: #5f6f86;
+            --line: #d9e2ee;
+            --primary: #1d4ed8;
+            --primary-deep: #173ea8;
+            --accent: #0f766e;
+            --accent-soft: rgba(15, 118, 110, 0.12);
+            --shadow: 0 20px 60px rgba(20, 32, 51, 0.08);
+            --radius-xl: 28px;
+            --radius-lg: 20px;
+            --radius-md: 16px;
         }
 
-        .bg-primary-custom {
-            background: var(--bg-gradient) !important;
+        * {
+            scroll-behavior: smooth;
         }
 
-        .text-primary-custom {
-            color: var(--primary) !important;
+        body {
+            margin: 0;
+            font-family: 'Manrope', sans-serif;
+            background:
+                radial-gradient(circle at top left, rgba(29, 78, 216, 0.08), transparent 32%),
+                linear-gradient(180deg, #f8fbff 0%, var(--bg) 38%, #eef3f9 100%);
+            color: var(--ink);
         }
 
-        .btn-primary-custom {
-            background: var(--primary);
-            color: var(--text-light);
-            border: none;
-            border-radius: 2rem;
-            transition: background 0.2s, box-shadow 0.2s;
-            box-shadow: 0 2px 8px rgba(187, 134, 252, 0.08);
+        a {
+            text-decoration: none;
         }
 
-        .btn-primary-custom:hover {
-            background: var(--accent);
-            color: var(--primary-dark);
-            box-shadow: 0 4px 16px rgba(3, 218, 198, 0.12);
+        .navbar {
+            background: rgba(248, 251, 255, 0.84);
+            backdrop-filter: blur(14px);
+            border-bottom: 1px solid rgba(217, 226, 238, 0.9);
         }
 
-        .btn-outline-primary {
-            border-radius: 2rem;
-            color: var(--primary);
-            border-color: var(--primary);
-            background: transparent;
-            transition: background 0.2s, color 0.2s;
+        .navbar-brand {
+            font-weight: 800;
+            letter-spacing: -0.03em;
+            color: var(--ink);
         }
 
-        .btn-outline-primary:hover,
-        .btn-outline-light:hover {
-            background: var(--primary);
-            color: var(--text-main);
-            border-color: var(--primary);
-        }
-
-        .btn-light {
-            border-radius: 2rem;
-            color: var(--primary-dark);
-            background: var(--bg-alt);
-            border: 1px solid var(--primary);
-            transition: background 0.2s, color 0.2s;
-        }
-
-        .btn-light:hover {
-            background: var(--accent-light);
-            color: var(--accent);
-        }
-
-        .section-title {
-            font-weight: 700;
-            margin-bottom: 1.5rem;
-            letter-spacing: 0.5px;
+        .navbar-brand span {
             color: var(--primary);
         }
 
-        .skill-icon {
-            font-size: 2.1rem;
-            color: var(--accent);
-            margin-bottom: 0.5rem;
-            transition: color 0.2s;
-        }
-
-        .skill-icon:hover {
-            color: var(--primary);
-        }
-
-        .project-card {
-            border-radius: var(--border-radius);
-            border: 1px solid var(--accent-light);
-            background: var(--bg-alt);
-            transition: box-shadow 0.2s, transform 0.2s;
-        }
-
-        .project-card:hover {
-            box-shadow: 0 6px 32px rgba(187, 134, 252, 0.10);
-            transform: translateY(-4px) scale(1.02);
-        }
-
-        .badge.bg-primary {
-            background: var(--primary) !important;
-            color: var(--text-main) !important;
-        }
-
-        .badge.bg-secondary {
-            background: var(--accent) !important;
-            color: var(--text-main) !important;
-        }
-
-        .testimonial {
-            background: var(--bg-alt);
-            border-radius: var(--border-radius);
-            padding: 1.5rem;
-            margin-bottom: 1rem;
-            box-shadow: 0 2px 8px rgba(6, 182, 212, 0.06);
-        }
-
-        .testimonial-avatar {
-            width: 48px;
-            height: 48px;
-            border-radius: 50%;
-            object-fit: cover;
-            margin-right: 1rem;
-            border: 2px solid var(--primary);
-        }
-
-        .footer-social a {
-            color: var(--accent);
-            margin: 0 0.5rem;
-            font-size: 1.3rem;
-            transition: color 0.2s;
-        }
-
-        .footer-social a:hover {
-            color: var(--primary);
-        }
-
-        /* Section backgrounds */
-        section {
-            background: var(--bg-section);
-        }
-
-        section.bg-light,
-        .bg-light {
-            background: var(--bg-alt) !important;
-        }
-
-        /* Form focus */
-        .form-control:focus {
-            border-color: var(--primary);
-            box-shadow: 0 0 0 0.2rem rgba(187, 134, 252, 0.10);
-        }
-
-        /* Misc */
-        .card-title {
-            color: var(--primary);
+        .nav-link {
+            color: var(--muted);
             font-weight: 600;
         }
 
-        .card-text {
-            color: var(--text-main);
+        .nav-link:hover,
+        .nav-link:focus {
+            color: var(--primary);
         }
 
-        .btn:focus {
-            box-shadow: 0 0 0 0.15rem rgba(187, 134, 252, 0.15) !important;
+        .hero-section {
+            padding: 7.5rem 0 5rem;
         }
 
-        /* Gradient border for hero image */
-        #hero img {
-            border: 4px solid var(--primary);
-            box-shadow: 0 4px 32px rgba(187, 134, 252, 0.10);
+        .eyebrow {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.55rem;
+            padding: 0.6rem 1rem;
+            border-radius: 999px;
+            background: rgba(255, 255, 255, 0.9);
+            border: 1px solid rgba(217, 226, 238, 0.9);
+            color: var(--primary);
+            font-size: 0.92rem;
+            font-weight: 700;
+            box-shadow: 0 10px 30px rgba(20, 32, 51, 0.04);
         }
 
-        /* Responsive tweaks */
-        @media (max-width: 767px) {
-            .section-title {
-                font-size: 1.5rem;
+        .hero-title {
+            font-size: clamp(2.8rem, 5vw, 5rem);
+            line-height: 1.02;
+            letter-spacing: -0.05em;
+            font-weight: 800;
+            margin: 1.4rem 0 1.25rem;
+        }
+
+        .hero-title .highlight {
+            color: var(--primary);
+        }
+
+        .hero-copy {
+            font-size: 1.08rem;
+            line-height: 1.85;
+            color: var(--muted);
+            max-width: 620px;
+        }
+
+        .btn-main,
+        .btn-ghost {
+            padding: 0.9rem 1.5rem;
+            border-radius: 999px;
+            font-weight: 700;
+            transition: 0.2s ease;
+        }
+
+        .btn-main {
+            background: linear-gradient(135deg, var(--primary) 0%, #2563eb 100%);
+            color: #fff;
+            border: 1px solid transparent;
+            box-shadow: 0 16px 36px rgba(29, 78, 216, 0.2);
+        }
+
+        .btn-main:hover {
+            background: linear-gradient(135deg, var(--primary-deep) 0%, var(--primary) 100%);
+            color: #fff;
+            transform: translateY(-1px);
+        }
+
+        .btn-ghost {
+            background: rgba(255, 255, 255, 0.8);
+            color: var(--ink);
+            border: 1px solid var(--line);
+        }
+
+        .btn-ghost:hover {
+            background: #fff;
+            border-color: #c8d4e4;
+            color: var(--primary);
+        }
+
+        .hero-panel,
+        .content-card,
+        .project-card,
+        .skill-card,
+        .contact-card,
+        .metric-card {
+            background: rgba(255, 255, 255, 0.82);
+            border: 1px solid rgba(217, 226, 238, 0.9);
+            box-shadow: var(--shadow);
+            backdrop-filter: blur(10px);
+        }
+
+        .hero-panel {
+            border-radius: 34px;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-panel::before {
+            content: "";
+            position: absolute;
+            inset: auto -60px -80px auto;
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            background: radial-gradient(circle, rgba(29, 78, 216, 0.2), transparent 70%);
+        }
+
+        .identity-badge {
+            width: 96px;
+            height: 96px;
+            border-radius: 28px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: linear-gradient(135deg, var(--primary) 0%, #2563eb 100%);
+            color: #fff;
+            font-size: 2rem;
+            font-weight: 800;
+            box-shadow: 0 20px 40px rgba(29, 78, 216, 0.22);
+        }
+
+        .hero-panel h3 {
+            font-size: 1.65rem;
+            font-weight: 800;
+            margin-top: 1.5rem;
+        }
+
+        .hero-meta {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.75rem;
+        }
+
+        .hero-meta-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+        }
+
+        .hero-meta-item i {
+            color: var(--accent);
+            font-size: 1.2rem;
+        }
+
+        .section-shell {
+            padding: 5rem 0;
+        }
+
+        .section-label {
+            display: inline-block;
+            margin-bottom: 0.85rem;
+            color: var(--primary);
+            font-weight: 800;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            font-size: 0.82rem;
+        }
+
+        .section-title {
+            font-size: clamp(2rem, 3vw, 3rem);
+            line-height: 1.1;
+            letter-spacing: -0.04em;
+            font-weight: 800;
+            margin-bottom: 1rem;
+        }
+
+        .section-desc {
+            color: var(--muted);
+            line-height: 1.8;
+            max-width: 700px;
+        }
+
+        .metric-card {
+            border-radius: var(--radius-lg);
+            padding: 1.5rem;
+            height: 100%;
+        }
+
+        .metric-number {
+            font-size: 2rem;
+            font-weight: 800;
+            letter-spacing: -0.04em;
+            color: var(--primary);
+        }
+
+        .metric-label {
+            color: var(--muted);
+            margin-top: 0.35rem;
+        }
+
+        .content-card {
+            border-radius: var(--radius-xl);
+            padding: 2rem;
+            height: 100%;
+        }
+
+        .service-list {
+            display: grid;
+            gap: 1rem;
+            margin-top: 1.75rem;
+        }
+
+        .service-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.9rem;
+            padding: 1rem 1.1rem;
+            border-radius: var(--radius-md);
+            background: var(--surface-alt);
+        }
+
+        .service-item i {
+            color: var(--primary);
+            font-size: 1.15rem;
+        }
+
+        .skill-card,
+        .project-card,
+        .contact-card {
+            border-radius: var(--radius-lg);
+            padding: 1.6rem;
+            height: 100%;
+        }
+
+        .skill-icon {
+            width: 56px;
+            height: 56px;
+            border-radius: 16px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(29, 78, 216, 0.1);
+            color: var(--primary);
+            font-size: 1.45rem;
+            margin-bottom: 1rem;
+        }
+
+        .skill-tags,
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.55rem;
+            margin-top: 1rem;
+        }
+
+        .tag {
+            padding: 0.42rem 0.72rem;
+            border-radius: 999px;
+            background: var(--surface-alt);
+            color: var(--muted);
+            font-size: 0.9rem;
+            font-weight: 700;
+        }
+
+        .project-card {
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .project-card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 24px 50px rgba(20, 32, 51, 0.12);
+        }
+
+        .project-type {
+            display: inline-block;
+            margin-bottom: 0.9rem;
+            color: var(--accent);
+            background: var(--accent-soft);
+            padding: 0.35rem 0.75rem;
+            border-radius: 999px;
+            font-size: 0.82rem;
+            font-weight: 800;
+        }
+
+        .project-card h5 {
+            font-size: 1.2rem;
+            font-weight: 800;
+            margin-bottom: 0.8rem;
+        }
+
+        .project-card p,
+        .contact-card p,
+        .modal-body p {
+            color: var(--muted);
+            line-height: 1.75;
+        }
+
+        .project-actions {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.75rem;
+            margin-top: 1.4rem;
+        }
+
+        .link-btn {
+            color: var(--primary);
+            font-weight: 800;
+        }
+
+        .link-btn:hover {
+            color: var(--primary-deep);
+        }
+
+        .contact-card i {
+            font-size: 1.1rem;
+            color: var(--primary);
+        }
+
+        .social-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-top: 1rem;
+        }
+
+        .social-links a {
+            width: 48px;
+            height: 48px;
+            border-radius: 14px;
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--surface-alt);
+            color: var(--primary);
+            font-size: 1.15rem;
+            transition: 0.2s ease;
+        }
+
+        .social-links a:hover {
+            background: var(--primary);
+            color: #fff;
+            transform: translateY(-2px);
+        }
+
+        .footer {
+            padding: 2rem 0 3rem;
+            color: var(--muted);
+        }
+
+        .modal-content {
+            background: #f8fbff;
+            color: var(--ink);
+            border: 1px solid var(--line);
+            border-radius: 24px;
+        }
+
+        .modal-header {
+            border-bottom-color: var(--line);
+        }
+
+        .modal-footer {
+            border-top-color: var(--line);
+        }
+
+        .modal-body ul {
+            color: var(--muted);
+        }
+
+        .modal-body img {
+            border-radius: 18px;
+            border: 1px solid var(--line);
+        }
+
+        @media (max-width: 991px) {
+            .hero-section {
+                padding-top: 6.5rem;
             }
 
-            .project-card {
-                margin-bottom: 1.5rem;
+            .hero-panel {
+                margin-top: 2rem;
+            }
+        }
+
+        @media (max-width: 767px) {
+            .hero-section,
+            .section-shell {
+                padding: 4rem 0;
+            }
+
+            .hero-panel,
+            .content-card,
+            .project-card,
+            .skill-card,
+            .contact-card {
+                padding: 1.4rem;
             }
         }
     </style>
 </head>
 
 <body>
-    <!-- Hero Section -->
-    <section class="bg-primary-custom text-white py-5" id="hero">
+    <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
-            <div class="row align-items-center flex-column-reverse flex-md-row">
-                <div class="col-md-7 text-center text-md-start">
-                    <h1 class="display-4 fw-bold mb-2">Rohmad Aditya</h1>
-                    <h3 class="fw-normal mb-2">Full Stack Web Developer</h3>
-                    <p class="lead mb-4">Membangun web modern dan efisien untuk masa depan digital</p>
-                    <div class="d-flex flex-column flex-sm-row gap-3 justify-content-center justify-content-md-start">
-                        <a href="#portfolio" class="btn btn-light btn-lg px-4 fw-semibold">Lihat Portofolio</a>
-                    </div>
-                </div>
-                <!-- Opsi visual: inisial nama dalam lingkaran -->
-                <div class="col-md-5 text-center mb-4 mb-md-0">
-                    <div
-                        style="width:200px;height:200px;display:inline-flex;align-items:center;justify-content:center;background:var(--primary);color:var(--text-light);font-size:3rem;font-weight:700;border-radius:50%;box-shadow:0 4px 32px rgba(37,99,235,0.10);">
-                        RA
-                    </div>
-                </div>
+            <a class="navbar-brand" href="#hero">Rohmad<span>.</span></a>
+            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
+                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="mainNav">
+                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
+                </ul>
             </div>
         </div>
-    </section>
+    </nav>
 
-    <!-- Tentang Saya Section -->
-    <section class="py-5" id="tentang">
+    <section class="hero-section" id="hero">
         <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-8 text-center">
-                    <h2 class="section-title text-primary-custom">Tentang Saya</h2>
-                    <p class="mb-3">Saya adalah seorang <b>Full Stack Web Developer</b> yang berfokus pada
-                        pengembangan aplikasi web modern, efisien, dan user-friendly. Saya cukup berpengalaman secara
-                        tim dalam membangun solusi digital untuk berbagai kebutuhan bisnis, mulai dari website company
-                        profile, aplikasi
-                        internal perusahaan, hingga sistem informasi manajemen di berbagai skala.</p>
-                    <a href="#kontak" class="btn btn-primary-custom px-4">Hubungi Saya</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section class="py-5 bg-light" id="skills">
-        <div class="container">
-            <h2 class="section-title text-center text-primary-custom">Keahlian</h2>
-            <div class="row g-4 justify-content-center">
-                <!-- Frontend -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold mb-3">Frontend</h5>
-                            <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
-                                <span class="skill-icon"><i class="bi bi-filetype-html"></i></span>
-                                <span class="skill-icon"><i class="bi bi-filetype-css"></i></span>
-                                <span class="skill-icon"><i class="bi bi-bootstrap"></i></span>
-                            </div>
-                            <div>HTML, CSS, Bootstrap</div>
-                        </div>
+            <div class="row align-items-center g-5">
+                <div class="col-lg-7">
+                    <span class="eyebrow"><i class="bi bi-stars"></i> Full Stack Web Developer</span>
+                    <h1 class="hero-title">Membangun produk web yang <span class="highlight">rapi, cepat,</span> dan
+                        siap dipakai bisnis.</h1>
+                    <p class="hero-copy">Saya Rohmad Aditya. Fokus saya adalah mengembangkan website dan aplikasi web
+                        yang profesional, efisien, dan mudah digunakan, mulai dari company profile sampai sistem
+                        internal yang membantu operasional bisnis berjalan lebih baik.</p>
+                    <div class="d-flex flex-wrap gap-3 mt-4">
+                        <a href="#portfolio" class="btn btn-main">Lihat Portofolio</a>
+                        <a href="#kontak" class="btn btn-ghost">Diskusikan Proyek</a>
                     </div>
                 </div>
-                <!-- Backend -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold mb-3">Backend</h5>
-                            <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
-                                <span class="skill-icon"><i class="bi bi-layers"></i></span> <!-- Laravel (abstract) -->
-                                <span class="skill-icon"><i class="bi bi-microsoft"></i></span>
-                                <!-- ASP.NET (Microsoft) -->
+                <div class="col-lg-5">
+                    <div class="hero-panel">
+                        <div class="identity-badge">RA</div>
+                        <h3>Solusi digital yang bersih secara visual dan jelas secara fungsi.</h3>
+                        <div class="hero-meta">
+                            <div class="hero-meta-item">
+                                <i class="bi bi-check2-circle"></i>
+                                <div>
+                                    <strong>Pengembangan end-to-end</strong>
+                                    <div class="text-muted">Frontend, backend, integrasi, dan deployment dasar.</div>
+                                </div>
                             </div>
-                            <div>Laravel, ASP.NET</div>
-                        </div>
-                    </div>
-                </div>
-                <!-- Tools -->
-                <div class="col-md-4">
-                    <div class="card h-100 border-0 shadow-sm">
-                        <div class="card-body text-center">
-                            <h5 class="fw-semibold mb-3">Tools</h5>
-                            <div class="d-flex flex-wrap justify-content-center gap-3 mb-2">
-                                <span class="skill-icon"><i class="bi bi-git"></i></span>
-                                <span class="skill-icon"><i class="bi bi-box"></i></span> <!-- Docker -->
-                                <span class="skill-icon"><i class="bi bi-wordpress"></i></span>
+                            <div class="hero-meta-item">
+                                <i class="bi bi-briefcase"></i>
+                                <div>
+                                    <strong>Pengalaman proyek nyata</strong>
+                                    <div class="text-muted">Prototype, aplikasi internal, dan website perusahaan.</div>
+                                </div>
                             </div>
-                            <div>Git, Docker, Wordpress</div>
+                            <div class="hero-meta-item">
+                                <i class="bi bi-graph-up-arrow"></i>
+                                <div>
+                                    <strong>Fokus pada hasil</strong>
+                                    <div class="text-muted">Tampilan profesional, performa baik, dan alur yang mudah
+                                        dipahami.</div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -295,157 +522,298 @@
         </div>
     </section>
 
-    <!-- Portfolio/Projects Section -->
-    <section class="py-5" id="portfolio">
+    <section class="section-shell pt-0">
         <div class="container">
-            <h2 class="section-title text-center text-primary-custom">Portofolio</h2>
-            <!-- Subheading: Proyek Prototype -->
-            <h4 class="fw-semibold mt-4 mb-3 text-primary-custom">Proyek Prototype</h4>
             <div class="row g-4">
-
-                <!-- Project MG-Playstation -->
                 <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">MG-Playstation</h5>
-                            <p class="card-text">Aplikasi Pengelolaan dan Transaksi Rental PS menggunakan Filament
-                                beserta Landing Page yang terintegrasi</p>
-                            <div class="mb-2"><span class="badge bg-primary">Laravel</span> <span
-                                    class="badge bg-secondary">Filament</span></div>
-                            <a href="#mgPlaystationModal" data-bs-toggle="modal"
-                                class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                    <div class="metric-card">
+                        <div class="metric-number">8+</div>
+                        <div class="metric-label">Proyek portofolio dan website yang sudah dikerjakan.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric-card">
+                        <div class="metric-number">3</div>
+                        <div class="metric-label">Area utama: frontend, backend, dan implementasi website bisnis.</div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="metric-card">
+                        <div class="metric-number">100%</div>
+                        <div class="metric-label">Pendekatan kerja berfokus pada kebutuhan pengguna dan bisnis.</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell" id="tentang">
+        <div class="container">
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-6">
+                    <div class="content-card">
+                        <span class="section-label">Tentang Saya</span>
+                        <h2 class="section-title">Portofolio yang lebih formal, terstruktur, dan relevan untuk klien.
+                        </h2>
+                        <p class="section-desc">Saya mengerjakan pengembangan aplikasi web modern dengan perhatian pada
+                            struktur data, tampilan antarmuka, dan kebutuhan operasional pengguna. Pengalaman saya
+                            mencakup website company profile, aplikasi manajemen, serta sistem internal untuk membantu
+                            proses bisnis menjadi lebih efisien.</p>
+                    </div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="content-card">
+                        <span class="section-label">Layanan</span>
+                        <div class="service-list">
+                            <div class="service-item">
+                                <i class="bi bi-window"></i>
+                                <div>
+                                    <strong>Website Company Profile</strong>
+                                    <div class="text-muted">Tampilan kredibel, responsif, dan sesuai identitas brand.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="bi bi-kanban"></i>
+                                <div>
+                                    <strong>Aplikasi Internal</strong>
+                                    <div class="text-muted">Membantu pengelolaan data, transaksi, dan proses kerja.
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="bi bi-code-square"></i>
+                                <div>
+                                    <strong>Prototype Produk Digital</strong>
+                                    <div class="text-muted">Validasi ide dengan alur yang jelas dan implementasi
+                                        cepat.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell" id="skills">
+        <div class="container">
+            <span class="section-label">Keahlian</span>
+            <h2 class="section-title">Stack yang saya gunakan untuk membangun produk web.</h2>
+            <p class="section-desc mb-5">Saya menggunakan kombinasi tools yang praktis dan stabil untuk pengembangan
+                website bisnis maupun aplikasi web yang lebih kompleks.</p>
+            <div class="row g-4">
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
+                        <h5 class="fw-bold">Frontend Development</h5>
+                        <p>Membangun antarmuka yang rapi, responsif, dan mudah dipahami pengguna.</p>
+                        <div class="skill-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">React</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-hdd-stack"></i></div>
+                        <h5 class="fw-bold">Backend Development</h5>
+                        <p>Mengelola logika aplikasi, data, autentikasi, dan proses bisnis di sisi server.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">ASP.NET</span>
+                            <span class="tag">MySQL</span>
+                            <span class="tag">Filament</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <div class="skill-card">
+                        <div class="skill-icon"><i class="bi bi-tools"></i></div>
+                        <h5 class="fw-bold">Implementation Tools</h5>
+                        <p>Mempermudah kolaborasi, deployment dasar, dan pengelolaan project secara efisien.</p>
+                        <div class="skill-tags">
+                            <span class="tag">Git</span>
+                            <span class="tag">Docker</span>
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Bootstrap Icons</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section-shell" id="portfolio">
+        <div class="container">
+            <span class="section-label">Portofolio</span>
+            <h2 class="section-title">Beberapa pekerjaan yang merepresentasikan cara saya membangun web.</h2>
+            <p class="section-desc mb-5">Dipisahkan antara proyek prototype dan implementasi company profile agar lebih
+                mudah dibaca oleh recruiter maupun calon klien.</p>
+
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
+                <h3 class="h4 fw-bold mb-0">Proyek Prototype</h3>
+            </div>
+            <div class="row g-4">
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Prototype App</span>
+                        <h5>MG-Playstation</h5>
+                        <p>Aplikasi pengelolaan rental PlayStation lengkap dengan landing page terintegrasi untuk
+                            promosi dan pemesanan.</p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Filament</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#mgPlaystationModal" data-bs-toggle="modal" class="link-btn">Detail</a>
                             <a href="https://github.com/RohmadAditya/mg-playstation/tree/main" target="_blank"
-                                rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">GitHub</a>
+                                rel="noopener noreferrer" class="link-btn">GitHub</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Timeline-Todo -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Timeline-Todo</h5>
-                            <p class="card-text">Aplikasi pencatatan tugas dan kegiatan harian pengguna</p>
-                            <div class="mb-2"><span class="badge bg-primary">Laravel</span> <span
-                                    class="badge bg-secondary">Bootstrap</span></div>
-                            <a href="#timelineTodoModal" data-bs-toggle="modal"
-                                class="btn btn-primary-custom btn-sm me-2">Detail</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-primary btn-sm">GitHub</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Prototype App</span>
+                        <h5>Timeline-Todo</h5>
+                        <p>Aplikasi pencatatan tugas dan kegiatan harian untuk membantu pengguna mengelola aktivitas
+                            dengan alur yang sederhana.</p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#timelineTodoModal" data-bs-toggle="modal" class="link-btn">Detail</a>
+                            <a href="#" class="link-btn">GitHub</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Point of Sales -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Point of Sales</h5>
-                            <p class="card-text">Aplikasi web untuk manajemen data pengelolaan dan transaksi penjualan
-                            </p>
-                            <div class="mb-2"><span class="badge bg-primary">Laravel</span> <span
-                                    class="badge bg-secondary">Bootstrap</span></div>
-                            <a href="#posModal" data-bs-toggle="modal"
-                                class="btn btn-primary-custom btn-sm me-2">Detail</a>
-                            <a href="#" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-primary btn-sm">GitHub</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Prototype App</span>
+                        <h5>Point of Sales</h5>
+                        <p>Aplikasi web untuk pengelolaan transaksi penjualan, data produk, dan pelaporan secara
+                            lebih efisien.</p>
+                        <div class="project-tags">
+                            <span class="tag">Laravel</span>
+                            <span class="tag">Bootstrap</span>
+                            <span class="tag">MySQL</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#posModal" data-bs-toggle="modal" class="link-btn">Detail</a>
+                            <a href="#" class="link-btn">GitHub</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Web Pencari Film -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Web Pencari Film</h5>
-                            <p class="card-text">web dengan mengusung keutamaan get data Film dan fitur search</p>
-                            <div class="mb-2"><span class="badge bg-primary">React</span> <span
-                                    class="badge bg-secondary">CSS</span></div>
-                            <a href="#filmModal" data-bs-toggle="modal"
-                                class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Frontend Project</span>
+                        <h5>Web Pencari Film</h5>
+                        <p>Aplikasi pencarian film berbasis API dengan fokus pada pencarian cepat dan tampilan daftar
+                            hasil yang mudah dipahami.</p>
+                        <div class="project-tags">
+                            <span class="tag">React</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">API</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#filmModal" data-bs-toggle="modal" class="link-btn">Detail</a>
                             <a href="https://github.com/RohmadAditya/web-pencari-film/tree/main" target="_blank"
-                                rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">GitHub</a>
+                                rel="noopener noreferrer" class="link-btn">GitHub</a>
                         </div>
                     </div>
                 </div>
-
-                <!-- Project Custom Link Tree -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Custom Link Tree</h5>
-                            <p class="card-text">Link Tree Sederhana</p>
-                            <div class="mb-2"><span class="badge bg-primary">HTML</span> <span
-                                    class="badge bg-secondary">CSS</span></div>
-                            <a href="#linktreeModal" data-bs-toggle="modal"
-                                class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Mini Project</span>
+                        <h5>Custom Link Tree</h5>
+                        <p>Halaman tautan sederhana dengan fokus pada akses cepat ke profil, kontak, dan platform
+                            penting lainnya.</p>
+                        <div class="project-tags">
+                            <span class="tag">HTML</span>
+                            <span class="tag">CSS</span>
+                            <span class="tag">Bootstrap</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#linktreeModal" data-bs-toggle="modal" class="link-btn">Detail</a>
                             <a href="https://github.com/RohmadAditya/LinkTreeNew" target="_blank"
-                                rel="noopener noreferrer" class="btn btn-outline-primary btn-sm">GitHub</a>
+                                rel="noopener noreferrer" class="link-btn">GitHub</a>
                         </div>
                     </div>
                 </div>
             </div>
 
-            <!-- Subheading: Proyek Perusahaan -->
-            <h4 class="fw-semibold mt-5 mb-3 text-primary-custom">Proyek Perusahaan</h4>
+            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mt-5 mb-4">
+                <h3 class="h4 fw-bold mb-0">Proyek Perusahaan</h3>
+            </div>
             <div class="row g-4">
-                <!-- Project PT Artalapan Strategi Logistik -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">PT Artalapan Strategi Logistik</h5>
-                            <p class="card-text">Website profil perusahaan dengan tampilan profesional dan responsif.
-                            </p>
-                            <div class="mb-2"><span class="badge bg-primary">Wordpress</span></div>
-                            <div class="mb-2"><span class="badge bg-secondary">Company Profile</span></div>
-                            <a href="#asllogistikModal" data-bs-toggle="modal" class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Company Profile</span>
+                        <h5>PT Artalapan Strategi Logistik</h5>
+                        <p>Website profil perusahaan yang dirancang untuk tampil kredibel, informatif, dan responsif
+                            di berbagai perangkat.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Business Website</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#asllogistikModal" data-bs-toggle="modal" class="link-btn">Detail</a>
                             <a href="https://asllogistik.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-primary btn-sm">Demo</a>
+                                class="link-btn">Demo</a>
                         </div>
                     </div>
                 </div>
-                <!-- Project Daemanindo Agencies -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">Daemanindo Agencies</h5>
-                            <p class="card-text">Website profil perusahaan dengan tampilan profesional dan responsif.
-                            </p>
-                            <div class="mb-2"><span class="badge bg-primary">Wordpress</span></div>
-                            <div class="mb-2"><span class="badge bg-secondary">Company Profile</span></div>
-                            <a href="#daemanindoagenciesModal" data-bs-toggle="modal" class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Company Profile</span>
+                        <h5>Daemanindo Agencies</h5>
+                        <p>Website profil perusahaan untuk kebutuhan branding digital dan penyajian layanan perusahaan
+                            secara lebih profesional.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Corporate</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#daemanindoagenciesModal" data-bs-toggle="modal" class="link-btn">Detail</a>
                             <a href="https://daemanindoagencies.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-primary btn-sm">Demo</a>
+                                class="link-btn">Demo</a>
                         </div>
                     </div>
                 </div>
-                <!-- Project PT Popeye Trans Logistik -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">PT Popeye Trans Logistik</h5>
-                            <p class="card-text">Website profil perusahaan dengan tampilan profesional dan responsif.
-                            </p>
-                            <div class="mb-2"><span class="badge bg-primary">Wordpress</span></div>
-                            <div class="mb-2"><span class="badge bg-secondary">Company Profile</span></div>
-                            <a href="#" class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Company Profile</span>
+                        <h5>PT Popeye Trans Logistik</h5>
+                        <p>Website perusahaan yang menekankan kejelasan profil bisnis, layanan, dan identitas visual
+                            yang lebih formal.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Logistics</span>
+                        </div>
+                        <div class="project-actions">
                             <a href="https://popeye-logistik.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-primary btn-sm">Demo</a>
+                                class="link-btn">Demo</a>
                         </div>
                     </div>
                 </div>
-                <!-- Project PT Synergy Perkasa Group -->
-                <div class="col-md-4">
-                    <div class="card project-card h-100">
-                        <div class="card-body">
-                            <h5 class="card-title">PT Synergy Perkasa Group</h5>
-                            <p class="card-text">Website profil perusahaan dengan tampilan profesional dan responsif.
-                            </p>
-                            <div class="mb-2"><span class="badge bg-primary">Wordpress</span></div>
-                            <div class="mb-2"><span class="badge bg-secondary">Company Profile</span></div>
-                            <a href="#" class="btn btn-primary-custom btn-sm me-2">Detail</a>
+                <div class="col-lg-4 col-md-6">
+                    <div class="project-card">
+                        <span class="project-type">Company Profile</span>
+                        <h5>PT Synergy Perkasa Group</h5>
+                        <p>Website company profile dengan pendekatan visual yang bersih untuk memperkuat kesan
+                            profesional perusahaan.</p>
+                        <div class="project-tags">
+                            <span class="tag">WordPress</span>
+                            <span class="tag">Corporate</span>
+                        </div>
+                        <div class="project-actions">
                             <a href="https://synergiperkasagroup.com/" target="_blank" rel="noopener noreferrer"
-                                class="btn btn-outline-primary btn-sm">Demo</a>
+                                class="link-btn">Demo</a>
                         </div>
                     </div>
                 </div>
@@ -453,245 +821,251 @@
         </div>
     </section>
 
-
-    <!-- Kontak Section -->
-    <section class="py-5" id="kontak">
+    <section class="section-shell" id="kontak">
         <div class="container">
-            <h2 class="section-title text-center text-primary-custom">Kontak</h2>
-            <div class="row justify-content-center">
-                <div class="col-lg-7 text-center">
-                    <p class="mb-4">Silakan hubungi saya melalui salah satu tautan berikut:</p>
-                    <div class="d-flex justify-content-center gap-4">
-                        <a href="https://wa.me/6289531656442" target="_blank" class="text-primary-custom fs-3" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                        <a href="https://www.instagram.com/rohmadaditya/" target="_blank" rel="noopener noreferrer"
-                            class="text-primary-custom fs-3" title="Instagram"><i
-                                class="bi bi-instagram"></i></a>
+            <div class="row g-4 align-items-stretch">
+                <div class="col-lg-7">
+                    <div class="contact-card">
+                        <span class="section-label">Kontak</span>
+                        <h2 class="section-title">Terbuka untuk diskusi proyek, kolaborasi, atau peluang kerja.</h2>
+                        <p>Jika Anda membutuhkan developer untuk website company profile, aplikasi internal, atau
+                            prototype produk digital, saya bisa diajak berdiskusi lebih lanjut.</p>
+                        <div class="social-links">
+                            <a href="https://wa.me/6289531656442" target="_blank" rel="noopener noreferrer"
+                                title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                            <a href="https://www.instagram.com/rohmadaditya/" target="_blank"
+                                rel="noopener noreferrer" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-5">
+                    <div class="contact-card">
+                        <span class="section-label">Ringkasan</span>
+                        <div class="d-grid gap-3">
+                            <div class="service-item">
+                                <i class="bi bi-person-workspace"></i>
+                                <div>
+                                    <strong>Role</strong>
+                                    <div class="text-muted">Full Stack Web Developer</div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="bi bi-geo-alt"></i>
+                                <div>
+                                    <strong>Fokus</strong>
+                                    <div class="text-muted">Website bisnis, aplikasi internal, dan prototype.</div>
+                                </div>
+                            </div>
+                            <div class="service-item">
+                                <i class="bi bi-chat-dots"></i>
+                                <div>
+                                    <strong>Kontak tercepat</strong>
+                                    <div class="text-muted">WhatsApp dan Instagram.</div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <!-- Footer -->
-    <footer class="bg-primary-custom text-white py-4 mt-5">
-        <div class="container text-center">
-            <div class="mb-2">&copy;2025 Rohmad Aditya. All rights reserved.</div>
+    <footer class="footer">
+        <div class="container d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <div>&copy; 2026 Rohmad Aditya. All rights reserved.</div>
+            <div>Designed for a more professional portfolio presentation.</div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS & Icons -->
+    <div class="modal fade" id="mgPlaystationModal" tabindex="-1" aria-labelledby="mgPlaystationModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="mgPlaystationModalLabel">MG-Playstation</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Studi Kasus</h6>
+                    <p class="mb-3">Aplikasi untuk membantu pengelolaan rental PlayStation, mulai dari pencatatan
+                        transaksi, manajemen pelanggan, hingga laporan keuangan. Sistem juga menyediakan landing page
+                        terintegrasi untuk promosi dan pemesanan online.</p>
+                    <h6 class="fw-bold mb-2">Screenshot</h6>
+                    <div class="row mb-3">
+                        <div class="col-md-6 mb-3 mb-md-0">
+                            <img src="https://raw.githubusercontent.com/RohmadAditya/mg-playstation/main/public/screenshots/dashboard.png"
+                                alt="Dashboard MG-Playstation" class="img-fluid">
+                        </div>
+                        <div class="col-md-6">
+                            <img src="https://raw.githubusercontent.com/RohmadAditya/mg-playstation/main/public/screenshots/landing.png"
+                                alt="Landing Page MG-Playstation" class="img-fluid">
+                        </div>
+                    </div>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>Laravel 10</li>
+                        <li>Filament Admin Panel</li>
+                        <li>MySQL</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="timelineTodoModal" tabindex="-1" aria-labelledby="timelineTodoModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="timelineTodoModalLabel">Timeline-Todo</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Deskripsi</h6>
+                    <p class="mb-3">Aplikasi pencatatan tugas dan kegiatan harian yang membantu pengguna mengelola,
+                        menjadwalkan, dan memantau progres aktivitas secara efisien.</p>
+                    <h6 class="fw-bold mb-2">Screenshot</h6>
+                    <div class="text-center mb-3">
+                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Timeline-Todo"
+                            alt="Screenshot Timeline-Todo" class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>Laravel</li>
+                        <li>Bootstrap 5</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="posModal" tabindex="-1" aria-labelledby="posModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="posModalLabel">Point of Sales</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Deskripsi</h6>
+                    <p class="mb-3">Aplikasi Point of Sales untuk membantu toko atau bisnis dalam mengelola transaksi
+                        penjualan, stok barang, dan laporan keuangan secara digital.</p>
+                    <h6 class="fw-bold mb-2">Screenshot</h6>
+                    <div class="text-center mb-3">
+                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Point+of+Sales" alt="Screenshot POS"
+                            class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>Laravel</li>
+                        <li>Bootstrap 5</li>
+                        <li>MySQL</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="filmModal" tabindex="-1" aria-labelledby="filmModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="filmModalLabel">Web Pencari Film</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Deskripsi</h6>
+                    <p class="mb-3">Aplikasi web untuk mencari informasi film, menampilkan detail film, dan fitur
+                        pencarian berdasarkan judul atau genre dengan data dari API eksternal.</p>
+                    <h6 class="fw-bold mb-2">Screenshot</h6>
+                    <div class="text-center mb-3">
+                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Web+Pencari+Film"
+                            alt="Screenshot Web Pencari Film" class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>React</li>
+                        <li>CSS</li>
+                        <li>API Film (OMDb/TMDB)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="linktreeModal" tabindex="-1" aria-labelledby="linktreeModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="linktreeModalLabel">Custom Link Tree</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Deskripsi</h6>
+                    <p class="mb-3">Aplikasi Link Tree sederhana untuk menampilkan daftar tautan penting dalam satu
+                        halaman, cocok untuk profil media sosial atau portofolio online.</p>
+                    <h6 class="fw-bold mb-2">Screenshot</h6>
+                    <div class="text-center mb-3">
+                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Custom+Link+Tree"
+                            alt="Screenshot Custom Link Tree" class="img-fluid">
+                    </div>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>HTML</li>
+                        <li>CSS</li>
+                        <li>Bootstrap 5</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="asllogistikModal" tabindex="-1" aria-labelledby="asllogistikModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="asllogistikModalLabel">PT Artalapan Strategi Logistik</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Deskripsi</h6>
+                    <p class="mb-3">Website company profile untuk PT. Artalapan Strategi Logistik yang bergerak di
+                        bidang forwarding dengan fokus pada tampilan profesional dan penyajian informasi perusahaan.
+                    </p>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="daemanindoagenciesModal" tabindex="-1"
+        aria-labelledby="daemanindoagenciesModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="daemanindoagenciesModalLabel">Daemanindo Agencies</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <h6 class="fw-bold mb-2">Deskripsi</h6>
+                    <p class="mb-3">Website company profile untuk Daemanindo Agencies yang bergerak di bidang logistik
+                        untuk wilayah Dili, Timor Leste, dengan pendekatan visual yang formal dan mudah dinavigasi.</p>
+                    <h6 class="fw-bold mb-2">Tech Stack</h6>
+                    <ul class="mb-0">
+                        <li>WordPress</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
 </body>
 
 </html>
-
-<!-- Modal MG-Playstation -->
-<div class="modal fade" id="mgPlaystationModal" tabindex="-1" aria-labelledby="mgPlaystationModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="mgPlaystationModalLabel">MG-Playstation - Studi Kasus & Detail</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Studi Kasus</h6>
-                <p class="mb-3">MG-Playstation adalah aplikasi untuk membantu pengelolaan rental PlayStation, mulai dari
-                    pencatatan transaksi, manajemen pelanggan, hingga laporan keuangan. Sistem ini juga menyediakan
-                    landing page terintegrasi untuk promosi dan pemesanan online.</p>
-                <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="row mb-3">
-                    <div class="col-md-6 mb-2">
-                        <img src="https://raw.githubusercontent.com/RohmadAditya/mg-playstation/main/public/screenshots/dashboard.png"
-                            alt="Dashboard MG-Playstation" class="img-fluid rounded shadow-sm">
-                    </div>
-                    <div class="col-md-6 mb-2">
-                        <img src="https://raw.githubusercontent.com/RohmadAditya/mg-playstation/main/public/screenshots/landing.png"
-                            alt="Landing Page MG-Playstation" class="img-fluid rounded shadow-sm">
-                    </div>
-                </div>
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>Laravel 10</li>
-                    <li>Filament Admin Panel</li>
-                    <li>MySQL</li>
-                    <li>Bootstrap 5</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Timeline-Todo -->
-<div class="modal fade" id="timelineTodoModal" tabindex="-1" aria-labelledby="timelineTodoModalLabel"
-    aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="timelineTodoModalLabel">Timeline-Todo - Detail Aplikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Deskripsi</h6>
-                <p class="mb-3">Aplikasi pencatatan tugas dan kegiatan harian yang membantu pengguna
-                    mengelola, menjadwalkan, dan memantau progres aktivitas secara efisien.</p>
-                <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="mb-3 text-center">
-                    <img src="https://dummyimage.com/600x350/ddd/222&text=Screenshot+Timeline-Todo"
-                        alt="Screenshot Timeline-Todo" class="img-fluid rounded shadow-sm">
-                </div>
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>Laravel</li>
-                    <li>Bootstrap 5</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Point of Sales -->
-<div class="modal fade" id="posModal" tabindex="-1" aria-labelledby="posModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="posModalLabel">Point of Sales - Detail Aplikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Deskripsi</h6>
-                <p class="mb-3">Aplikasi Point of Sales (POS) untuk membantu toko atau bisnis dalam
-                    mengelola transaksi penjualan, stok barang, dan laporan keuangan secara digital dan
-                    efisien.</p>
-                <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="mb-3 text-center">
-                    <img src="https://dummyimage.com/600x350/ddd/222&text=Screenshot+POS" alt="Screenshot POS"
-                        class="img-fluid rounded shadow-sm">
-                </div>
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>Laravel</li>
-                    <li>Bootstrap 5</li>
-                    <li>MySQL</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Web Pencari Film -->
-<div class="modal fade" id="filmModal" tabindex="-1" aria-labelledby="filmModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="filmModalLabel">Web Pencari Film - Detail Aplikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Deskripsi</h6>
-                <p class="mb-3">Aplikasi web untuk mencari informasi film, menampilkan detail film, dan
-                    fitur
-                    pencarian berdasarkan judul atau genre. Data film diambil dari API eksternal.</p>
-                <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="mb-3 text-center">
-                    <img src="https://dummyimage.com/600x350/ddd/222&text=Screenshot+Web+Pencari+Film"
-                        alt="Screenshot Web Pencari Film" class="img-fluid rounded shadow-sm">
-                </div>
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>React</li>
-                    <li>CSS</li>
-                    <li>API Film (OMDb/TMDB)</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Custom Link Tree -->
-<div class="modal fade" id="linktreeModal" tabindex="-1" aria-labelledby="linktreeModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="linktreeModalLabel">Custom Link Tree - Detail Aplikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Deskripsi</h6>
-                <p class="mb-3">Aplikasi Link Tree sederhana untuk menampilkan daftar tautan penting
-                    dalam
-                    satu halaman, cocok untuk profil media sosial atau portofolio online.</p>
-                <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="mb-3 text-center">
-                    <img src="https://dummyimage.com/600x350/ddd/222&text=Screenshot+Custom+Link+Tree"
-                        alt="Screenshot Custom Link Tree" class="img-fluid rounded shadow-sm">
-                </div>
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>HTML</li>
-                    <li>CSS</li>
-                    <li>Bootstrap 5</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal PT ASL -->
-<div class="modal fade" id="asllogistikModal" tabindex="-1" aria-labelledby="asllogistikModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="asllogistikModalLabel">PT ASL Logistik - Detail Aplikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Deskripsi</h6>
-                <p class="mb-3">Website Company Profile untuk PT. Artalapan Strategi Logistik. Yang bergerak dibidang Forwarding.</p>
-                <!-- <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="mb-3 text-center">
-                    <img src="https://dummyimage.com/600x350/ddd/222&text=Screenshot+Custom+Link+Tree"
-                        alt="Screenshot Custom Link Tree" class="img-fluid rounded shadow-sm">
-                </div> -->
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>Wordpress</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
-
-<!-- Modal Daemanindo Agencies -->
-<div class="modal fade" id="daemanindoagenciesModal" tabindex="-1" aria-labelledby="daemanindoagenciesModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-lg modal-dialog-centered">
-        <div class="modal-content"
-            style="background:var(--bg-section);color:var(--text-main);border-radius:var(--border-radius);">
-            <div class="modal-header">
-                <h5 class="modal-title" id="daemanindoagenciesModalLabel">Daemanindo Agencies - Detail Aplikasi</h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
-            <div class="modal-body">
-                <h6 class="fw-semibold mb-2">Deskripsi</h6>
-                <p class="mb-3">Website Company Profile untuk Daemanindo Agencies. Yang bergerak dibidang logistik Dili, Timor Leste.</p>
-                <!-- <h6 class="fw-semibold mb-2">Screenshot</h6>
-                <div class="mb-3 text-center">
-                    <img src="https://dummyimage.com/600x350/ddd/222&text=Screenshot+Custom+Link+Tree"
-                        alt="Screenshot Custom Link Tree" class="img-fluid rounded shadow-sm">
-                </div> -->
-                <h6 class="fw-semibold mb-2">Tech Stack</h6>
-                <ul class="mb-0">
-                    <li>Wordpress</li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
