@@ -72,8 +72,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <img src="${slide.src}" alt="${slide.alt}" class="img-fluid" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>
                 </a>
                 <div class="carousel-caption d-block">
-                    <h6 class="fw-bold text-white">${slide.title}</h6>
-                    <p class="mb-0 text-white">${slide.desc}</p>
+                    <h6 class="fw-bold">${slide.title}</h6>
+                    <p class="mb-0">${slide.desc}</p>
                 </div>
             </div>`)
         .join('');

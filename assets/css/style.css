@@ -499,7 +499,14 @@ a {
 .project-carousel .carousel-inner {
     border-radius: 20px;
     overflow: hidden;
-    background: #edf2f8;
+    background: transparent;
+}
+
+.project-carousel .carousel-item {
+    background: #fff;
+    border: 1px solid var(--line);
+    border-radius: 20px;
+    overflow: hidden;
 }
 
 .project-carousel .carousel-item img {
@@ -507,20 +514,26 @@ a {
     height: 420px;
     object-fit: cover;
     display: block;
+    border: 0;
+    border-radius: 0;
 }
 
 .project-carousel .carousel-caption {
-    left: 1rem;
-    right: 1rem;
-    bottom: 1rem;
-    padding: 0.85rem 1rem;
-    border-radius: 14px;
-    background: linear-gradient(180deg, rgba(20, 32, 51, 0.18), rgba(20, 32, 51, 0.78));
+    position: static;
+    padding: 1rem 1.1rem 1.1rem;
+    background: #fff;
     text-align: left;
+    border-top: 1px solid var(--line);
 }
 
 .project-carousel .carousel-caption h6 {
-    margin-bottom: 0.2rem;
+    margin-bottom: 0.3rem;
+    color: var(--ink);
+}
+
+.project-carousel .carousel-caption p {
+    color: var(--muted) !important;
+    line-height: 1.65;
 }
 
 .project-carousel .carousel-indicators {
@@ -783,7 +796,15 @@ a {
     }
 
     .project-carousel .carousel-item img {
-        height: 280px;
+        height: 240px;
+    }
+
+    .project-carousel .carousel-caption {
+        padding: 0.9rem 0.95rem 1rem;
+    }
+
+    .project-carousel .carousel-caption h6 {
+        font-size: 1rem;
     }
 
     .project-thumb img {
@@ -849,10 +870,16 @@ a {
         grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .project-carousel .carousel-item {
+        border-radius: 18px;
+    }
+
+    .project-carousel .carousel-item img {
+        height: 200px;
+    }
+
     .project-carousel .carousel-caption {
-        position: static;
-        margin-top: 0;
-        border-radius: 0 0 18px 18px;
+        padding: 0.85rem 0.9rem 0.95rem;
     }
 
     .lightbox-overlay {
