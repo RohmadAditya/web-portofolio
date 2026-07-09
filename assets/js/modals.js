@@ -1,4 +1,31 @@
 document.addEventListener('DOMContentLoaded', () => {
+    const body = document.body;
+    const siteLoader = document.getElementById('siteLoader');
+    let loaderDismissed = false;
+
+    const hideSiteLoader = () => {
+        if (!siteLoader || loaderDismissed) {
+            body.classList.remove('is-loading');
+            return;
+        }
+
+        loaderDismissed = true;
+        siteLoader.classList.add('is-hidden');
+        body.classList.remove('is-loading');
+
+        window.setTimeout(() => {
+            siteLoader.remove();
+        }, 500);
+    };
+
+    if (document.readyState === 'complete') {
+        window.setTimeout(hideSiteLoader, 180);
+    } else {
+        window.addEventListener('load', () => {
+            window.setTimeout(hideSiteLoader, 180);
+        }, { once: true });
+    }
+
     const mgSlides = [
         {
             src: 'assets/projects/mg-playstation/slide-01.jpg',

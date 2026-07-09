@@ -15,7 +15,18 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="is-loading">
+    <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="Memuat halaman">
+        <div class="site-loader__inner">
+            <div class="site-loader__logo">
+                <img src="assets/logo-ra.png" alt="Logo Rohmad Aditya">
+            </div>
+            <p class="site-loader__label">Loading portfolio experience</p>
+            <div class="site-loader__bar" aria-hidden="true">
+                <span></span>
+            </div>
+        </div>
+    </div>
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container">
             <a class="navbar-brand" href="#hero">
@@ -47,12 +58,12 @@
             <div class="row align-items-center g-5">
                 <div class="col-lg-7">
                     <span class="eyebrow"><i class="bi bi-stars"></i> Full Stack Web Developer</span>
-                    <h1 class="hero-title">Membangun solusi web <span class="highlight">profesional, efisien,</span>
-                        dan siap mendukung kebutuhan bisnis.</h1>
-                    <p class="hero-copy">Saya Rohmad Aditya, seorang Full Stack Web Developer yang berfokus pada
-                        pengembangan website dan aplikasi web dengan tampilan profesional, struktur yang rapi, dan
-                        pengalaman pengguna yang efektif. Saya membantu menghadirkan solusi digital, mulai dari company
-                        profile hingga sistem internal yang mendukung operasional bisnis secara lebih optimal.</p>
+                    <h1 class="hero-title">Portofolio yang menampilkan karya terbaik dengan kurasi yang lebih
+                        <span class="highlight">tegas</span> dan profesional.</h1>
+                    <p class="hero-copy">Saya Rohmad Aditya, Full Stack Web Developer yang berfokus pada website
+                        bisnis, aplikasi internal, dan prototype produk digital. Saya membantu menghadirkan solusi
+                        yang rapi, modern, dan mudah dipahami, dengan proyek yang disusun sebagai bukti kerja yang
+                        relevan.</p>
                     <div class="d-flex flex-wrap gap-3 mt-4">
                         <a href="#portfolio" class="btn btn-main">Lihat Portofolio</a>
                         <a href="#kontak" class="btn btn-ghost">Konsultasikan Proyek</a>
@@ -122,7 +133,7 @@
         </div>
     </section>
 
-    <section class="section-shell" id="tentang">
+    <section class="section-shell section-emphasis" id="tentang">
         <div class="container">
             <div class="row g-4 align-items-stretch">
                 <div class="col-lg-6">
@@ -224,12 +235,35 @@
         </div>
     </section>
 
-    <section class="section-shell" id="portfolio">
+    <section class="section-shell section-emphasis" id="portfolio">
         <div class="container">
             <span class="section-label">Portofolio</span>
             <h2 class="section-title">Pilihan proyek yang mencerminkan pendekatan kerja dan kualitas eksekusi saya.</h2>
-            <p class="section-desc mb-5">Portofolio ini dibagi antara proyek prototype dan website company profile agar
-                recruiter maupun calon klien dapat meninjau pengalaman saya dengan lebih mudah.</p>
+            <p class="section-desc mb-5">Portofolio ini dikurasi supaya proyek yang paling relevan tampil lebih jelas,
+                sementara sisanya tetap mendukung cerita kemampuan saya secara utuh.</p>
+
+            <div class="featured-project mb-5">
+                <div class="featured-project-copy">
+                    <span class="project-type">Featured Project</span>
+                    <h3>MG-Playstation</h3>
+                    <p>Aplikasi pengelolaan rental PlayStation yang dilengkapi landing page terintegrasi untuk
+                        kebutuhan promosi, pemesanan, dan administrasi operasional.</p>
+                    <div class="project-tags">
+                        <span class="tag">Laravel</span>
+                        <span class="tag">Filament</span>
+                        <span class="tag">Bootstrap</span>
+                        <span class="tag">MySQL</span>
+                    </div>
+                    <div class="project-actions">
+                        <a href="#mgPlaystationModal" data-bs-toggle="modal" class="link-btn">Detail Project</a>
+                        <a href="https://github.com/RohmadAditya/mg-playstation/tree/main" target="_blank"
+                            rel="noopener noreferrer" class="link-btn">GitHub</a>
+                    </div>
+                </div>
+                <div class="featured-project-visual">
+                    <img src="assets/projects/mg-playstation/slide-01.jpg" alt="MG-Playstation preview">
+                </div>
+            </div>
 
             <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
                 <h3 class="h4 fw-bold mb-0">Proyek Prototype</h3>
