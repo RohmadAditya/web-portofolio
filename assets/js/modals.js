@@ -95,7 +95,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mgItems = mgSlides
         .map((slide, index) => `
             <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                <a href="${slide.full}" class="modal-gallery-item" data-lightbox="mg-playstation" data-index="${index}" data-title="${slide.title}">
+                <a href="${slide.full}" class="modal-gallery-item" target="_blank" rel="noopener noreferrer" data-title="${slide.title}">
                     <img src="${slide.src}" alt="${slide.alt}" class="img-fluid" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>
                 </a>
                 <div class="carousel-caption d-block">
@@ -291,28 +291,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     document.body.insertAdjacentHTML('beforeend', modalsMarkup);
 
-    const lightboxMarkup = `
-    <div class="lightbox-overlay" id="imageLightbox" aria-hidden="true">
-        <div class="lightbox-dialog">
-            <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">&#8249;</button>
-            <button type="button" class="lightbox-nav lightbox-next" aria-label="Next image">&#8250;</button>
-            <button type="button" class="lightbox-close" aria-label="Close preview">&times;</button>
-            <img src="" alt="" class="lightbox-image">
-        </div>
-    </div>`;
-
-    document.body.insertAdjacentHTML('beforeend', lightboxMarkup);
-
-    const lightbox = document.getElementById('imageLightbox');
-    const lightboxImage = lightbox.querySelector('.lightbox-image');
-    const lightboxClose = lightbox.querySelector('.lightbox-close');
-    const lightboxPrev = lightbox.querySelector('.lightbox-prev');
-    const lightboxNext = lightbox.querySelector('.lightbox-next');
     const carouselElement = document.getElementById('mgPlaystationCarousel');
-    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
-    const thumbButtons = Array.from(document.querySelectorAll('.project-thumb'));
+    const carousel = carouselElement ? bootstrap.Carousel.getOrCreateInstance(carouselElement) : null;
+    const thumbButtons = Array.from(document.querySelectorAll('.project-thumbs .project-thumb'));
     const mgModal = document.getElementById('mgPlaystationModal');
-    let currentLightboxIndex = 0;
 
     const syncActiveThumb = (activeIndex) => {
         thumbButtons.forEach((button, index) => {
@@ -320,86 +302,21 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    const openLightboxAt = (index) => {
-        const slide = mgSlides[index];
-        if (!slide) {
-            return;
-        }
+    if (carouselElement) {
+        carouselElement.addEventListener('slid.bs.carousel', (event) => {
+            syncActiveThumb(event.to);
+        });
+    }
 
-        currentLightboxIndex = index;
-        lightboxImage.src = slide.full;
-        lightboxImage.alt = slide.alt;
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
-    };
+    if (mgModal && carousel) {
+        mgModal.addEventListener('shown.bs.modal', () => {
+            carousel.cycle();
+        });
 
-    const closeLightbox = () => {
-        lightbox.classList.remove('is-open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-    };
-
-    const showAdjacentLightboxImage = (direction) => {
-        const total = mgSlides.length;
-        currentLightboxIndex = (currentLightboxIndex + direction + total) % total;
-        openLightboxAt(currentLightboxIndex);
-    };
-
-    carouselElement.addEventListener('slid.bs.carousel', (event) => {
-        syncActiveThumb(event.to);
-    });
-
-    document.addEventListener('click', (event) => {
-        const trigger = event.target.closest('[data-lightbox]');
-        if (trigger) {
-            event.preventDefault();
-            const currentIndex = Number(trigger.getAttribute('data-index'));
-            openLightboxAt(currentIndex >= 0 ? currentIndex : 0);
-            return;
-        }
-
-        if (event.target === lightbox || event.target === lightboxClose) {
-            closeLightbox();
-            return;
-        }
-
-        if (event.target === lightboxPrev) {
-            showAdjacentLightboxImage(-1);
-            return;
-        }
-
-        if (event.target === lightboxNext) {
-            showAdjacentLightboxImage(1);
-        }
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (!lightbox.classList.contains('is-open')) {
-            return;
-        }
-
-        if (event.key === 'Escape') {
-            closeLightbox();
-        }
-
-        if (event.key === 'ArrowLeft') {
-            showAdjacentLightboxImage(-1);
-        }
-
-        if (event.key === 'ArrowRight') {
-            showAdjacentLightboxImage(1);
-        }
-    });
-
-    mgModal.addEventListener('shown.bs.modal', () => {
-        carousel.cycle();
-    });
-
-    mgModal.addEventListener('hide.bs.modal', () => {
-        carousel.pause();
-        closeLightbox();
-    });
+        mgModal.addEventListener('hide.bs.modal', () => {
+            carousel.pause();
+        });
+    }
 
     syncActiveThumb(0);
 });
