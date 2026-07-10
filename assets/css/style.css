@@ -955,18 +955,28 @@ img {
 .service-grid {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
-    gap: 1.5rem;
+    gap: 1.2rem;
 }
 
 .service-card {
-    padding: 1.65rem;
+    min-height: 280px;
+    padding: 1.45rem;
 }
 
 .service-card__head {
     display: flex;
-    gap: 1rem;
+    gap: 0.9rem;
     align-items: flex-start;
-    margin-bottom: 1rem;
+    margin-bottom: 1.05rem;
+}
+
+.service-card__head .skill-icon {
+    flex: 0 0 52px;
+    width: 52px;
+    height: 52px;
+    margin-bottom: 0;
+    border-radius: 15px;
+    font-size: 1.35rem;
 }
 
 .service-card__head h3 {
@@ -978,17 +988,36 @@ img {
 .service-card__head p {
     margin: 0;
     color: var(--muted);
-    line-height: 1.7;
+    line-height: 1.65;
 }
 
 .service-list {
     margin: 0;
-    padding-left: 1.15rem;
+    padding: 1rem 0 0;
+    list-style: none;
     color: var(--muted);
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
+}
+
+.service-list li {
+    position: relative;
+    padding-left: 1.15rem;
+    line-height: 1.6;
+}
+
+.service-list li::before {
+    content: "";
+    position: absolute;
+    top: 0.7em;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background: var(--blue);
 }
 
 .service-list li + li {
-    margin-top: 0.6rem;
+    margin-top: 0.5rem;
 }
 
 .skill-card {
