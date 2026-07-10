@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rohmad Aditya | Full Stack Web Developer</title>
+    <title>RA Dev | Developer & Designer</title>
     <link rel="icon" type="image/png" href="assets/logo-ra.png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
@@ -19,7 +19,7 @@
     <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="Memuat halaman">
         <div class="site-loader__inner">
             <div class="site-loader__logo">
-                <img src="assets/logo-ra.png" alt="Logo Rohmad Aditya">
+                <img src="assets/logo-ra.png" alt="Logo RA Dev">
             </div>
             <p class="site-loader__label">Loading portfolio experience</p>
             <div class="site-loader__bar" aria-hidden="true">
@@ -27,467 +27,384 @@
             </div>
         </div>
     </div>
+
     <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container">
-            <a class="navbar-brand" href="#hero">
-                <span class="brand-mark">
-                    <img src="assets/logo-ra.png" alt="Logo Rohmad Aditya">
-                </span>
-                <span class="brand-text">
-                    <span class="brand-name">Rohmad Aditya</span>
-                    <span class="brand-role">Full Stack Web Developer</span>
-                </span>
+        <div class="container site-container">
+            <a class="navbar-brand" href="#hero" aria-label="Kembali ke hero">
+                <img src="assets/logo-ra.png" alt="Logo RA Dev">
             </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
                 data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto align-items-lg-center gap-lg-3">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link is-active" href="#hero">Hero</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#skills">Keahlian</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#portfolio">Portofolio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#portofolio">Portofolio</a></li>
                     <li class="nav-item"><a class="nav-link" href="#kontak">Kontak</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
-    <section class="hero-section" id="hero">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-7">
-                    <span class="eyebrow"><i class="bi bi-stars"></i> Full Stack Web Developer</span>
-                    <h1 class="hero-title">Portofolio yang menampilkan karya terbaik dengan kurasi yang lebih
-                        <span class="highlight">tegas</span> dan profesional.</h1>
-                    <p class="hero-copy">Saya Rohmad Aditya, Full Stack Web Developer yang berfokus pada website
-                        bisnis, aplikasi internal, dan prototype produk digital. Saya membantu menghadirkan solusi
-                        yang rapi, modern, dan mudah dipahami, dengan proyek yang disusun sebagai bukti kerja yang
-                        relevan.</p>
-                    <div class="d-flex flex-wrap gap-3 mt-4">
-                        <a href="#portfolio" class="btn btn-main">Lihat Portofolio</a>
-                        <a href="#kontak" class="btn btn-ghost">Konsultasikan Proyek</a>
+    <main class="page-shell">
+        <section class="hero-section" id="hero">
+            <div class="container site-container hero-grid">
+                <div class="hero-copy-panel">
+                    <span class="intro-pill">Halo, saya</span>
+                    <h1 class="hero-title">Saya Developer <span>&amp; <em>Designer</em></span></h1>
+                    <p class="hero-copy">
+                        Saya membangun pengalaman digital yang modern, cepat, dan berfokus pada pengguna.
+                        Menggabungkan kode yang bersih dengan desain yang elegan.
+                    </p>
+                    <div class="hero-actions">
+                        <a class="btn btn-primary-glow" href="#portofolio">Lihat Portofolio <i class="bi bi-arrow-right"></i></a>
+                        <a class="btn btn-outline-frost" href="#kontak">Hubungi Saya <i class="bi bi-envelope"></i></a>
                     </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="hero-panel">
-                        <div class="hero-logo-wrap">
-                            <img src="assets/logo-ra.png" alt="Logo Rohmad Aditya">
+                    <div class="stats-row">
+                        <div class="stat-item">
+                            <i class="bi bi-briefcase"></i>
+                            <div>
+                                <strong>4+</strong>
+                                <span>Tahun Pengalaman</span>
+                            </div>
                         </div>
-                        <h3>Solusi digital dengan tampilan meyakinkan dan fungsi yang terarah.</h3>
-                        <div class="hero-meta">
-                            <div class="hero-meta-item">
-                                <i class="bi bi-check2-circle"></i>
-                                <div>
-                                    <strong>Pengembangan end-to-end</strong>
-                                    <div class="text-muted">Frontend, backend, integrasi, dan deployment dasar.</div>
-                                </div>
+                        <div class="stat-item">
+                            <i class="bi bi-bezier2"></i>
+                            <div>
+                                <strong>20+</strong>
+                                <span>Proyek Selesai</span>
                             </div>
-                            <div class="hero-meta-item">
-                                <i class="bi bi-briefcase"></i>
-                                <div>
-                                    <strong>Pengalaman proyek nyata</strong>
-                                    <div class="text-muted">Pengalaman pada prototype, aplikasi internal, dan website
-                                        perusahaan.</div>
-                                </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="bi bi-people"></i>
+                            <div>
+                                <strong>15+</strong>
+                                <span>Klien Puas</span>
                             </div>
-                            <div class="hero-meta-item">
-                                <i class="bi bi-graph-up-arrow"></i>
-                                <div>
-                                    <strong>Fokus pada hasil</strong>
-                                    <div class="text-muted">Berorientasi pada kualitas tampilan, performa, dan
-                                        kemudahan penggunaan.</div>
-                                </div>
+                        </div>
+                        <div class="stat-item">
+                            <i class="bi bi-award"></i>
+                            <div>
+                                <strong>100%</strong>
+                                <span>Dedikasi</span>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
 
-    <section class="section-shell pt-0">
-        <div class="container">
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="metric-card">
-                        <div class="metric-number">8+</div>
-                        <div class="metric-label">Proyek portofolio dan website yang telah dikerjakan.</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="metric-card">
-                        <div class="metric-number">3</div>
-                        <div class="metric-label">Fokus utama pada frontend, backend, dan pengembangan website
-                            bisnis.</div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="metric-card">
-                        <div class="metric-number">100%</div>
-                        <div class="metric-label">Pendekatan kerja yang berorientasi pada kebutuhan pengguna dan tujuan
-                            bisnis.</div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-shell section-emphasis" id="tentang">
-        <div class="container">
-            <div class="row g-4 align-items-stretch">
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <span class="section-label">Tentang Saya</span>
-                        <h2 class="section-title">Membangun website yang relevan untuk kebutuhan bisnis dan
-                            profesional.</h2>
-                        <p class="section-desc">Saya mengembangkan aplikasi web modern dengan perhatian pada struktur
-                            sistem, kualitas antarmuka, dan kebutuhan operasional pengguna. Pengalaman saya mencakup
-                            website company profile, aplikasi manajemen, hingga sistem internal yang dirancang untuk
-                            mendukung proses bisnis secara lebih efisien.</p>
-                    </div>
-                </div>
-                <div class="col-lg-6">
-                    <div class="content-card">
-                        <span class="section-label">Layanan</span>
-                        <div class="service-list">
-                            <div class="service-item">
-                                <i class="bi bi-window"></i>
-                                <div>
-                                    <strong>Website Company Profile</strong>
-                                    <div class="text-muted">Dirancang untuk membangun citra perusahaan yang kredibel,
-                                        responsif, dan sesuai identitas brand.
-                                    </div>
+                <div class="hero-visual" aria-hidden="true">
+                    <span class="floating-badge badge-top"><i class="bi bi-code-slash"></i></span>
+                    <span class="floating-badge badge-left">CSS</span>
+                    <span class="floating-badge badge-right">{ }</span>
+                    <span class="floating-badge badge-bottom">JS</span>
+                    <div class="hero-orbit"></div>
+                    <div class="device-frame">
+                        <div class="device-topbar">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="device-screen">
+                            <div class="code-column">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+                            <div class="preview-column">
+                                <div class="preview-actions">
+                                    <span></span>
+                                    <span></span>
+                                </div>
+                                <div class="code-mark">&lt;/&gt;</div>
+                                <div class="preview-lines">
+                                    <span></span>
+                                    <span></span>
+                                    <span></span>
                                 </div>
                             </div>
-                            <div class="service-item">
-                                <i class="bi bi-kanban"></i>
-                                <div>
-                                    <strong>Aplikasi Internal</strong>
-                                    <div class="text-muted">Mendukung pengelolaan data, transaksi, dan alur kerja agar
-                                        lebih terstruktur.
-                                    </div>
-                                </div>
+                        </div>
+                    </div>
+                    <div class="phone-frame">
+                        <div class="phone-notch"></div>
+                        <div class="phone-display">
+                            <div class="phone-media"></div>
+                            <div class="phone-grid">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
-                            <div class="service-item">
-                                <i class="bi bi-code-square"></i>
-                                <div>
-                                    <strong>Prototype Produk Digital</strong>
-                                    <div class="text-muted">Membantu memvalidasi ide melalui alur yang jelas dan
-                                        implementasi yang terarah.</div>
-                                </div>
+                            <div class="phone-lines">
+                                <span></span>
+                                <span></span>
+                                <span></span>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <section class="section-shell" id="skills">
-        <div class="container">
-            <span class="section-label">Keahlian</span>
-            <h2 class="section-title">Teknologi yang saya gunakan untuk membangun produk web yang andal.</h2>
-            <p class="section-desc mb-5">Saya menggunakan kombinasi teknologi yang praktis, stabil, dan relevan untuk
-                pengembangan website bisnis maupun aplikasi web dengan kebutuhan yang lebih kompleks.</p>
-            <div class="row g-4">
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="bi bi-layout-text-window-reverse"></i></div>
-                        <h5 class="fw-bold">Frontend Development</h5>
-                        <p>Mengembangkan antarmuka yang rapi, responsif, dan nyaman digunakan di berbagai perangkat.</p>
-                        <div class="skill-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Bootstrap</span>
-                            <span class="tag">React</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="bi bi-hdd-stack"></i></div>
-                        <h5 class="fw-bold">Backend Development</h5>
-                        <p>Mengelola logika aplikasi, data, autentikasi, dan proses bisnis agar sistem berjalan
-                            stabil.</p>
-                        <div class="skill-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">ASP.NET</span>
-                            <span class="tag">MySQL</span>
-                            <span class="tag">Filament</span>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-4">
-                    <div class="skill-card">
-                        <div class="skill-icon"><i class="bi bi-tools"></i></div>
-                        <h5 class="fw-bold">Implementation Tools</h5>
-                        <p>Mendukung kolaborasi, deployment dasar, dan pengelolaan project secara lebih efisien.</p>
-                        <div class="skill-tags">
-                            <span class="tag">Git</span>
-                            <span class="tag">Docker</span>
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Bootstrap Icons</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+        <section class="section-band" id="tentang">
+            <div class="container site-container">
+                <div class="section-grid about-grid">
+                    <article class="panel-card about-copy">
+                        <span class="section-label">Tentang</span>
+                        <h2 class="section-title">Membangun Solusi Digital dengan Kreativitas &amp; Kode</h2>
+                        <p>
+                            Saya adalah seorang Fullstack Developer &amp; UI/UX Designer yang bersemangat
+                            menciptakan produk digital yang tidak hanya fungsional, tetapi juga indah dan mudah digunakan.
+                        </p>
+                        <p>
+                            Saya senang belajar hal baru, memecahkan masalah kompleks, dan bekerja sama untuk
+                            mewujudkan ide menjadi solusi nyata.
+                        </p>
+                    </article>
 
-    <section class="section-shell section-emphasis" id="portfolio">
-        <div class="container">
-            <span class="section-label">Portofolio</span>
-            <h2 class="section-title">Pilihan proyek yang mencerminkan pendekatan kerja dan kualitas eksekusi saya.</h2>
-            <p class="section-desc mb-5">Portofolio ini dikurasi supaya proyek yang paling relevan tampil lebih jelas,
-                sementara sisanya tetap mendukung cerita kemampuan saya secara utuh.</p>
+                    <article class="panel-card profile-card">
+                        <div class="profile-glow"></div>
+                        <div class="profile-avatar">
+                            <div class="avatar-hair"></div>
+                            <div class="avatar-face"></div>
+                            <div class="avatar-glasses"></div>
+                            <div class="avatar-body"></div>
+                            <div class="avatar-mark">&lt;/&gt;</div>
+                        </div>
+                    </article>
 
-            <div class="featured-project mb-5">
-                <div class="featured-project-copy">
-                    <span class="project-type">Featured Project</span>
-                    <h3>MG-Playstation</h3>
-                    <p>Aplikasi pengelolaan rental PlayStation yang dilengkapi landing page terintegrasi untuk
-                        kebutuhan promosi, pemesanan, dan administrasi operasional.</p>
-                    <div class="project-tags">
-                        <span class="tag">Laravel</span>
-                        <span class="tag">Filament</span>
-                        <span class="tag">Bootstrap</span>
-                        <span class="tag">MySQL</span>
-                    </div>
-                    <div class="project-actions">
-                        <a href="#mgPlaystationModal" data-bs-toggle="modal" class="link-btn">Detail Project</a>
-                        <a href="https://github.com/RohmadAditya/mg-playstation/tree/main" target="_blank"
-                            rel="noopener noreferrer" class="link-btn">GitHub</a>
-                    </div>
-                </div>
-                <div class="featured-project-visual">
-                    <img src="assets/projects/mg-playstation/slide-01.jpg" alt="MG-Playstation preview">
-                </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
-                <h3 class="h4 fw-bold mb-0">Proyek Prototype</h3>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Prototype App</span>
-                        <h5>MG-Playstation</h5>
-                        <p>Aplikasi pengelolaan rental PlayStation yang dilengkapi landing page terintegrasi untuk
-                            kebutuhan promosi dan pemesanan.</p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Filament</span>
-                            <span class="tag">Bootstrap</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#mgPlaystationModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="https://github.com/RohmadAditya/mg-playstation/tree/main" target="_blank"
-                                rel="noopener noreferrer" class="link-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Prototype App</span>
-                        <h5>Timeline-Todo</h5>
-                        <p>Aplikasi pencatatan tugas dan kegiatan harian yang dirancang untuk membantu pengguna
-                            mengelola aktivitas secara lebih terstruktur.</p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Bootstrap</span>
-                            <span class="tag">MySQL</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#timelineTodoModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="#" class="link-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Prototype App</span>
-                        <h5>Point of Sales</h5>
-                        <p>Aplikasi web untuk pengelolaan transaksi penjualan, data produk, dan pelaporan agar proses
-                            operasional lebih efisien.</p>
-                        <div class="project-tags">
-                            <span class="tag">Laravel</span>
-                            <span class="tag">Bootstrap</span>
-                            <span class="tag">MySQL</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#posModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="#" class="link-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Frontend Project</span>
-                        <h5>Web Pencari Film</h5>
-                        <p>Aplikasi pencarian film berbasis API dengan fokus pada pencarian yang cepat dan penyajian
-                            hasil yang mudah dipahami.</p>
-                        <div class="project-tags">
-                            <span class="tag">React</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">API</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#filmModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="https://github.com/RohmadAditya/web-pencari-film/tree/main" target="_blank"
-                                rel="noopener noreferrer" class="link-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Mini Project</span>
-                        <h5>Custom Link Tree</h5>
-                        <p>Halaman tautan sederhana yang memudahkan akses ke profil, kontak, dan berbagai platform
-                            penting dalam satu tempat.</p>
-                        <div class="project-tags">
-                            <span class="tag">HTML</span>
-                            <span class="tag">CSS</span>
-                            <span class="tag">Bootstrap</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#linktreeModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="https://github.com/RohmadAditya/LinkTreeNew" target="_blank"
-                                rel="noopener noreferrer" class="link-btn">GitHub</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mt-5 mb-4">
-                <h3 class="h4 fw-bold mb-0">Proyek Perusahaan</h3>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Company Profile</span>
-                        <h5>PT Artalapan Strategi Logistik</h5>
-                        <p>Website profil perusahaan yang dirancang untuk tampil kredibel, informatif, dan responsif di
-                            berbagai perangkat.</p>
-                        <div class="project-tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Business Website</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#asllogistikModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="https://asllogistik.com/" target="_blank" rel="noopener noreferrer"
-                                class="link-btn">Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Company Profile</span>
-                        <h5>Daemanindo Agencies</h5>
-                        <p>Website profil perusahaan yang mendukung branding digital sekaligus menyajikan informasi
-                            layanan secara profesional.</p>
-                        <div class="project-tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Corporate</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#daemanindoagenciesModal" data-bs-toggle="modal" class="link-btn">Detail</a>
-                            <a href="https://daemanindoagencies.com/" target="_blank" rel="noopener noreferrer"
-                                class="link-btn">Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Company Profile</span>
-                        <h5>PT Popeye Trans Logistik</h5>
-                        <p>Website perusahaan yang menekankan kejelasan profil bisnis, layanan, dan identitas visual
-                            yang profesional.</p>
-                        <div class="project-tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Logistics</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://popeye-logistik.com/" target="_blank" rel="noopener noreferrer"
-                                class="link-btn">Demo</a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-md-6">
-                    <div class="project-card">
-                        <span class="project-type">Company Profile</span>
-                        <h5>PT Synergy Perkasa Group</h5>
-                        <p>Website company profile dengan pendekatan visual yang bersih untuk memperkuat citra
-                            profesional perusahaan.</p>
-                        <div class="project-tags">
-                            <span class="tag">WordPress</span>
-                            <span class="tag">Corporate</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://synergiperkasagroup.com/" target="_blank" rel="noopener noreferrer"
-                                class="link-btn">Demo</a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <section class="section-shell" id="kontak">
-        <div class="container">
-            <div class="row g-4 align-items-stretch">
-                <div class="col-lg-7">
-                    <div class="contact-card">
-                        <span class="section-label">Kontak</span>
-                        <h2 class="section-title">Terbuka untuk kerja sama proyek, kolaborasi profesional, maupun
-                            peluang karier.</h2>
-                        <p>Jika Anda membutuhkan developer untuk website company profile, aplikasi internal, atau
-                            prototype produk digital, saya siap berdiskusi untuk memahami kebutuhan dan solusi yang
-                            paling sesuai.</p>
-                        <div class="social-links">
-                            <a href="https://wa.me/6289531656442" target="_blank" rel="noopener noreferrer"
-                                title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
-                            <a href="https://www.instagram.com/rohmadaditya/" target="_blank"
-                                rel="noopener noreferrer" title="Instagram"><i class="bi bi-instagram"></i></a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-5">
-                    <div class="contact-card">
-                        <span class="section-label">Ringkasan</span>
-                        <div class="d-grid gap-3">
-                            <div class="service-item">
-                                <i class="bi bi-person-workspace"></i>
-                                <div>
-                                    <strong>Role</strong>
-                                    <div class="text-muted">Full Stack Web Developer</div>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <i class="bi bi-geo-alt"></i>
-                                <div>
-                                    <strong>Fokus</strong>
-                                    <div class="text-muted">Website bisnis, aplikasi internal, dan prototype digital.
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="service-item">
-                                <i class="bi bi-chat-dots"></i>
-                                <div>
-                                    <strong>Kontak tercepat</strong>
-                                    <div class="text-muted">WhatsApp dan Instagram untuk komunikasi yang cepat.</div>
-                                </div>
+                    <article class="panel-card values-card">
+                        <div class="value-item">
+                            <i class="bi bi-bullseye"></i>
+                            <div>
+                                <h3>Berorientasi Hasil</h3>
+                                <p>Fokus pada kualitas, performa, dan kepuasan pengguna.</p>
                             </div>
                         </div>
-                    </div>
+                        <div class="value-item">
+                            <i class="bi bi-lightbulb"></i>
+                            <div>
+                                <h3>Selalu Belajar</h3>
+                                <p>Terus mengasah kemampuan dan mengikuti teknologi terbaru.</p>
+                            </div>
+                        </div>
+                        <div class="value-item">
+                            <i class="bi bi-people"></i>
+                            <div>
+                                <h3>Kolaboratif</h3>
+                                <p>Bekerja bersama tim untuk mencapai hasil terbaik.</p>
+                            </div>
+                        </div>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer">
-        <div class="container d-flex justify-content-center align-items-center flex-wrap gap-2">
-            <div>&copy; 2026 Rohmad Aditya. All rights reserved.</div>
+        <section class="section-band" id="keahlian">
+            <div class="container site-container">
+                <span class="section-label">Keahlian</span>
+                <div class="skills-grid">
+                    <article class="panel-card skill-card">
+                        <div class="skill-icon web"><i class="bi bi-window-sidebar"></i></div>
+                        <h3>Web Development</h3>
+                        <div class="skill-meta"><span>95%</span></div>
+                        <div class="skill-meter"><span style="width: 95%;"></span></div>
+                        <p>Membangun website modern, cepat, dan responsif.</p>
+                    </article>
+                    <article class="panel-card skill-card">
+                        <div class="skill-icon ui"><i class="bi bi-vector-pen"></i></div>
+                        <h3>UI/UX Design</h3>
+                        <div class="skill-meta"><span>90%</span></div>
+                        <div class="skill-meter"><span style="width: 90%;"></span></div>
+                        <p>Merancang antarmuka yang menarik dan berfokus pada UX.</p>
+                    </article>
+                    <article class="panel-card skill-card">
+                        <div class="skill-icon fe"><i class="bi bi-bootstrap-reboot"></i></div>
+                        <h3>Frontend</h3>
+                        <div class="skill-meta"><span>92%</span></div>
+                        <div class="skill-meter"><span style="width: 92%;"></span></div>
+                        <p>HTML, CSS, JavaScript, React, Tailwind CSS, dan lainnya.</p>
+                    </article>
+                    <article class="panel-card skill-card">
+                        <div class="skill-icon be"><i class="bi bi-hexagon"></i></div>
+                        <h3>Backend</h3>
+                        <div class="skill-meta"><span>88%</span></div>
+                        <div class="skill-meter"><span style="width: 88%;"></span></div>
+                        <p>Node.js, Express, REST API, database, dan authentication.</p>
+                    </article>
+                    <article class="panel-card skill-card">
+                        <div class="skill-icon brand"><i class="bi bi-pen"></i></div>
+                        <h3>Branding</h3>
+                        <div class="skill-meta"><span>85%</span></div>
+                        <div class="skill-meter"><span style="width: 85%;"></span></div>
+                        <p>Membangun identitas visual yang kuat dan konsisten.</p>
+                    </article>
+                    <article class="panel-card skill-card">
+                        <div class="skill-icon solve"><i class="bi bi-puzzle"></i></div>
+                        <h3>Problem Solving</h3>
+                        <div class="skill-meta"><span>95%</span></div>
+                        <div class="skill-meter"><span style="width: 95%;"></span></div>
+                        <p>Analitis, logis, dan terstruktur dalam menyelesaikan masalah.</p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band" id="portofolio">
+            <div class="container site-container">
+                <div class="portfolio-head">
+                    <span class="section-label">Portofolio</span>
+                    <div class="filter-pills" aria-label="Filter portofolio">
+                        <button class="filter-pill is-active" type="button">Semua</button>
+                        <button class="filter-pill" type="button">Website</button>
+                        <button class="filter-pill" type="button">Aplikasi</button>
+                        <button class="filter-pill" type="button">Branding</button>
+                        <button class="filter-pill" type="button">Lainnya</button>
+                    </div>
+                </div>
+
+                <div class="portfolio-grid">
+                    <article class="panel-card project-card">
+                        <div class="project-thumb">
+                            <img src="assets/projects/mg-playstation/slide-01.jpg" alt="Finanxa mock project preview" loading="lazy">
+                        </div>
+                        <span class="project-tag">Website</span>
+                        <h3>Finanxa</h3>
+                        <p>Website company profile untuk konsultasi keuangan bisnis.</p>
+                        <a class="project-link" href="#mgPlaystationModal" data-bs-toggle="modal" aria-label="Detail Finanxa"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                    <article class="panel-card project-card">
+                        <div class="project-thumb">
+                            <img src="assets/projects/mg-playstation/slide-02.jpg" alt="TaskFlow preview" loading="lazy">
+                        </div>
+                        <span class="project-tag violet">Aplikasi</span>
+                        <h3>TaskFlow</h3>
+                        <p>Aplikasi manajemen tugas untuk produktivitas tim.</p>
+                        <a class="project-link" href="#timelineTodoModal" data-bs-toggle="modal" aria-label="Detail TaskFlow"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                    <article class="panel-card project-card">
+                        <div class="project-thumb">
+                            <img src="assets/projects/mg-playstation/slide-03.jpg" alt="GreenShop preview" loading="lazy">
+                        </div>
+                        <span class="project-tag">Website</span>
+                        <h3>GreenShop</h3>
+                        <p>E-commerce plant shop dengan desain minimalis modern.</p>
+                        <a class="project-link" href="#filmModal" data-bs-toggle="modal" aria-label="Detail GreenShop"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                    <article class="panel-card project-card">
+                        <div class="project-thumb">
+                            <img src="assets/projects/mg-playstation/slide-04.jpg" alt="DashPro preview" loading="lazy">
+                        </div>
+                        <span class="project-tag cyan">Aplikasi</span>
+                        <h3>DashPro</h3>
+                        <p>Dashboard analitik dengan visualisasi data interaktif.</p>
+                        <a class="project-link" href="#posModal" data-bs-toggle="modal" aria-label="Detail DashPro"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                    <article class="panel-card project-card">
+                        <div class="project-thumb">
+                            <img src="assets/projects/mg-playstation/slide-05.jpg" alt="Nexora Brand preview" loading="lazy">
+                        </div>
+                        <span class="project-tag amber">Branding</span>
+                        <h3>Nexora Brand</h3>
+                        <p>Identitas brand untuk perusahaan teknologi modern.</p>
+                        <a class="project-link" href="#linktreeModal" data-bs-toggle="modal" aria-label="Detail Nexora Brand"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                    <article class="panel-card project-card">
+                        <div class="project-thumb">
+                            <img src="assets/projects/mg-playstation/slide-06.jpg" alt="EduLearn preview" loading="lazy">
+                        </div>
+                        <span class="project-tag">Website</span>
+                        <h3>EduLearn</h3>
+                        <p>Platform belajar online dengan pengalaman interaktif.</p>
+                        <a class="project-link" href="#asllogistikModal" data-bs-toggle="modal" aria-label="Detail EduLearn"><i class="bi bi-box-arrow-up-right"></i></a>
+                    </article>
+                </div>
+
+                <div class="portfolio-action">
+                    <a class="btn btn-outline-frost wide" href="#kontak">Lihat Semua Proyek <i class="bi bi-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <section class="section-band" id="kontak">
+            <div class="container site-container">
+                <span class="section-label">Kontak</span>
+                <div class="contact-grid">
+                    <article class="panel-card contact-info">
+                        <div class="contact-line">
+                            <i class="bi bi-envelope"></i>
+                            <div>
+                                <strong>Email</strong>
+                                <span>halo@rafdev.id</span>
+                            </div>
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-telephone"></i>
+                            <div>
+                                <strong>Telepon</strong>
+                                <span>+62 812-3456-7890</span>
+                            </div>
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-geo-alt"></i>
+                            <div>
+                                <strong>Lokasi</strong>
+                                <span>Jakarta, Indonesia</span>
+                            </div>
+                        </div>
+                        <div class="contact-line">
+                            <i class="bi bi-clock"></i>
+                            <div>
+                                <strong>Ketersediaan</strong>
+                                <span>Tersedia untuk freelance &amp; fulltime</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="panel-card contact-form-card">
+                        <form class="contact-form">
+                            <div class="contact-form-row">
+                                <input class="form-control" type="text" placeholder="Nama Lengkap" aria-label="Nama Lengkap">
+                                <input class="form-control" type="email" placeholder="Email" aria-label="Email">
+                            </div>
+                            <textarea class="form-control" rows="6" placeholder="Pesan Anda" aria-label="Pesan Anda"></textarea>
+                            <button class="btn btn-primary-glow wide" type="submit">Kirim Pesan <i class="bi bi-arrow-right"></i></button>
+                        </form>
+                    </article>
+
+                    <article class="panel-card contact-social">
+                        <h3>Terhubung dengan saya</h3>
+                        <p>Mari berkolaborasi dan wujudkan ide terbaik Anda.</p>
+                        <div class="social-grid">
+                            <a href="https://github.com/RohmadAditya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
+                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                            <a href="https://www.instagram.com/rohmadaditya/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                            <a href="https://dribbble.com/" target="_blank" rel="noopener noreferrer" aria-label="Dribbble"><i class="bi bi-dribbble"></i></a>
+                            <a href="mailto:halo@rafdev.id" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="site-footer">
+        <div class="container site-container footer-grid">
+            <div class="footer-brand">
+                <img src="assets/logo-ra.png" alt="Logo RA Dev">
+                <div>
+                    <strong>Kode. Desain. Solusi.</strong>
+                    <span>Mari membangun masa depan digital bersama.</span>
+                </div>
+            </div>
+            <p class="footer-copy">&copy; 2024 RA Dev. Semua hak dilindungi.</p>
+            <a class="back-to-top" href="#hero" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></a>
         </div>
     </footer>
 
