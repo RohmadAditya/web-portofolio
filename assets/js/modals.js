@@ -33,31 +33,31 @@ document.addEventListener('DOMContentLoaded', () => {
             thumb: 'assets/projects/mg-playstation/thumb-01.jpg',
             alt: 'Screenshot hero MG-Playstation',
             title: 'Hero Section',
-            desc: 'Tampilan pembuka landing page dengan visual utama dan CTA ketersediaan.'
+            desc: 'Opening landing page section with a primary visual and availability CTA.'
         },
         {
             src: 'assets/projects/mg-playstation/slide-02.jpg',
             full: 'assets/projects/mg-playstation/mg-02.png',
             thumb: 'assets/projects/mg-playstation/thumb-02.jpg',
-            alt: 'Screenshot fasilitas MG-Playstation',
-            title: 'Fasilitas',
-            desc: 'Ringkasan fasilitas utama yang menjadi nilai jual layanan rental.'
+            alt: 'Screenshot MG-Playstation facilities',
+            title: 'Facilities',
+            desc: 'A concise summary of the core facilities that support the rental service offer.'
         },
         {
             src: 'assets/projects/mg-playstation/slide-03.jpg',
             full: 'assets/projects/mg-playstation/mg-03.png',
             thumb: 'assets/projects/mg-playstation/thumb-03.jpg',
-            alt: 'Screenshot harga MG-Playstation',
-            title: 'Informasi Harga',
-            desc: 'Penyajian layanan dan pricing agar pelanggan mudah membandingkan opsi.'
+            alt: 'Screenshot MG-Playstation pricing',
+            title: 'Pricing Information',
+            desc: 'Service and pricing presentation that makes options easy for customers to compare.'
         },
         {
             src: 'assets/projects/mg-playstation/slide-04.jpg',
             full: 'assets/projects/mg-playstation/mg-04.png',
             thumb: 'assets/projects/mg-playstation/thumb-04.jpg',
-            alt: 'Screenshot ketersediaan MG-Playstation',
-            title: 'Ketersediaan Meja',
-            desc: 'Status unit dan meja PlayStation yang tersedia secara visual.'
+            alt: 'Screenshot MG-Playstation availability',
+            title: 'Station Availability',
+            desc: 'Visual availability status for PlayStation units and rental stations.'
         },
         {
             src: 'assets/projects/mg-playstation/slide-05.jpg',
@@ -65,15 +65,15 @@ document.addEventListener('DOMContentLoaded', () => {
             thumb: 'assets/projects/mg-playstation/thumb-05.jpg',
             alt: 'Screenshot game MG-Playstation',
             title: 'Top Games',
-            desc: 'Katalog game unggulan untuk memperkuat daya tarik landing page.'
+            desc: 'Featured game catalog designed to strengthen the appeal of the landing page.'
         },
         {
             src: 'assets/projects/mg-playstation/slide-06.jpg',
             full: 'assets/projects/mg-playstation/mg-06.png',
             thumb: 'assets/projects/mg-playstation/thumb-06.jpg',
-            alt: 'Screenshot kontak MG-Playstation',
-            title: 'Kontak dan Lokasi',
-            desc: 'Informasi alamat, kontak, dan peta untuk memudahkan pelanggan.'
+            alt: 'Screenshot MG-Playstation contact',
+            title: 'Contact and Location',
+            desc: 'Address, contact, and map information that helps customers reach the business.'
         },
         {
             src: 'assets/projects/mg-playstation/slide-07.jpg',
@@ -81,7 +81,7 @@ document.addEventListener('DOMContentLoaded', () => {
             thumb: 'assets/projects/mg-playstation/thumb-07.jpg',
             alt: 'Screenshot Admin Panel MG-Playstation',
             title: 'Admin Panel',
-            desc: 'Antarmuka administrasi untuk mengelola data dan transaksi rental.'
+            desc: 'Administration interface for managing rental data and transactions.'
         }
     ];
 
@@ -107,7 +107,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const mgThumbs = mgSlides
         .map((slide, index) => `
-            <button type="button" class="project-thumb ${index === 0 ? 'is-active' : ''}" data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}" aria-label="Lihat ${slide.title}">
+            <button type="button" class="project-thumb ${index === 0 ? 'is-active' : ''}" data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}" aria-label="View ${slide.title}">
                 <img src="${slide.thumb}" alt="${slide.alt}" loading="lazy" decoding="async">
             </button>`)
         .join('');
@@ -121,8 +121,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Studi Kasus</h6>
-                    <p class="mb-3">Aplikasi ini dirancang untuk mendukung pengelolaan rental PlayStation, mulai dari pencatatan transaksi, manajemen pelanggan, hingga laporan keuangan. Sistem juga dilengkapi landing page terintegrasi untuk kebutuhan promosi dan pemesanan online.</p>
+                    <h6 class="fw-bold mb-2">Case Study</h6>
+                    <p class="mb-3">This application supports PlayStation rental operations, from transaction records and customer management to financial reporting. It also includes an integrated landing page for promotion and online booking needs.</p>
                     <h6 class="fw-bold mb-2">Screenshot</h6>
                     <div id="mgPlaystationCarousel" class="carousel slide project-carousel mb-3" data-bs-ride="false" data-bs-interval="4000" data-bs-pause="hover">
                         <div class="carousel-indicators">
@@ -159,8 +159,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi pencatatan tugas dan kegiatan harian yang membantu pengguna mengelola, menjadwalkan, dan memantau progres aktivitas dengan lebih efisien.</p>
+                    <h6 class="fw-bold mb-2">Description</h6>
+                    <p class="mb-3">A task and daily activity tracking application that helps users manage, schedule, and monitor progress more efficiently.</p>
                     <h6 class="fw-bold mb-2">Screenshot</h6>
                     <div class="text-center mb-3">
                         <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Timeline-Todo" alt="Screenshot Timeline-Todo" class="img-fluid">
@@ -184,8 +184,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi Point of Sales yang dirancang untuk membantu toko atau bisnis mengelola transaksi penjualan, stok barang, dan laporan keuangan secara digital.</p>
+                    <h6 class="fw-bold mb-2">Description</h6>
+                    <p class="mb-3">A Point of Sales application designed to help stores and businesses manage sales transactions, inventory, and financial reports digitally.</p>
                     <h6 class="fw-bold mb-2">Screenshot</h6>
                     <div class="text-center mb-3">
                         <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Point+of+Sales" alt="Screenshot POS" class="img-fluid">
@@ -205,21 +205,21 @@ document.addEventListener('DOMContentLoaded', () => {
         <div class="modal-dialog modal-lg modal-dialog-centered">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="filmModalLabel">Web Pencari Film</h5>
+                    <h5 class="modal-title" id="filmModalLabel">Movie Finder</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi web untuk mencari informasi film, menampilkan detail, serta menyediakan fitur pencarian berdasarkan judul atau genre dengan memanfaatkan data dari API eksternal.</p>
+                    <h6 class="fw-bold mb-2">Description</h6>
+                    <p class="mb-3">A web application for searching movie information, viewing details, and filtering by title or genre using data from an external API.</p>
                     <h6 class="fw-bold mb-2">Screenshot</h6>
                     <div class="text-center mb-3">
-                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Web+Pencari+Film" alt="Screenshot Web Pencari Film" class="img-fluid">
+                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Movie+Finder" alt="Screenshot Movie Finder" class="img-fluid">
                     </div>
                     <h6 class="fw-bold mb-2">Tech Stack</h6>
                     <ul class="mb-0">
                         <li>React</li>
                         <li>CSS</li>
-                        <li>API Film (OMDb/TMDB)</li>
+                        <li>Movie API (OMDb/TMDB)</li>
                     </ul>
                 </div>
             </div>
@@ -234,8 +234,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi Link Tree sederhana yang menampilkan berbagai tautan penting dalam satu halaman, cocok untuk profil media sosial maupun portofolio online.</p>
+                    <h6 class="fw-bold mb-2">Description</h6>
+                    <p class="mb-3">A simple Link Tree application that presents important links on one page, suitable for social profiles and online portfolios.</p>
                     <h6 class="fw-bold mb-2">Screenshot</h6>
                     <div class="text-center mb-3">
                         <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Custom+Link+Tree" alt="Screenshot Custom Link Tree" class="img-fluid">
@@ -259,8 +259,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Website company profile untuk PT Artalapan Strategi Logistik yang bergerak di bidang forwarding, dengan fokus pada tampilan profesional dan penyajian informasi perusahaan yang jelas.</p>
+                    <h6 class="fw-bold mb-2">Description</h6>
+                    <p class="mb-3">A company profile website for PT Artalapan Strategi Logistik, a forwarding business, focused on a professional presentation and clear company information.</p>
                     <h6 class="fw-bold mb-2">Tech Stack</h6>
                     <ul class="mb-0">
                         <li>WordPress</li>
@@ -278,8 +278,8 @@ document.addEventListener('DOMContentLoaded', () => {
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Website company profile untuk Daemanindo Agencies yang bergerak di bidang logistik di wilayah Dili, Timor Leste, dengan pendekatan visual yang formal dan navigasi yang mudah dipahami.</p>
+                    <h6 class="fw-bold mb-2">Description</h6>
+                    <p class="mb-3">A company profile website for Daemanindo Agencies, a logistics business in Dili, Timor-Leste, with a formal visual approach and easy-to-understand navigation.</p>
                     <h6 class="fw-bold mb-2">Tech Stack</h6>
                     <ul class="mb-0">
                         <li>WordPress</li>
