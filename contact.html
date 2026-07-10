@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="id">
+<html lang="en">
 
 <head>
     <meta charset="UTF-8">
@@ -16,7 +16,7 @@
 </head>
 
 <body class="is-loading inner-page">
-    <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="Memuat halaman">
+    <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="Loading page">
         <div class="site-loader__inner">
             <div class="site-loader__logo">
                 <img src="assets/logo-ra.png" alt="Logo RA Dev">
@@ -30,7 +30,7 @@
 
     <nav class="navbar navbar-expand-lg fixed-top">
         <div class="container site-container">
-            <a class="navbar-brand" href="index.html" aria-label="Kembali ke beranda">
+            <a class="navbar-brand" href="index.html" aria-label="Back to homepage">
                 <img src="assets/logo-ra.png" alt="Logo RA Dev">
             </a>
             <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
@@ -50,68 +50,91 @@
     </nav>
 
     <main class="page-shell">
-        <section class="page-hero page-hero--center" id="top">
+        <section class="page-hero page-hero--compact page-hero--center" id="top">
             <div class="container site-container">
                 <span class="section-label">Contact</span>
-                <h1 class="section-title">Apa yang bisa saya bantu untuk proyek Anda?</h1>
+                <h1 class="section-title">Let's discuss your project needs.</h1>
                 <p class="page-hero-copy">
-                    Jika Anda sedang menyiapkan website baru, redesign tampilan, atau butuh pengembangan sistem,
-                    kirim pesan dan saya akan balas secepatnya.
+                    Send a short brief, question, or early idea. I will help shape the next steps
+                    clearly and thoughtfully.
                 </p>
             </div>
         </section>
 
         <section class="section-band">
             <div class="container site-container">
-                <div class="contact-stack">
-                    <article class="panel-card contact-panel contact-panel--wide">
-                        <h2 class="contact-title">Mari mulai dari kebutuhan yang paling penting</h2>
+                <div class="contact-layout">
+                    <article class="panel-card contact-panel contact-panel--primary">
+                        <span class="contact-kicker">Start with a quick conversation</span>
+                        <h2 class="contact-title">Tell me your goals, timeline, and the outcome you want to build.</h2>
                         <p class="contact-lead">
-                            Saya biasa membantu dari tahap diskusi kebutuhan, penyusunan tampilan,
-                            sampai implementasi website dan aplikasi yang siap dipakai.
+                            I help with requirement discussions, interface planning, and implementation
+                            for websites and applications that are ready to use.
                         </p>
-                        <div class="contact-grid contact-grid--simple">
-                            <div class="contact-line">
-                                <i class="bi bi-envelope"></i>
-                                <div>
-                                    <strong>Email</strong>
-                                    <span>halo@rafdev.id</span>
-                                </div>
-                            </div>
-                            <div class="contact-line">
-                                <i class="bi bi-telephone"></i>
-                                <div>
-                                    <strong>Telepon</strong>
-                                    <span>+62 812-3456-7890</span>
-                                </div>
-                            </div>
-                            <div class="contact-line">
-                                <i class="bi bi-geo-alt"></i>
-                                <div>
-                                    <strong>Lokasi</strong>
-                                    <span>Jakarta, Indonesia</span>
-                                </div>
-                            </div>
-                            <div class="contact-line">
-                                <i class="bi bi-clock"></i>
-                                <div>
-                                    <strong>Ketersediaan</strong>
-                                    <span>Tersedia untuk freelance dan kolaborasi tim</span>
-                                </div>
-                            </div>
+
+                        <div class="contact-actions" aria-label="Primary contact actions">
+                            <a class="btn btn-primary-glow" href="mailto:rohmadaditya21@gmail.com" target="_blank" rel="noopener noreferrer">
+                                Send Email <i class="bi bi-envelope"></i>
+                            </a>
+                            <a class="btn btn-outline-frost" href="https://wa.me/6289531656442" target="_blank"
+                                rel="noopener noreferrer">
+                                Chat WhatsApp <i class="bi bi-whatsapp"></i>
+                            </a>
                         </div>
                     </article>
 
-                    <article class="panel-card contact-panel">
-                        <h3>Connect</h3>
-                        <p>Silakan hubungi saya lewat platform yang paling nyaman untuk Anda.</p>
-                        <div class="social-grid social-grid--large">
-                            <a href="https://github.com/RohmadAditya" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i class="bi bi-github"></i></a>
-                            <a href="https://www.linkedin.com/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                            <a href="https://www.instagram.com/rohmadaditya/" target="_blank" rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                            <a href="mailto:halo@rafdev.id" aria-label="Email"><i class="bi bi-envelope"></i></a>
-                        </div>
-                    </article>
+                    <aside class="contact-side" aria-label="Contact information">
+                        <article class="panel-card contact-panel contact-panel--details">
+                            <h3>Contact details</h3>
+                            <div class="contact-list">
+                                <div class="contact-line">
+                                    <i class="bi bi-envelope"></i>
+                                    <div>
+                                        <strong>Email</strong>
+                                        <a href="mailto:rohmadaditya21@gmail.com">rohmadaditya21@gmail.com</a>
+                                    </div>
+                                </div>
+                                <div class="contact-line">
+                                    <i class="bi bi-whatsapp"></i>
+                                    <div>
+                                        <strong>WhatsApp</strong>
+                                        <a href="https://wa.me/6289531656442" target="_blank"
+                                            rel="noopener noreferrer">+62 895-3165-6442</a>
+                                    </div>
+                                </div>
+                                <div class="contact-line">
+                                    <i class="bi bi-geo-alt"></i>
+                                    <div>
+                                        <strong>Location</strong>
+                                        <span>Sidoarjo, Indonesia</span>
+                                    </div>
+                                </div>
+                                <div class="contact-line">
+                                    <i class="bi bi-clock"></i>
+                                    <div>
+                                        <strong>Availability</strong>
+                                        <span>Available for freelance work and team collaboration</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="panel-card contact-panel contact-panel--social">
+                            <div>
+                                <h3>Connect</h3>
+                                <p>Choose the platform that feels most convenient for you.</p>
+                            </div>
+                            <div class="social-grid social-grid--large">
+                                <a href="https://github.com/RohmadAditya" target="_blank" rel="noopener noreferrer"
+                                    aria-label="GitHub"><i class="bi bi-github"></i></a>
+                                <a href="https://www.linkedin.com/in/rohmad-aditya-731b02390" target="_blank" rel="noopener noreferrer"
+                                    aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+                                <a href="https://www.instagram.com/rohmad_aditya/" target="_blank"
+                                    rel="noopener noreferrer" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+                                <a href="mailto:rohmadaditya21@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i class="bi bi-envelope"></i></a>
+                            </div>
+                        </article>
+                    </aside>
                 </div>
             </div>
         </section>
@@ -123,11 +146,11 @@
                 <img src="assets/logo-ra.png" alt="Logo RA Dev">
                 <div>
                     <strong>RA Dev</strong>
-                    <span>Website, aplikasi, dan antarmuka yang rapi untuk kebutuhan digital Anda.</span>
+                    <span>Clean websites, applications, and interfaces for your digital needs.</span>
                 </div>
             </div>
-            <p class="footer-copy">&copy; 2026 RA Dev. Semua hak dilindungi.</p>
-            <a class="back-to-top" href="#top" aria-label="Kembali ke atas"><i class="bi bi-arrow-up"></i></a>
+            <p class="footer-copy">&copy; 2026 RA Dev. All rights reserved.</p>
+            <a class="back-to-top" href="#top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
         </div>
     </footer>
 
