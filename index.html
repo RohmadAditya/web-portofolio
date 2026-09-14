@@ -1,227 +1,325 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="id">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>RA Dev | Home</title>
+    <meta name="description" content="Portfolio Rohmad Aditya, Fullstack Web Developer yang membangun website, antarmuka, dan sistem digital.">
+    <meta name="theme-color" content="#07111f">
+    <title>Rohmad Aditya | Fullstack Web Developer</title>
     <link rel="icon" type="image/png" href="assets/logo-ra.png">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://cdn.jsdelivr.net">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap"
-        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css">
+    <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body class="is-loading">
-    <div class="site-loader" id="siteLoader" role="status" aria-live="polite" aria-label="Loading page">
-        <div class="site-loader__inner">
-            <div class="site-loader__logo">
-                <img src="assets/logo-ra.png" alt="Logo RA Dev">
+<body>
+    <a class="skip-link" href="#main-content" data-id="Lewati ke konten" data-en="Skip to content">Lewati ke konten</a>
+    <div class="spotlight" aria-hidden="true"></div>
+
+    <div class="portfolio-shell">
+        <header class="intro-panel" id="top">
+            <div class="intro-panel__inner">
+                <a class="brand-mark" href="#top" aria-label="RA Dev - kembali ke atas" data-id-aria-label="RA Dev - kembali ke atas" data-en-aria-label="RA Dev - back to top">
+                    <img src="assets/logo-ra.png" alt="Logo RA Dev">
+                </a>
+
+                <div class="intro-copy">
+                    <p class="eyebrow" data-id="Halo, saya" data-en="Hi, I'm">Halo, saya</p>
+                    <h1>Rohmad Aditya</h1>
+                    <h2>Fullstack Web Developer</h2>
+                    <p class="intro-summary"
+                        data-id="Saya membangun website, antarmuka, dan sistem yang bersih, stabil, serta mudah digunakan."
+                        data-en="I build clean, stable, and easy-to-use websites, interfaces, and systems.">
+                        Saya membangun website, antarmuka, dan sistem yang bersih, stabil, serta mudah digunakan.
+                    </p>
+                </div>
+
+                <nav class="section-nav" aria-label="Navigasi utama" data-id-aria-label="Navigasi utama" data-en-aria-label="Primary navigation">
+                    <a href="#about" class="section-nav__link is-active" data-section="about">
+                        <span class="section-nav__line"></span>
+                        <span data-id="Tentang" data-en="About">Tentang</span>
+                    </a>
+                    <a href="#services" class="section-nav__link" data-section="services">
+                        <span class="section-nav__line"></span>
+                        <span data-id="Layanan" data-en="Services">Layanan</span>
+                    </a>
+                    <a href="#projects" class="section-nav__link" data-section="projects">
+                        <span class="section-nav__line"></span>
+                        <span data-id="Proyek" data-en="Projects">Proyek</span>
+                    </a>
+                    <a href="#contact" class="section-nav__link" data-section="contact">
+                        <span class="section-nav__line"></span>
+                        <span data-id="Kontak" data-en="Contact">Kontak</span>
+                    </a>
+                </nav>
+
+                <div class="intro-footer">
+                    <div class="language-switcher" role="group" aria-label="Pilih bahasa" data-id-aria-label="Pilih bahasa" data-en-aria-label="Choose language">
+                        <button type="button" class="language-button is-active" data-language="id" aria-pressed="true">ID</button>
+                        <span aria-hidden="true">/</span>
+                        <button type="button" class="language-button" data-language="en" aria-pressed="false">EN</button>
+                    </div>
+
+                    <div class="social-links" aria-label="Tautan sosial" data-id-aria-label="Tautan sosial" data-en-aria-label="Social links">
+                        <a href="https://github.com/RohmadAditya" target="_blank" rel="noopener noreferrer" aria-label="GitHub">
+                            <i class="bi bi-github" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/rohmad-aditya-731b02390" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                            <i class="bi bi-linkedin" aria-hidden="true"></i>
+                        </a>
+                        <a href="https://www.instagram.com/rohmad_aditya/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                            <i class="bi bi-instagram" aria-hidden="true"></i>
+                        </a>
+                        <a href="mailto:rohmadaditya21@gmail.com" aria-label="Email">
+                            <i class="bi bi-envelope" aria-hidden="true"></i>
+                        </a>
+                    </div>
+                </div>
             </div>
-            <p class="site-loader__label">Loading Pages</p>
-            <div class="site-loader__bar" aria-hidden="true">
-                <span></span>
-            </div>
-        </div>
+        </header>
+
+        <main class="content-panel" id="main-content">
+            <section class="content-section" id="about" aria-labelledby="about-title">
+                <p class="mobile-section-label" id="about-title" data-id="Tentang" data-en="About">Tentang</p>
+                <div class="prose-block">
+                    <p data-id-html="Saya bekerja di sisi <strong>frontend dan backend</strong> untuk membuat website, landing page, internal tool, dan antarmuka admin dengan struktur yang jelas."
+                        data-en-html="I work across <strong>frontend and backend</strong> to create websites, landing pages, internal tools, and admin interfaces with a clear structure.">
+                        Saya bekerja di sisi <strong>frontend dan backend</strong> untuk membuat website, landing page, internal tool, dan antarmuka admin dengan struktur yang jelas.
+                    </p>
+                    <p data-id-html="Fokus saya sederhana: visual yang bersih, implementasi yang stabil, dan alur kerja yang masuk akal bagi orang yang menggunakannya."
+                        data-en-html="My focus is simple: clean visuals, stable implementation, and workflows that make sense for the people using them.">
+                        Fokus saya sederhana: visual yang bersih, implementasi yang stabil, dan alur kerja yang masuk akal bagi orang yang menggunakannya.
+                    </p>
+                    <p data-id-html="Saya senang membantu klien dan tim mengubah ide menjadi produk digital yang <strong>siap diluncurkan, dikembangkan, dan digunakan</strong>."
+                        data-en-html="I enjoy helping clients and teams turn ideas into digital products that are <strong>ready to launch, improve, and use</strong>.">
+                        Saya senang membantu klien dan tim mengubah ide menjadi produk digital yang <strong>siap diluncurkan, dikembangkan, dan digunakan</strong>.
+                    </p>
+                </div>
+
+                <dl class="profile-facts">
+                    <div>
+                        <dt data-id="Lokasi" data-en="Location">Lokasi</dt>
+                        <dd>Sidoarjo, Indonesia</dd>
+                    </div>
+                    <div>
+                        <dt data-id="Fokus" data-en="Focus">Fokus</dt>
+                        <dd data-id="Website, dashboard, dan aplikasi internal" data-en="Websites, dashboards, and internal applications">Website, dashboard, dan aplikasi internal</dd>
+                    </div>
+                    <div>
+                        <dt data-id="Cara kerja" data-en="Working style">Cara kerja</dt>
+                        <dd data-id="Jelas, kolaboratif, dan berorientasi hasil" data-en="Clear, collaborative, and outcome-oriented">Jelas, kolaboratif, dan berorientasi hasil</dd>
+                    </div>
+                </dl>
+            </section>
+
+            <section class="content-section" id="services" aria-labelledby="services-title">
+                <p class="mobile-section-label" id="services-title" data-id="Layanan" data-en="Services">Layanan</p>
+                <div class="section-heading">
+                    <p class="eyebrow" data-id="Yang saya kerjakan" data-en="What I do">Yang saya kerjakan</p>
+                    <h2 data-id="Solusi digital yang praktis dan terukur." data-en="Practical, focused digital solutions.">Solusi digital yang praktis dan terukur.</h2>
+                </div>
+
+                <div class="service-list">
+                    <article class="service-item">
+                        <span class="service-icon"><i class="bi bi-window-sidebar" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 data-id="Pengembangan Website" data-en="Website Development">Pengembangan Website</h3>
+                            <p data-id="Website khusus untuk company profile, landing page, dan promosi digital dengan alur konten yang jelas."
+                               data-en="Custom websites for company profiles, landing pages, and digital promotion with a clear content flow.">
+                                Website khusus untuk company profile, landing page, dan promosi digital dengan alur konten yang jelas.
+                            </p>
+                            <ul class="tag-list" aria-label="Keahlian" data-id-aria-label="Keahlian" data-en-aria-label="Skills">
+                                <li>Responsive</li><li>Landing Page</li><li>Company Profile</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <span class="service-icon"><i class="bi bi-code-square" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 data-id="Implementasi Frontend" data-en="Frontend Implementation">Implementasi Frontend</h3>
+                            <p data-id="Mengubah desain menjadi antarmuka yang rapi, cepat, konsisten, dan nyaman digunakan di berbagai perangkat."
+                               data-en="Turning designs into clean, fast, consistent interfaces that work comfortably across devices.">
+                                Mengubah desain menjadi antarmuka yang rapi, cepat, konsisten, dan nyaman digunakan di berbagai perangkat.
+                            </p>
+                            <ul class="tag-list" aria-label="Keahlian" data-id-aria-label="Keahlian" data-en-aria-label="Skills">
+                                <li>HTML</li><li>CSS</li><li>JavaScript</li><li>Bootstrap</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <span class="service-icon"><i class="bi bi-database" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 data-id="Backend &amp; Pengembangan Sistem" data-en="Backend &amp; System Development">Backend &amp; Pengembangan Sistem</h3>
+                            <p data-id="Membangun fitur aplikasi, struktur data, dan alur operasional yang stabil serta mudah dikelola."
+                               data-en="Building stable application features, data structures, and operational flows that are easy to manage.">
+                                Membangun fitur aplikasi, struktur data, dan alur operasional yang stabil serta mudah dikelola.
+                            </p>
+                            <ul class="tag-list" aria-label="Keahlian" data-id-aria-label="Keahlian" data-en-aria-label="Skills">
+                                <li>Laravel</li><li>MySQL</li><li>REST API</li><li>CRUD</li>
+                            </ul>
+                        </div>
+                    </article>
+
+                    <article class="service-item">
+                        <span class="service-icon"><i class="bi bi-vector-pen" aria-hidden="true"></i></span>
+                        <div>
+                            <h3 data-id="Penyempurnaan UI" data-en="UI Refinement">Penyempurnaan UI</h3>
+                            <p data-id="Merapikan hierarki konten, navigasi, dan visual agar produk terasa lebih ringan dan profesional."
+                               data-en="Refining content hierarchy, navigation, and visuals so products feel lighter and more professional.">
+                                Merapikan hierarki konten, navigasi, dan visual agar produk terasa lebih ringan dan profesional.
+                            </p>
+                            <ul class="tag-list" aria-label="Keahlian" data-id-aria-label="Keahlian" data-en-aria-label="Skills">
+                                <li>UI Audit</li><li>Design System</li><li>Accessibility</li>
+                            </ul>
+                        </div>
+                    </article>
+                </div>
+            </section>
+
+            <section class="content-section" id="projects" aria-labelledby="projects-title">
+                <p class="mobile-section-label" id="projects-title" data-id="Proyek" data-en="Projects">Proyek</p>
+                <div class="section-heading">
+                    <p class="eyebrow" data-id="Karya pilihan" data-en="Selected work">Karya pilihan</p>
+                    <h2 data-id="Produk digital untuk kebutuhan nyata." data-en="Digital products built for real needs.">Produk digital untuk kebutuhan nyata.</h2>
+                </div>
+
+                <div class="project-group">
+                    <p class="project-group__label" data-id="Proyek produksi" data-en="Production projects">Proyek produksi</p>
+
+                    <button type="button" class="project-card project-card--featured" data-bs-toggle="modal" data-bs-target="#mgPlaystationModal" aria-label="Lihat detail MG-Playstation" data-id-aria-label="Lihat detail MG-Playstation" data-en-aria-label="View MG-Playstation details">
+                        <span class="project-card__index">01</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>MG-Playstation</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Landing page dan sistem manajemen rental PlayStation dengan alur promosi dan operasional yang saling terhubung."
+                                  data-en="A PlayStation rental landing page and management system with connected promotional and operational flows.">
+                                Landing page dan sistem manajemen rental PlayStation dengan alur promosi dan operasional yang saling terhubung.
+                            </span>
+                            <span class="tag-list"><span>Laravel 10</span><span>Filament</span><span>MySQL</span><span>Bootstrap</span></span>
+                        </span>
+                        <span class="project-card__media"><img src="assets/projects/mg-playstation/slide-01.jpg" alt="Tampilan MG-Playstation" data-id-alt="Tampilan MG-Playstation" data-en-alt="MG-Playstation preview" loading="lazy"></span>
+                    </button>
+
+                    <button type="button" class="project-card" data-bs-toggle="modal" data-bs-target="#asllogistikModal" aria-label="Lihat detail PT Artalapan Strategi Logistik" data-id-aria-label="Lihat detail PT Artalapan Strategi Logistik" data-en-aria-label="View PT Artalapan Strategi Logistik details">
+                        <span class="project-card__index">02</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>PT Artalapan Strategi Logistik</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Company profile profesional untuk bisnis forwarding dengan informasi layanan dan perusahaan yang mudah dipahami."
+                                  data-en="A professional company profile for a forwarding business with clear service and company information.">
+                                Company profile profesional untuk bisnis forwarding dengan informasi layanan dan perusahaan yang mudah dipahami.
+                            </span>
+                            <span class="tag-list"><span>WordPress</span><span>Company Profile</span></span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="project-card" data-bs-toggle="modal" data-bs-target="#daemanindoagenciesModal" aria-label="Lihat detail Daemanindo Agencies" data-id-aria-label="Lihat detail Daemanindo Agencies" data-en-aria-label="View Daemanindo Agencies details">
+                        <span class="project-card__index">03</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>Daemanindo Agencies</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Website company profile formal untuk perusahaan logistik di Dili dengan navigasi yang ringkas."
+                                  data-en="A formal company profile for a Dili-based logistics business with concise, easy-to-use navigation.">
+                                Website company profile formal untuk perusahaan logistik di Dili dengan navigasi yang ringkas.
+                            </span>
+                            <span class="tag-list"><span>WordPress</span><span>Logistics</span></span>
+                        </span>
+                    </button>
+                </div>
+
+                <div class="project-group">
+                    <p class="project-group__label" data-id="Proyek konsep" data-en="Concept projects">Proyek konsep</p>
+
+                    <button type="button" class="project-card" data-bs-toggle="modal" data-bs-target="#timelineTodoModal" aria-label="Lihat detail Timeline-Todo" data-id-aria-label="Lihat detail Timeline-Todo" data-en-aria-label="View Timeline-Todo details">
+                        <span class="project-card__index">04</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>Timeline-Todo</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Prototype pengelolaan tugas dan aktivitas untuk mengatur jadwal, prioritas, dan progres harian."
+                                  data-en="A task and activity management prototype for organizing schedules, priorities, and daily progress.">
+                                Prototype pengelolaan tugas dan aktivitas untuk mengatur jadwal, prioritas, dan progres harian.
+                            </span>
+                            <span class="tag-list"><span>Laravel</span><span>Bootstrap</span><span>MySQL</span></span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="project-card" data-bs-toggle="modal" data-bs-target="#posModal" aria-label="Lihat detail Point of Sales" data-id-aria-label="Lihat detail Point of Sales" data-en-aria-label="View Point of Sales details">
+                        <span class="project-card__index">05</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>Point of Sales</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Konsep kasir digital untuk transaksi penjualan, pengelolaan stok, dan laporan keuangan."
+                                  data-en="A digital cashier concept for sales transactions, stock tracking, and financial reporting.">
+                                Konsep kasir digital untuk transaksi penjualan, pengelolaan stok, dan laporan keuangan.
+                            </span>
+                            <span class="tag-list"><span>Laravel</span><span>Bootstrap</span><span>MySQL</span></span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="project-card" data-bs-toggle="modal" data-bs-target="#filmModal" aria-label="Lihat detail Movie Finder" data-id-aria-label="Lihat detail Movie Finder" data-en-aria-label="View Movie Finder details">
+                        <span class="project-card__index">06</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>Movie Finder</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Prototype pencarian film untuk menjelajahi detail, genre, dan data dari API eksternal."
+                                  data-en="A movie search prototype for browsing details, genres, and data from an external API.">
+                                Prototype pencarian film untuk menjelajahi detail, genre, dan data dari API eksternal.
+                            </span>
+                            <span class="tag-list"><span>React</span><span>CSS</span><span>Movie API</span></span>
+                        </span>
+                    </button>
+
+                    <button type="button" class="project-card" data-bs-toggle="modal" data-bs-target="#linktreeModal" aria-label="Lihat detail Custom Link Tree" data-id-aria-label="Lihat detail Custom Link Tree" data-en-aria-label="View Custom Link Tree details">
+                        <span class="project-card__index">07</span>
+                        <span class="project-card__body">
+                            <span class="project-card__topline"><span>Custom Link Tree</span><i class="bi bi-arrow-up-right" aria-hidden="true"></i></span>
+                            <span class="project-card__description" data-id="Hub tautan personal untuk menyatukan profil sosial, referensi portfolio, dan tautan penting."
+                                  data-en="A personal link hub for social profiles, portfolio references, and important links.">
+                                Hub tautan personal untuk menyatukan profil sosial, referensi portfolio, dan tautan penting.
+                            </span>
+                            <span class="tag-list"><span>HTML</span><span>CSS</span><span>Bootstrap</span></span>
+                        </span>
+                    </button>
+                </div>
+            </section>
+
+            <section class="content-section contact-section" id="contact" aria-labelledby="contact-title">
+                <p class="mobile-section-label" data-id="Kontak" data-en="Contact">Kontak</p>
+                <p class="eyebrow" data-id="Mulai percakapan" data-en="Start a conversation">Mulai percakapan</p>
+                <h2 id="contact-title" data-id="Punya ide atau proyek yang ingin diwujudkan?" data-en="Have an idea or project you'd like to build?">Punya ide atau proyek yang ingin diwujudkan?</h2>
+                <p data-id="Ceritakan tujuan, kebutuhan, atau ide awal Anda. Saya siap membantu merancang langkah berikutnya dengan jelas."
+                   data-en="Tell me about your goals, needs, or early idea. I'll help shape the next steps clearly.">
+                    Ceritakan tujuan, kebutuhan, atau ide awal Anda. Saya siap membantu merancang langkah berikutnya dengan jelas.
+                </p>
+                <div class="contact-actions" aria-label="Pilihan kontak" data-id-aria-label="Pilihan kontak" data-en-aria-label="Contact options">
+                    <a class="primary-action" href="mailto:rohmadaditya21@gmail.com">
+                        <i class="bi bi-envelope" aria-hidden="true"></i>
+                        <span data-id="Kirim Email" data-en="Send Email">Kirim Email</span>
+                    </a>
+                    <a class="secondary-action" href="https://wa.me/6289531656442" target="_blank" rel="noopener noreferrer">
+                        <i class="bi bi-whatsapp" aria-hidden="true"></i>
+                        <span data-id="Chat WhatsApp" data-en="Chat on WhatsApp">Chat WhatsApp</span>
+                    </a>
+                </div>
+                <div class="contact-meta">
+                    <a href="mailto:rohmadaditya21@gmail.com">rohmadaditya21@gmail.com</a>
+                    <span aria-hidden="true">•</span>
+                    <span>Sidoarjo, Indonesia</span>
+                </div>
+            </section>
+
+            <footer class="site-footer">
+                <p data-id-html="Dirancang dan dikembangkan oleh <strong>Rohmad Aditya</strong>."
+                   data-en-html="Designed and built by <strong>Rohmad Aditya</strong>.">
+                    Dirancang dan dikembangkan oleh <strong>Rohmad Aditya</strong>.
+                </p>
+                <a href="#top" data-id="Kembali ke atas" data-en="Back to top">Kembali ke atas</a>
+            </footer>
+        </main>
     </div>
 
-    <nav class="navbar navbar-expand-lg fixed-top">
-        <div class="container site-container">
-            <a class="navbar-brand" href="index.html" aria-label="Back to homepage">
-                <img src="assets/logo-ra.png" alt="Logo RA Dev">
-            </a>
-            <button class="navbar-toggler border-0 shadow-none" type="button" data-bs-toggle="collapse"
-                data-bs-target="#mainNav" aria-controls="mainNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="mainNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link is-active" href="index.html">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-                    <li class="nav-item"><a class="nav-link" href="service.html">Service</a></li>
-                    <li class="nav-item"><a class="nav-link" href="project.html">Project</a></li>
-                    <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
-
-    <main class="page-shell">
-        <section class="hero-section" id="top">
-            <div class="container site-container hero-grid">
-                <div class="hero-copy-panel">
-                    <span class="intro-pill">Software Developer</span>
-                    <h1 class="hero-title">Clean web products <span>built for <em>real use</em></span></h1>
-                    <p class="hero-copy">
-                        I build websites, dashboards, and internal tools with clear interfaces,
-                        stable structure, and practical delivery.
-                    </p>
-                    <div class="hero-actions">
-                        <a class="btn btn-primary-glow" href="project.html">View Projects <i class="bi bi-arrow-right"></i></a>
-                        <a class="btn btn-outline-frost" href="contact.html">Contact Me <i class="bi bi-envelope"></i></a>
-                    </div>
-                    <div class="stats-row">
-                        <div class="stat-item">
-                            <i class="bi bi-briefcase"></i>
-                            <div>
-                                <strong>4+</strong>
-                                <span>Years Experience</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-bezier2"></i>
-                            <div>
-                                <strong>20+</strong>
-                                <span>Projects Delivered</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-code-square"></i>
-                            <div>
-                                <strong>Fullstack</strong>
-                                <span>Web &amp; UI Delivery</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <i class="bi bi-people"></i>
-                            <div>
-                                <strong>Collaborative</strong>
-                                <span>Freelance &amp; Teams</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="hero-side-stack">
-                    <article class="panel-card intro-card">
-                        <span class="section-label">Welcome</span>
-                        <h2>Hi, I'm Rohmad Aditya.</h2>
-                        <p>
-                            I help turn business ideas into digital products that feel clear,
-                            useful, and ready to grow.
-                        </p>
-                        <a class="btn btn-outline-frost" href="service.html">View Services <i class="bi bi-arrow-right"></i></a>
-                    </article>
-
-                    <div class="hero-visual hero-visual--compact" aria-hidden="true">
-                        <div class="signal-path">
-                            <span></span>
-                            <span></span>
-                            <span></span>
-                        </div>
-                        <span class="floating-badge badge-top"><i class="bi bi-code-slash"></i></span>
-                        <span class="floating-badge badge-left">UI</span>
-                        <span class="floating-badge badge-right">API</span>
-                        <span class="floating-badge badge-bottom">WEB</span>
-                        <div class="hero-orbit"></div>
-                        <div class="device-frame">
-                            <div class="device-topbar">
-                                <span></span>
-                                <span></span>
-                                <span></span>
-                            </div>
-                            <div class="device-screen">
-                                <div class="code-column">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div class="preview-column">
-                                    <div class="preview-actions">
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                    <div class="code-mark">&lt;/&gt;</div>
-                                    <div class="preview-lines">
-                                        <span></span>
-                                        <span></span>
-                                        <span></span>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="phone-frame">
-                            <div class="phone-notch"></div>
-                            <div class="phone-display">
-                                <div class="phone-media"></div>
-                                <div class="phone-grid">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                                <div class="phone-lines">
-                                    <span></span>
-                                    <span></span>
-                                    <span></span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <section class="section-band">
-            <div class="container site-container">
-                <div class="page-intro">
-                    <span class="section-label">Focus</span>
-                    <h2 class="section-title">A simple path through my work</h2>
-                    <p>
-                        Explore the profile, services, selected projects, and the easiest way to start a conversation.
-                    </p>
-                </div>
-
-                <div class="overview-grid">
-                    <article class="panel-card overview-card">
-                        <div class="overview-icon"><i class="bi bi-person-badge"></i></div>
-                        <h3>About</h3>
-                        <p>A short profile, focus area, and working style.</p>
-                        <a class="btn btn-outline-frost" href="about.html">Open About <i class="bi bi-arrow-right"></i></a>
-                    </article>
-                    <article class="panel-card overview-card">
-                        <div class="overview-icon"><i class="bi bi-briefcase"></i></div>
-                        <h3>Services</h3>
-                        <p>Practical support for websites, interfaces, and systems.</p>
-                        <a class="btn btn-outline-frost" href="service.html">Open Services <i class="bi bi-arrow-right"></i></a>
-                    </article>
-                    <article class="panel-card overview-card">
-                        <div class="overview-icon"><i class="bi bi-grid"></i></div>
-                        <h3>Projects</h3>
-                        <p>Real projects and prototypes with concise details.</p>
-                        <a class="btn btn-outline-frost" href="project.html">Open Projects <i class="bi bi-arrow-right"></i></a>
-                    </article>
-                    <article class="panel-card overview-card">
-                        <div class="overview-icon"><i class="bi bi-chat-dots"></i></div>
-                        <h3>Contact</h3>
-                        <p>The fastest way to discuss a website, redesign, or system need.</p>
-                        <a class="btn btn-outline-frost" href="contact.html">Open Contact <i class="bi bi-arrow-right"></i></a>
-                    </article>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <footer class="site-footer">
-        <div class="container site-container footer-grid">
-            <div class="footer-brand">
-                <img src="assets/logo-ra.png" alt="Logo RA Dev">
-                <div>
-                    <strong>RA Dev</strong>
-                    <span>Clean websites, applications, and interfaces for your digital needs.</span>
-                </div>
-            </div>
-            <p class="footer-copy">&copy; 2026 RA Dev. All rights reserved.</p>
-            <a class="back-to-top" href="#top" aria-label="Back to top"><i class="bi bi-arrow-up"></i></a>
-        </div>
-    </footer>
+    <div class="visually-hidden" id="languageStatus" aria-live="polite"></div>
 
     <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
     <script defer src="assets/js/modals.js"></script>
