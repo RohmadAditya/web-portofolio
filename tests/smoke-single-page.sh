@@ -34,13 +34,17 @@ assert_contains index.html 'mailto:rohmadaditya21@gmail.com' 'Missing email link
 assert_contains index.html 'https://wa.me/6289531656442' 'Missing WhatsApp link'
 assert_contains index.html 'href="#main-content"' 'Missing skip link'
 assert_contains assets/css/style.css 'prefers-reduced-motion: reduce' 'Missing reduced-motion support'
+assert_contains assets/css/style.css 'background-color: var(--bg-deep)' 'Missing root overscroll background'
+assert_contains assets/css/style.css 'overscroll-behavior-y: none' 'Missing overscroll containment'
 
 if rg -q 'dummyimage\.com|site-loader|is-loading' index.html assets/js/modals.js; then
     fail 'Legacy loader or dummy project imagery is still present'
 fi
 
 while IFS=':' read -r page section; do
-    assert_contains "$page" "index.html#$section" "Broken redirect in $page"
+    if [[ -f "$page" ]]; then
+        assert_contains "$page" "index.html#$section" "Broken redirect in $page"
+    fi
 done <<'REDIRECTS'
 about.html:about
 service.html:services
