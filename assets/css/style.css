@@ -214,7 +214,7 @@ img {
 }
 
 .hero-section {
-    padding: 8.9rem 0 2.2rem;
+    padding: 8.2rem 0 2rem;
     border-bottom: 1px solid rgba(255, 255, 255, 0.06);
 }
 
@@ -245,10 +245,11 @@ img {
 }
 
 .hero-title {
-    margin: 1.15rem 0 1.2rem;
-    font-size: clamp(3.2rem, 6vw, 5.55rem);
-    line-height: 0.96;
-    letter-spacing: -0.07em;
+    margin: 1.05rem 0 1.1rem;
+    max-width: 720px;
+    font-size: clamp(3rem, 5.4vw, 5rem);
+    line-height: 1;
+    letter-spacing: -0.065em;
     font-weight: 800;
 }
 
@@ -321,15 +322,16 @@ img {
 .stats-row {
     display: grid;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 1rem;
-    margin-top: 1.7rem;
-    padding-top: 1.45rem;
+    gap: 0.9rem;
+    margin-top: 1.45rem;
+    padding-top: 1.25rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.07);
 }
 
 .stat-item {
     display: flex;
     align-items: flex-start;
-    gap: 0.75rem;
+    gap: 0.65rem;
 }
 
 .stat-item i {
@@ -339,7 +341,7 @@ img {
 
 .stat-item strong {
     display: block;
-    font-size: 1.7rem;
+    font-size: 1.45rem;
     line-height: 1;
 }
 
@@ -353,6 +355,7 @@ img {
 .hero-visual {
     position: relative;
     min-height: 500px;
+    animation: heroFloat 7s ease-in-out infinite;
 }
 
 .hero-visual--compact {
@@ -369,6 +372,46 @@ img {
     background:
         radial-gradient(circle at center, rgba(30, 123, 255, 0.26), rgba(12, 23, 44, 0.04) 62%, transparent 72%);
     filter: blur(0.4px);
+    animation: orbitPulse 5.8s ease-in-out infinite;
+}
+
+.signal-path {
+    position: absolute;
+    inset: 1rem 2.4rem 3rem 1.2rem;
+    pointer-events: none;
+    opacity: 0.9;
+}
+
+.signal-path span {
+    position: absolute;
+    height: 1px;
+    border-radius: 999px;
+    background: linear-gradient(90deg, transparent, rgba(87, 190, 255, 0.8), transparent);
+    transform-origin: left center;
+    animation: signalSweep 3.8s ease-in-out infinite;
+}
+
+.signal-path span:nth-child(1) {
+    top: 24%;
+    left: 10%;
+    width: 58%;
+    transform: rotate(8deg);
+}
+
+.signal-path span:nth-child(2) {
+    top: 52%;
+    right: 4%;
+    width: 42%;
+    animation-delay: 0.75s;
+    transform: rotate(-18deg);
+}
+
+.signal-path span:nth-child(3) {
+    bottom: 18%;
+    left: 24%;
+    width: 46%;
+    animation-delay: 1.45s;
+    transform: rotate(24deg);
 }
 
 .device-frame,
@@ -390,6 +433,7 @@ img {
     border-radius: 22px;
     background: linear-gradient(180deg, rgba(13, 22, 38, 0.94), rgba(8, 14, 25, 0.98));
     border: 1px solid var(--line-strong);
+    animation: deviceLift 6.8s ease-in-out infinite;
 }
 
 .device-topbar {
@@ -442,6 +486,7 @@ img {
     height: 6px;
     margin-bottom: 0.9rem;
     background: linear-gradient(90deg, rgba(71, 146, 255, 0.88), rgba(71, 146, 255, 0.18));
+    animation: codeScan 2.8s ease-in-out infinite;
 }
 
 .code-column span:nth-child(1) {
@@ -450,26 +495,32 @@ img {
 
 .code-column span:nth-child(2) {
     width: 62%;
+    animation-delay: 0.15s;
 }
 
 .code-column span:nth-child(3) {
     width: 82%;
+    animation-delay: 0.3s;
 }
 
 .code-column span:nth-child(4) {
     width: 56%;
+    animation-delay: 0.45s;
 }
 
 .code-column span:nth-child(5) {
     width: 70%;
+    animation-delay: 0.6s;
 }
 
 .code-column span:nth-child(6) {
     width: 46%;
+    animation-delay: 0.75s;
 }
 
 .code-column span:nth-child(7) {
     width: 66%;
+    animation-delay: 0.9s;
 }
 
 .preview-actions {
@@ -494,6 +545,7 @@ img {
     font-weight: 800;
     color: rgba(57, 160, 255, 0.94);
     letter-spacing: -0.08em;
+    animation: codeMarkPulse 4.2s ease-in-out infinite;
 }
 
 .preview-lines span {
@@ -534,6 +586,7 @@ img {
     border-radius: 24px;
     background: linear-gradient(180deg, rgba(11, 19, 33, 0.98), rgba(7, 13, 23, 0.98));
     border: 1px solid var(--line-strong);
+    animation: phoneFloat 6s ease-in-out infinite;
 }
 
 .phone-notch {
@@ -604,6 +657,7 @@ img {
     border: 1px solid rgba(82, 146, 255, 0.32);
     color: #58b0ff;
     font-weight: 700;
+    animation: badgePulse 4.4s ease-in-out infinite;
 }
 
 .badge-top {
@@ -614,16 +668,131 @@ img {
 .badge-left {
     left: 0;
     top: 50%;
+    animation-delay: 0.5s;
 }
 
 .badge-right {
     top: 7rem;
     right: 0;
+    animation-delay: 1s;
 }
 
 .badge-bottom {
     right: 0.3rem;
     bottom: 7rem;
+    animation-delay: 1.5s;
+}
+
+@keyframes heroFloat {
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes orbitPulse {
+    0%,
+    100% {
+        opacity: 0.68;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.04);
+    }
+}
+
+@keyframes signalSweep {
+    0% {
+        opacity: 0;
+        clip-path: inset(0 100% 0 0);
+    }
+
+    35%,
+    65% {
+        opacity: 1;
+        clip-path: inset(0 0 0 0);
+    }
+
+    100% {
+        opacity: 0;
+        clip-path: inset(0 0 0 100%);
+    }
+}
+
+@keyframes deviceLift {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0);
+    }
+
+    50% {
+        transform: translate3d(0, -10px, 0);
+    }
+}
+
+@keyframes phoneFloat {
+    0%,
+    100% {
+        transform: translate3d(0, 0, 0) rotate(0deg);
+    }
+
+    50% {
+        transform: translate3d(0, -8px, 0) rotate(1.5deg);
+    }
+}
+
+@keyframes codeScan {
+    0%,
+    100% {
+        opacity: 0.42;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+@keyframes codeMarkPulse {
+    0%,
+    100% {
+        text-shadow: 0 0 18px rgba(57, 160, 255, 0.18);
+    }
+
+    50% {
+        text-shadow: 0 0 34px rgba(57, 160, 255, 0.42);
+    }
+}
+
+@keyframes badgePulse {
+    0%,
+    100% {
+        transform: translateY(0);
+        border-color: rgba(82, 146, 255, 0.28);
+    }
+
+    50% {
+        transform: translateY(-5px);
+        border-color: rgba(102, 183, 255, 0.58);
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-visual,
+    .hero-orbit,
+    .device-frame,
+    .phone-frame,
+    .floating-badge,
+    .code-column span,
+    .code-mark,
+    .signal-path span {
+        animation: none;
+    }
 }
 
 .section-band {
