@@ -64,13 +64,67 @@ document.addEventListener('DOMContentLoaded', () => {
             ]
         },
         {
+            id: 'mpkuDashboardModal',
+            title: 'MPKU Dashboard — Hospital Audit & Monitoring',
+            description: {
+                id: 'Saya mengembangkan dashboard untuk memusatkan hasil audit dan management letter rumah sakit. Platform ini membantu pimpinan dan anggota dewan memantau indikator kinerja, rekomendasi manajemen, dan progres organisasi secara transparan sehingga pelaporan dan pengambilan keputusan strategis menjadi lebih efektif.',
+                en: 'I developed a dashboard that centralizes hospital audit results and management letters. It helps leadership and board members monitor performance indicators, management recommendations, and organizational progress transparently, making reporting and strategic decision-making more effective.'
+            },
+            tags: ['May 2026–Present', 'Laravel', 'Information System', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'aslErpModal',
+            title: 'PT Artalapan Strategi Logistik — ERP System',
+            description: {
+                id: 'Saya berkontribusi dalam pengembangan ERP khusus freight forwarding yang mengintegrasikan quotation, pelaksanaan job, invoicing, dan operasional gudang. Sistem terpusat ini mengurangi pekerjaan manual, meningkatkan visibilitas data, dan memperkuat koordinasi tim operasional, gudang, serta keuangan.',
+                en: 'I contributed to a custom freight-forwarding ERP integrating quotations, job execution, invoicing, and warehouse operations. This centralized system reduces manual work, improves data visibility, and strengthens coordination across operations, warehouse, and finance teams.'
+            },
+            tags: ['Oct 2025–Present', 'Laravel', 'Bootstrap', 'ERP', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'mitraDjayaModal',
+            title: 'PT Mitra Djaya Trans — Company Profile',
+            description: {
+                id: 'Saya membangun website company profile untuk PT Mitra Djaya Trans, perusahaan jasa angkutan dan logistik di Gresik yang melayani transportasi darat, laut, dan udara. Website menyajikan solusi pengiriman perusahaan secara profesional, jelas, dan mudah diakses.',
+                en: 'I built a company profile website for PT Mitra Djaya Trans, a Gresik-based logistics provider serving land, sea, and air transportation needs. The website presents its shipping solutions professionally, clearly, and accessibly.'
+            },
+            tags: ['May 2026', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'smtCatalogModal',
+            title: 'PT Surya Medika Timur — e-Catalog',
+            description: {
+                id: 'Saya mengembangkan e-Catalog yang memusatkan penawaran produk dari vendor dalam ekosistem pengadaan Surya Medika Timur. Platform ini membantu tim pengadaan rumah sakit mengevaluasi dan membandingkan produk serta harga dengan lebih transparan untuk memperoleh nilai pembelian terbaik.',
+                en: 'I developed an e-Catalog that centralizes vendor product offers within the Surya Medika Timur procurement ecosystem. It enables hospital procurement teams to evaluate and compare products and pricing transparently to identify the best purchasing value.'
+            },
+            tags: ['Apr 2026', 'Laravel', 'Procurement', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'sitiKhodijahHisModal',
+            title: 'RS Siti Khodijah Sepanjang — Hospital Information System',
+            description: {
+                id: 'Saya berkontribusi dalam pengembangan ulang Hospital Information System dari awal untuk memodernisasi operasional rumah sakit. Sistem terintegrasi ini mendukung layanan pasien, rekam medis, farmasi, billing, dan alur administrasi sekaligus meningkatkan skalabilitas, keandalan, dan kemudahan pemeliharaan.',
+                en: 'I contributed to rebuilding the Hospital Information System from the ground up to modernize hospital operations. The integrated platform supports patient services, medical records, pharmacy, billing, and administrative workflows while improving scalability, reliability, and maintainability.'
+            },
+            tags: ['Apr 2025–Apr 2026', 'Software Development', 'HIS', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'smtQuotationModal',
+            title: 'PT Surya Medika Timur — Form Penawaran',
+            description: {
+                id: 'Saya merancang dan mengimplementasikan modul pengajuan penawaran vendor tanpa login melalui token akses unik, beserta sistem pemeringkatan berdasarkan kategori obat dan jenis produk. Fitur ini mempercepat pengumpulan, perbandingan, dan evaluasi penawaran untuk keputusan pengadaan berbasis data.',
+                en: 'I designed and implemented a login-free vendor quotation module using unique access tokens, together with a ranking system based on drug categories and product types. The features accelerate quotation collection, comparison, and evaluation for data-driven procurement decisions.'
+            },
+            tags: ['Feb–Mar 2026', 'Laravel', 'Procurement', 'PT Altama Tekno Mandiri']
+        },
+        {
             id: 'asllogistikModal',
             title: 'PT Artalapan Strategi Logistik',
             description: {
                 id: 'Saya menangani perencanaan struktur, tampilan, dan implementasi website PT Artalapan Strategi Logistik secara end-to-end. Website ini dirancang untuk memperkuat citra profesional perusahaan forwarding serta menyajikan profil, layanan, dan informasi penting dengan alur yang mudah dipahami.',
                 en: 'I handled the structure, visual direction, and implementation of the PT Artalapan Strategi Logistik website end-to-end. The site presents the forwarding company professionally while making its profile, services, and essential information easy to understand.'
             },
-            tags: ['WordPress']
+            tags: ['Aug 2025', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'daemanindoagenciesModal',
@@ -79,25 +133,43 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya merancang dan membangun website Daemanindo Agencies secara end-to-end untuk menghadirkan profil digital yang sesuai dengan karakter perusahaan logistik. Struktur konten dan navigasinya dibuat ringkas agar calon pelanggan mudah mengenal perusahaan serta layanan yang tersedia.',
                 en: 'I designed and built the Daemanindo Agencies website end-to-end to create a digital presence suited to a logistics company. Its concise content structure and navigation help prospective customers understand the company and its services.'
             },
-            tags: ['WordPress']
+            tags: ['Jan 2026', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
         },
         {
-            id: 'popeyeLogistikModal',
-            title: 'PT Popeye Trans Logistik',
+            id: 'restoBuAisModal',
+            title: 'Resto Bu Ais — POS System',
             description: {
-                id: 'Saya membangun website company profile PT Popeye Trans Logistik untuk menyajikan profil bisnis, layanan logistik, dan identitas perusahaan secara jelas melalui tampilan yang formal dan responsif.',
-                en: 'I built the PT Popeye Trans Logistik company profile website to present its business profile, logistics services, and corporate identity clearly through a formal, responsive interface.'
+                id: 'Sebagai Full Stack Developer, saya mengembangkan aplikasi Point of Sale berbasis web untuk pengelolaan pesanan, pemrosesan transaksi, administrasi menu, dan laporan penjualan. Sistem ini menyederhanakan alur kerja harian, meningkatkan akurasi transaksi, dan menyajikan insight bisnis melalui dashboard.',
+                en: 'As the Full Stack Developer, I built a web-based Point of Sale application for order management, transaction processing, menu administration, and sales reporting. It streamlines daily workflows, improves transaction accuracy, and provides business insights through a dashboard.'
             },
-            tags: ['WordPress', 'Logistics']
+            tags: ['Jan 2026', 'Laravel', 'Bootstrap', 'POS', 'PT Altama Tekno Mandiri']
         },
         {
-            id: 'synergyPerkasaModal',
-            title: 'PT Synergy Perkasa Group',
+            id: 'synergyTangguhModal',
+            title: 'PT Synergy Tangguh Perkasa — Company Profile',
             description: {
-                id: 'Saya mengembangkan website company profile PT Synergy Perkasa Group dengan struktur informasi yang ringkas dan pendekatan visual yang bersih untuk memperkuat citra profesional perusahaan.',
-                en: 'I developed the PT Synergy Perkasa Group company profile website with concise information architecture and a clean visual approach to strengthen the company’s professional image.'
+                id: 'Saya mengembangkan website company profile untuk PT Synergy Tangguh Perkasa, penyedia pengadaan barang dan jasa bagi perusahaan, proyek, serta institusi. Penyajian konten menekankan profesionalisme, ketepatan spesifikasi, efisiensi biaya, dan kepastian pengiriman.',
+                en: 'I developed a company profile website for PT Synergy Tangguh Perkasa, a procurement provider serving companies, projects, and institutions. Its content emphasizes professionalism, specification accuracy, cost efficiency, and delivery certainty.'
             },
-            tags: ['WordPress', 'Corporate']
+            tags: ['Jul 2025', 'WordPress', 'Procurement', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'popeyeProfileModal',
+            title: 'PT Popeye Trans Logistik — Company Profile',
+            description: {
+                id: 'Saya membangun website company profile untuk PT Popeye Trans Logistik guna menyajikan layanan kargo, transportasi, pindahan, logistik, distribusi, general supplier, serta ekspor-impor secara terstruktur dan profesional.',
+                en: 'I built the PT Popeye Trans Logistik company profile website to present its cargo, transportation, relocation, logistics, distribution, general supplier, and export-import services in a structured and professional way.'
+            },
+            tags: ['Jun 2025', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'popeyeErpModal',
+            title: 'PT Popeye Trans Logistik — ERP System',
+            description: {
+                id: 'Saya berkontribusi dalam pengembangan ERP yang memusatkan proses operasional dan transaksi perusahaan transportasi serta logistik. Arsitektur fleksibelnya memungkinkan tata letak invoice, struktur dokumen, dan format ekspor disesuaikan secara dinamis dengan standar bisnis setiap pelanggan.',
+                en: 'I contributed to an ERP that centralizes operational and transactional processes for a transportation and logistics company. Its flexible architecture allows invoice layouts, document structures, and export formats to be dynamically tailored to each customer’s business standards.'
+            },
+            tags: ['Mar–Apr 2025', 'Laravel', 'Bootstrap', 'ERP', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'timelineTodoModal',
