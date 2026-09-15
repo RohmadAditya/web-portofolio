@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'mgPlaystationModal',
             title: 'MG-Playstation',
             description: {
-                id: 'Untuk MG-Playstation, saya menangani proses end-to-end: memetakan kebutuhan rental, merancang antarmuka, lalu mengembangkan landing page dan sistem operasional. Solusi ini menyatukan promosi, pemesanan, data pelanggan, transaksi, ketersediaan unit, dan laporan keuangan dalam satu alur kerja.',
-                en: 'For MG-Playstation, I handled the project end-to-end: mapping the rental workflow, designing the interface, and developing both the landing page and operational system. The result brings promotion, booking, customer data, transactions, unit availability, and financial reporting into one connected flow.'
+                id: 'Proyek konsep MG-Playstation mengeksplorasi alur rental secara end-to-end, mulai dari landing page dan pemesanan hingga pengelolaan pelanggan, transaksi, ketersediaan unit, dan laporan keuangan dalam satu sistem.',
+                en: 'The MG-Playstation concept project explores an end-to-end rental workflow, from its landing page and booking flow to customer management, transactions, unit availability, and financial reporting in one system.'
             },
             tags: ['Laravel 10', 'Filament Admin Panel', 'MySQL', 'Bootstrap 5'],
             gallery: [
@@ -80,6 +80,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 en: 'I designed and built the Daemanindo Agencies website end-to-end to create a digital presence suited to a logistics company. Its concise content structure and navigation help prospective customers understand the company and its services.'
             },
             tags: ['WordPress']
+        },
+        {
+            id: 'popeyeLogistikModal',
+            title: 'PT Popeye Trans Logistik',
+            description: {
+                id: 'Saya membangun website company profile PT Popeye Trans Logistik untuk menyajikan profil bisnis, layanan logistik, dan identitas perusahaan secara jelas melalui tampilan yang formal dan responsif.',
+                en: 'I built the PT Popeye Trans Logistik company profile website to present its business profile, logistics services, and corporate identity clearly through a formal, responsive interface.'
+            },
+            tags: ['WordPress', 'Logistics']
+        },
+        {
+            id: 'synergyPerkasaModal',
+            title: 'PT Synergy Perkasa Group',
+            description: {
+                id: 'Saya mengembangkan website company profile PT Synergy Perkasa Group dengan struktur informasi yang ringkas dan pendekatan visual yang bersih untuk memperkuat citra profesional perusahaan.',
+                en: 'I developed the PT Synergy Perkasa Group company profile website with concise information architecture and a clean visual approach to strengthen the company’s professional image.'
+            },
+            tags: ['WordPress', 'Corporate']
         },
         {
             id: 'timelineTodoModal',
