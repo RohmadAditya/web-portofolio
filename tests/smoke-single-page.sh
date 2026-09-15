@@ -30,6 +30,8 @@ done
 assert_contains index.html 'data-language="id"' 'Missing Indonesian language control'
 assert_contains index.html 'data-language="en"' 'Missing English language control'
 assert_contains assets/js/modals.js "const STORAGE_KEY = 'ra-dev-language'" 'Missing language persistence key'
+assert_contains index.html 'Fullstack Laravel Developer' 'Missing updated professional positioning'
+assert_contains index.html 'Mari bicarakan kebutuhan digital perusahaan Anda.' 'Missing updated contact message'
 assert_contains index.html 'mailto:rohmadaditya21@gmail.com' 'Missing email link'
 assert_contains index.html 'https://wa.me/6289531656442' 'Missing WhatsApp link'
 assert_contains index.html 'href="#main-content"' 'Missing skip link'
@@ -37,8 +39,19 @@ assert_contains assets/css/style.css 'prefers-reduced-motion: reduce' 'Missing r
 assert_contains assets/css/style.css 'background-color: var(--bg-deep)' 'Missing root overscroll background'
 assert_contains assets/css/style.css 'overscroll-behavior-y: none' 'Missing overscroll containment'
 
+service_count="$(rg -c '<article class="service-item">' index.html)"
+[[ "$service_count" -eq 3 ]] || fail "Expected 3 service cards, found $service_count"
+
+id_copy_count="$(rg -o 'data-id[[:alnum:]-]*=' index.html assets/js/modals.js | wc -l | tr -d ' ')"
+en_copy_count="$(rg -o 'data-en[[:alnum:]-]*=' index.html assets/js/modals.js | wc -l | tr -d ' ')"
+[[ "$id_copy_count" -eq "$en_copy_count" ]] || fail "Bilingual copy count differs: ID=$id_copy_count EN=$en_copy_count"
+
 if rg -q 'dummyimage\.com|site-loader|is-loading' index.html assets/js/modals.js; then
     fail 'Legacy loader or dummy project imagery is still present'
+fi
+
+if rg -q 'Fullstack Web Developer|Solusi digital yang praktis dan terukur|Proyek produksi' index.html assets/js/modals.js; then
+    fail 'Outdated generic copy is still present'
 fi
 
 while IFS=':' read -r page section; do

@@ -7,8 +7,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'mgPlaystationModal',
             title: 'MG-Playstation',
             description: {
-                id: 'Aplikasi yang mendukung operasional rental PlayStation, mulai dari pencatatan transaksi dan pelanggan hingga laporan keuangan. Proyek ini juga memiliki landing page terintegrasi untuk promosi dan kebutuhan pemesanan online.',
-                en: 'An application that supports PlayStation rental operations, from transaction records and customer management to financial reporting. It also includes an integrated landing page for promotion and online booking.'
+                id: 'Untuk MG-Playstation, saya menangani proses end-to-end: memetakan kebutuhan rental, merancang antarmuka, lalu mengembangkan landing page dan sistem operasional. Solusi ini menyatukan promosi, pemesanan, data pelanggan, transaksi, ketersediaan unit, dan laporan keuangan dalam satu alur kerja.',
+                en: 'For MG-Playstation, I handled the project end-to-end: mapping the rental workflow, designing the interface, and developing both the landing page and operational system. The result brings promotion, booking, customer data, transactions, unit availability, and financial reporting into one connected flow.'
             },
             tags: ['Laravel 10', 'Filament Admin Panel', 'MySQL', 'Bootstrap 5'],
             gallery: [
@@ -16,50 +16,50 @@ document.addEventListener('DOMContentLoaded', () => {
                     image: 'assets/projects/mg-playstation/slide-01.jpg',
                     full: 'assets/projects/mg-playstation/mg-01.png',
                     thumb: 'assets/projects/mg-playstation/thumb-01.jpg',
-                    title: { id: 'Bagian Hero', en: 'Hero Section' },
-                    description: { id: 'Pembuka landing page dengan visual utama dan CTA ketersediaan.', en: 'Landing page opener with a primary visual and availability CTA.' }
+                    title: { id: 'Penawaran Utama', en: 'Primary Offer' },
+                    description: { id: 'Bagian pembuka menyampaikan layanan rental dengan cepat dan mengarahkan pelanggan untuk memeriksa ketersediaan.', en: 'The opening section communicates the rental offer quickly and guides customers toward checking availability.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-02.jpg',
                     full: 'assets/projects/mg-playstation/mg-02.png',
                     thumb: 'assets/projects/mg-playstation/thumb-02.jpg',
                     title: { id: 'Fasilitas', en: 'Facilities' },
-                    description: { id: 'Ringkasan fasilitas utama yang mendukung layanan rental.', en: 'A concise summary of the facilities supporting the rental service.' }
+                    description: { id: 'Informasi fasilitas disusun ringkas agar pelanggan mudah memahami pengalaman rental yang ditawarkan.', en: 'Facility information is organized clearly so customers can understand the rental experience at a glance.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-03.jpg',
                     full: 'assets/projects/mg-playstation/mg-03.png',
                     thumb: 'assets/projects/mg-playstation/thumb-03.jpg',
                     title: { id: 'Informasi Harga', en: 'Pricing Information' },
-                    description: { id: 'Penyajian paket dan harga yang mudah dibandingkan.', en: 'A clear presentation that makes pricing options easy to compare.' }
+                    description: { id: 'Paket dan harga dibuat mudah dipindai sehingga pelanggan dapat membandingkan pilihan tanpa kebingungan.', en: 'Packages and pricing are easy to scan, helping customers compare their options without unnecessary friction.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-04.jpg',
                     full: 'assets/projects/mg-playstation/mg-04.png',
                     thumb: 'assets/projects/mg-playstation/thumb-04.jpg',
-                    title: { id: 'Ketersediaan Station', en: 'Station Availability' },
-                    description: { id: 'Status visual unit dan station PlayStation yang tersedia.', en: 'Visual availability status for PlayStation units and stations.' }
+                    title: { id: 'Ketersediaan Unit', en: 'Unit Availability' },
+                    description: { id: 'Status unit ditampilkan secara visual agar pelanggan dapat mengetahui pilihan yang tersedia sebelum memesan.', en: 'Visual unit statuses let customers see what is available before making a booking.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-05.jpg',
                     full: 'assets/projects/mg-playstation/mg-05.png',
                     thumb: 'assets/projects/mg-playstation/thumb-05.jpg',
-                    title: { id: 'Game Unggulan', en: 'Top Games' },
-                    description: { id: 'Katalog game pilihan untuk memperkuat daya tarik landing page.', en: 'A featured game catalog that strengthens the landing page offer.' }
+                    title: { id: 'Katalog Game', en: 'Game Catalog' },
+                    description: { id: 'Game unggulan ditampilkan untuk memperjelas pilihan hiburan sekaligus memperkuat daya tarik layanan.', en: 'Featured games make the entertainment options clearer and strengthen the overall service offer.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-06.jpg',
                     full: 'assets/projects/mg-playstation/mg-06.png',
                     thumb: 'assets/projects/mg-playstation/thumb-06.jpg',
                     title: { id: 'Kontak dan Lokasi', en: 'Contact and Location' },
-                    description: { id: 'Alamat, kontak, dan peta untuk membantu pelanggan.', en: 'Address, contact, and map information that helps customers.' }
+                    description: { id: 'Alamat, kontak, dan peta ditempatkan dalam satu bagian untuk memudahkan pelanggan menghubungi atau mengunjungi lokasi.', en: 'Address, contact details, and a map are grouped together to make reaching or visiting the business easier.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-07.jpg',
                     full: 'assets/projects/mg-playstation/mg-07.png',
                     thumb: 'assets/projects/mg-playstation/thumb-07.jpg',
                     title: { id: 'Panel Admin', en: 'Admin Panel' },
-                    description: { id: 'Antarmuka administrasi untuk mengelola data rental dan transaksi.', en: 'An administration interface for rental data and transactions.' }
+                    description: { id: 'Panel admin memusatkan pengelolaan pelanggan, unit, transaksi, dan laporan agar operasional lebih teratur.', en: 'The admin panel centralizes customers, units, transactions, and reports to keep daily operations organized.' }
                 }
             ]
         },
@@ -67,8 +67,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'asllogistikModal',
             title: 'PT Artalapan Strategi Logistik',
             description: {
-                id: 'Website company profile untuk PT Artalapan Strategi Logistik, sebuah bisnis forwarding, dengan fokus pada presentasi profesional dan informasi perusahaan yang jelas.',
-                en: 'A company profile website for PT Artalapan Strategi Logistik, a forwarding business, focused on professional presentation and clear company information.'
+                id: 'Saya menangani perencanaan struktur, tampilan, dan implementasi website PT Artalapan Strategi Logistik secara end-to-end. Website ini dirancang untuk memperkuat citra profesional perusahaan forwarding serta menyajikan profil, layanan, dan informasi penting dengan alur yang mudah dipahami.',
+                en: 'I handled the structure, visual direction, and implementation of the PT Artalapan Strategi Logistik website end-to-end. The site presents the forwarding company professionally while making its profile, services, and essential information easy to understand.'
             },
             tags: ['WordPress']
         },
@@ -76,8 +76,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'daemanindoagenciesModal',
             title: 'Daemanindo Agencies',
             description: {
-                id: 'Website company profile untuk bisnis logistik di Dili, Timor-Leste, dengan pendekatan visual formal dan navigasi yang mudah dipahami.',
-                en: 'A company profile website for a logistics business in Dili, Timor-Leste, with a formal visual approach and easy-to-understand navigation.'
+                id: 'Saya merancang dan membangun website Daemanindo Agencies secara end-to-end untuk menghadirkan profil digital yang sesuai dengan karakter perusahaan logistik. Struktur konten dan navigasinya dibuat ringkas agar calon pelanggan mudah mengenal perusahaan serta layanan yang tersedia.',
+                en: 'I designed and built the Daemanindo Agencies website end-to-end to create a digital presence suited to a logistics company. Its concise content structure and navigation help prospective customers understand the company and its services.'
             },
             tags: ['WordPress']
         },
@@ -85,8 +85,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'timelineTodoModal',
             title: 'Timeline-Todo',
             description: {
-                id: 'Aplikasi pencatatan tugas dan aktivitas harian yang membantu pengguna mengatur jadwal, menentukan prioritas, dan memantau progres dengan lebih efisien.',
-                en: 'A task and daily activity tracking application that helps users manage schedules, priorities, and progress more efficiently.'
+                id: 'Proyek konsep untuk mengeksplorasi alur aplikasi produktivitas berbasis Laravel. Fokusnya adalah menyusun tugas dan jadwal, menentukan prioritas, serta menampilkan progres harian dalam antarmuka yang mudah dipahami.',
+                en: 'A concept project exploring a Laravel-based productivity workflow. It focuses on organizing tasks and schedules, setting priorities, and presenting daily progress through an approachable interface.'
             },
             tags: ['Laravel', 'Bootstrap 5', 'MySQL']
         },
@@ -94,8 +94,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'posModal',
             title: 'Point of Sales',
             description: {
-                id: 'Aplikasi kasir digital untuk membantu toko dan bisnis mengelola transaksi penjualan, inventaris, dan laporan keuangan.',
-                en: 'A digital cashier application that helps stores and businesses manage sales transactions, inventory, and financial reports.'
+                id: 'Proyek konsep untuk mempelajari kebutuhan utama sistem kasir digital. Alurnya mencakup transaksi penjualan, pengelolaan stok, dan laporan keuangan agar data operasional dapat dikelola dalam satu aplikasi.',
+                en: 'A concept project exploring the core requirements of a digital point-of-sale system, including sales transactions, inventory management, and financial reporting in one application.'
             },
             tags: ['Laravel', 'Bootstrap 5', 'MySQL']
         },
@@ -103,8 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'filmModal',
             title: 'Movie Finder',
             description: {
-                id: 'Aplikasi web untuk mencari informasi film, melihat detail, dan menyaring berdasarkan judul atau genre menggunakan data dari API eksternal.',
-                en: 'A web application for searching movie information, viewing details, and filtering by title or genre using data from an external API.'
+                id: 'Proyek eksplorasi React dan integrasi API eksternal. Pengguna dapat mencari film, membuka detail, dan menjelajahi konten berdasarkan judul atau genre melalui alur yang sederhana dan responsif.',
+                en: 'An exploration of React and third-party API integration. Users can search for movies, view details, and browse by title or genre through a simple, responsive experience.'
             },
             tags: ['React', 'CSS', 'Movie API']
         },
@@ -112,8 +112,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'linktreeModal',
             title: 'Custom Link Tree',
             description: {
-                id: 'Aplikasi link hub sederhana untuk menyajikan tautan penting dalam satu halaman, cocok untuk profil sosial dan portfolio online.',
-                en: 'A simple link hub that presents important links on one page, suitable for social profiles and online portfolios.'
+                id: 'Proyek konsep untuk mengeksplorasi penyajian informasi personal secara ringkas. Halaman ini menggabungkan profil sosial, portfolio, dan tautan penting dalam satu tampilan yang mudah dibuka dari perangkat mobile.',
+                en: 'A concept project exploring a concise way to present personal information. It brings social profiles, portfolio work, and important links into a single mobile-friendly page.'
             },
             tags: ['HTML', 'CSS', 'Bootstrap 5']
         }
@@ -154,7 +154,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `
             <div class="modal-stack">
-                <span class="modal-stack__label" data-id="Galeri proyek" data-en="Project gallery">Galeri proyek</span>
+                <span class="modal-stack__label" data-id="Tampilan solusi" data-en="Solution gallery">Tampilan solusi</span>
                 <div id="mgPlaystationCarousel" class="carousel slide project-carousel" data-bs-ride="false">
                     <div class="carousel-indicators">${indicators}</div>
                     <div class="carousel-inner">${slides}</div>
@@ -178,7 +178,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 <div class="modal-content">
                     <div class="modal-header">
                         <div class="modal-title-wrap">
-                            <span class="modal-eyebrow" data-id="Detail proyek" data-en="Project details">Detail proyek</span>
+                            <span class="modal-eyebrow" data-id="Ringkasan proyek" data-en="Project overview">Ringkasan proyek</span>
                             <h2 class="modal-title" id="${project.id}Label">${project.title}</h2>
                         </div>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"
@@ -190,7 +190,7 @@ document.addEventListener('DOMContentLoaded', () => {
                         </p>
                         ${makeGallery(project)}
                         <div class="modal-stack">
-                            <span class="modal-stack__label" data-id="Teknologi" data-en="Technology">Teknologi</span>
+                            <span class="modal-stack__label" data-id="Stack teknologi" data-en="Technology stack">Stack teknologi</span>
                             <div class="tag-list">
                                 ${project.tags.map((tag) => `<span>${tag}</span>`).join('')}
                             </div>
@@ -227,14 +227,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
         document.documentElement.lang = language;
         document.title = language === 'id'
-            ? 'Rohmad Aditya | Fullstack Web Developer'
-            : 'Rohmad Aditya | Fullstack Web Developer';
+            ? 'Rohmad Aditya | Fullstack Laravel Developer'
+            : 'Rohmad Aditya | Fullstack Laravel Developer';
 
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
             metaDescription.content = language === 'id'
-                ? 'Portfolio Rohmad Aditya, Fullstack Web Developer yang membangun website, antarmuka, dan sistem digital.'
-                : 'Portfolio of Rohmad Aditya, a Fullstack Web Developer building websites, interfaces, and digital systems.';
+                ? 'Portfolio Rohmad Aditya, Fullstack Laravel Developer untuk website perusahaan dan sistem web yang profesional serta siap digunakan.'
+                : 'Portfolio of Rohmad Aditya, a Fullstack Laravel Developer building professional company websites and ready-to-use web systems.';
         }
 
         document.querySelectorAll(`[data-${language}]`).forEach((element) => {
