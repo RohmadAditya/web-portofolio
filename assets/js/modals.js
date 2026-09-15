@@ -1,378 +1,367 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const mgSlides = [
+    const STORAGE_KEY = 'ra-dev-language';
+    const SUPPORTED_LANGUAGES = ['id', 'en'];
+
+    const projectData = [
         {
-            src: 'assets/projects/mg-playstation/slide-01.jpg',
-            full: 'assets/projects/mg-playstation/mg-01.png',
-            thumb: 'assets/projects/mg-playstation/thumb-01.jpg',
-            alt: 'Screenshot hero MG-Playstation',
-            title: 'Hero Section',
-            desc: 'Tampilan pembuka landing page dengan visual utama dan CTA ketersediaan.'
+            id: 'mgPlaystationModal',
+            title: 'MG-Playstation',
+            description: {
+                id: 'Proyek konsep MG-Playstation mengeksplorasi alur rental secara end-to-end, mulai dari landing page dan pemesanan hingga pengelolaan pelanggan, transaksi, ketersediaan unit, dan laporan keuangan dalam satu sistem.',
+                en: 'The MG-Playstation concept project explores an end-to-end rental workflow, from its landing page and booking flow to customer management, transactions, unit availability, and financial reporting in one system.'
+            },
+            tags: ['Laravel 10', 'Filament Admin Panel', 'MySQL', 'Bootstrap 5'],
+            gallery: [
+                {
+                    image: 'assets/projects/mg-playstation/slide-01.jpg',
+                    full: 'assets/projects/mg-playstation/mg-01.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-01.jpg',
+                    title: { id: 'Penawaran Utama', en: 'Primary Offer' },
+                    description: { id: 'Bagian pembuka menyampaikan layanan rental dengan cepat dan mengarahkan pelanggan untuk memeriksa ketersediaan.', en: 'The opening section communicates the rental offer quickly and guides customers toward checking availability.' }
+                },
+                {
+                    image: 'assets/projects/mg-playstation/slide-02.jpg',
+                    full: 'assets/projects/mg-playstation/mg-02.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-02.jpg',
+                    title: { id: 'Fasilitas', en: 'Facilities' },
+                    description: { id: 'Informasi fasilitas disusun ringkas agar pelanggan mudah memahami pengalaman rental yang ditawarkan.', en: 'Facility information is organized clearly so customers can understand the rental experience at a glance.' }
+                },
+                {
+                    image: 'assets/projects/mg-playstation/slide-03.jpg',
+                    full: 'assets/projects/mg-playstation/mg-03.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-03.jpg',
+                    title: { id: 'Informasi Harga', en: 'Pricing Information' },
+                    description: { id: 'Paket dan harga dibuat mudah dipindai sehingga pelanggan dapat membandingkan pilihan tanpa kebingungan.', en: 'Packages and pricing are easy to scan, helping customers compare their options without unnecessary friction.' }
+                },
+                {
+                    image: 'assets/projects/mg-playstation/slide-04.jpg',
+                    full: 'assets/projects/mg-playstation/mg-04.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-04.jpg',
+                    title: { id: 'Ketersediaan Unit', en: 'Unit Availability' },
+                    description: { id: 'Status unit ditampilkan secara visual agar pelanggan dapat mengetahui pilihan yang tersedia sebelum memesan.', en: 'Visual unit statuses let customers see what is available before making a booking.' }
+                },
+                {
+                    image: 'assets/projects/mg-playstation/slide-05.jpg',
+                    full: 'assets/projects/mg-playstation/mg-05.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-05.jpg',
+                    title: { id: 'Katalog Game', en: 'Game Catalog' },
+                    description: { id: 'Game unggulan ditampilkan untuk memperjelas pilihan hiburan sekaligus memperkuat daya tarik layanan.', en: 'Featured games make the entertainment options clearer and strengthen the overall service offer.' }
+                },
+                {
+                    image: 'assets/projects/mg-playstation/slide-06.jpg',
+                    full: 'assets/projects/mg-playstation/mg-06.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-06.jpg',
+                    title: { id: 'Kontak dan Lokasi', en: 'Contact and Location' },
+                    description: { id: 'Alamat, kontak, dan peta ditempatkan dalam satu bagian untuk memudahkan pelanggan menghubungi atau mengunjungi lokasi.', en: 'Address, contact details, and a map are grouped together to make reaching or visiting the business easier.' }
+                },
+                {
+                    image: 'assets/projects/mg-playstation/slide-07.jpg',
+                    full: 'assets/projects/mg-playstation/mg-07.png',
+                    thumb: 'assets/projects/mg-playstation/thumb-07.jpg',
+                    title: { id: 'Panel Admin', en: 'Admin Panel' },
+                    description: { id: 'Panel admin memusatkan pengelolaan pelanggan, unit, transaksi, dan laporan agar operasional lebih teratur.', en: 'The admin panel centralizes customers, units, transactions, and reports to keep daily operations organized.' }
+                }
+            ]
         },
         {
-            src: 'assets/projects/mg-playstation/slide-02.jpg',
-            full: 'assets/projects/mg-playstation/mg-02.png',
-            thumb: 'assets/projects/mg-playstation/thumb-02.jpg',
-            alt: 'Screenshot fasilitas MG-Playstation',
-            title: 'Fasilitas',
-            desc: 'Ringkasan fasilitas utama yang menjadi nilai jual layanan rental.'
+            id: 'asllogistikModal',
+            title: 'PT Artalapan Strategi Logistik',
+            description: {
+                id: 'Saya menangani perencanaan struktur, tampilan, dan implementasi website PT Artalapan Strategi Logistik secara end-to-end. Website ini dirancang untuk memperkuat citra profesional perusahaan forwarding serta menyajikan profil, layanan, dan informasi penting dengan alur yang mudah dipahami.',
+                en: 'I handled the structure, visual direction, and implementation of the PT Artalapan Strategi Logistik website end-to-end. The site presents the forwarding company professionally while making its profile, services, and essential information easy to understand.'
+            },
+            tags: ['WordPress']
         },
         {
-            src: 'assets/projects/mg-playstation/slide-03.jpg',
-            full: 'assets/projects/mg-playstation/mg-03.png',
-            thumb: 'assets/projects/mg-playstation/thumb-03.jpg',
-            alt: 'Screenshot harga MG-Playstation',
-            title: 'Informasi Harga',
-            desc: 'Penyajian layanan dan pricing agar pelanggan mudah membandingkan opsi.'
+            id: 'daemanindoagenciesModal',
+            title: 'Daemanindo Agencies',
+            description: {
+                id: 'Saya merancang dan membangun website Daemanindo Agencies secara end-to-end untuk menghadirkan profil digital yang sesuai dengan karakter perusahaan logistik. Struktur konten dan navigasinya dibuat ringkas agar calon pelanggan mudah mengenal perusahaan serta layanan yang tersedia.',
+                en: 'I designed and built the Daemanindo Agencies website end-to-end to create a digital presence suited to a logistics company. Its concise content structure and navigation help prospective customers understand the company and its services.'
+            },
+            tags: ['WordPress']
         },
         {
-            src: 'assets/projects/mg-playstation/slide-04.jpg',
-            full: 'assets/projects/mg-playstation/mg-04.png',
-            thumb: 'assets/projects/mg-playstation/thumb-04.jpg',
-            alt: 'Screenshot ketersediaan MG-Playstation',
-            title: 'Ketersediaan Meja',
-            desc: 'Status unit dan meja PlayStation yang tersedia secara visual.'
+            id: 'popeyeLogistikModal',
+            title: 'PT Popeye Trans Logistik',
+            description: {
+                id: 'Saya membangun website company profile PT Popeye Trans Logistik untuk menyajikan profil bisnis, layanan logistik, dan identitas perusahaan secara jelas melalui tampilan yang formal dan responsif.',
+                en: 'I built the PT Popeye Trans Logistik company profile website to present its business profile, logistics services, and corporate identity clearly through a formal, responsive interface.'
+            },
+            tags: ['WordPress', 'Logistics']
         },
         {
-            src: 'assets/projects/mg-playstation/slide-05.jpg',
-            full: 'assets/projects/mg-playstation/mg-05.png',
-            thumb: 'assets/projects/mg-playstation/thumb-05.jpg',
-            alt: 'Screenshot game MG-Playstation',
-            title: 'Top Games',
-            desc: 'Katalog game unggulan untuk memperkuat daya tarik landing page.'
+            id: 'synergyPerkasaModal',
+            title: 'PT Synergy Perkasa Group',
+            description: {
+                id: 'Saya mengembangkan website company profile PT Synergy Perkasa Group dengan struktur informasi yang ringkas dan pendekatan visual yang bersih untuk memperkuat citra profesional perusahaan.',
+                en: 'I developed the PT Synergy Perkasa Group company profile website with concise information architecture and a clean visual approach to strengthen the company’s professional image.'
+            },
+            tags: ['WordPress', 'Corporate']
         },
         {
-            src: 'assets/projects/mg-playstation/slide-06.jpg',
-            full: 'assets/projects/mg-playstation/mg-06.png',
-            thumb: 'assets/projects/mg-playstation/thumb-06.jpg',
-            alt: 'Screenshot kontak MG-Playstation',
-            title: 'Kontak dan Lokasi',
-            desc: 'Informasi alamat, kontak, dan peta untuk memudahkan pelanggan.'
+            id: 'timelineTodoModal',
+            title: 'Timeline-Todo',
+            description: {
+                id: 'Proyek konsep untuk mengeksplorasi alur aplikasi produktivitas berbasis Laravel. Fokusnya adalah menyusun tugas dan jadwal, menentukan prioritas, serta menampilkan progres harian dalam antarmuka yang mudah dipahami.',
+                en: 'A concept project exploring a Laravel-based productivity workflow. It focuses on organizing tasks and schedules, setting priorities, and presenting daily progress through an approachable interface.'
+            },
+            tags: ['Laravel', 'Bootstrap 5', 'MySQL']
         },
         {
-            src: 'assets/projects/mg-playstation/slide-07.jpg',
-            full: 'assets/projects/mg-playstation/mg-07.png',
-            thumb: 'assets/projects/mg-playstation/thumb-07.jpg',
-            alt: 'Screenshot Admin Panel MG-Playstation',
-            title: 'Admin Panel',
-            desc: 'Antarmuka administrasi untuk mengelola data dan transaksi rental.'
+            id: 'posModal',
+            title: 'Point of Sales',
+            description: {
+                id: 'Proyek konsep untuk mempelajari kebutuhan utama sistem kasir digital. Alurnya mencakup transaksi penjualan, pengelolaan stok, dan laporan keuangan agar data operasional dapat dikelola dalam satu aplikasi.',
+                en: 'A concept project exploring the core requirements of a digital point-of-sale system, including sales transactions, inventory management, and financial reporting in one application.'
+            },
+            tags: ['Laravel', 'Bootstrap 5', 'MySQL']
+        },
+        {
+            id: 'filmModal',
+            title: 'Movie Finder',
+            description: {
+                id: 'Proyek eksplorasi React dan integrasi API eksternal. Pengguna dapat mencari film, membuka detail, dan menjelajahi konten berdasarkan judul atau genre melalui alur yang sederhana dan responsif.',
+                en: 'An exploration of React and third-party API integration. Users can search for movies, view details, and browse by title or genre through a simple, responsive experience.'
+            },
+            tags: ['React', 'CSS', 'Movie API']
+        },
+        {
+            id: 'linktreeModal',
+            title: 'Custom Link Tree',
+            description: {
+                id: 'Proyek konsep untuk mengeksplorasi penyajian informasi personal secara ringkas. Halaman ini menggabungkan profil sosial, portfolio, dan tautan penting dalam satu tampilan yang mudah dibuka dari perangkat mobile.',
+                en: 'A concept project exploring a concise way to present personal information. It brings social profiles, portfolio work, and important links into a single mobile-friendly page.'
+            },
+            tags: ['HTML', 'CSS', 'Bootstrap 5']
         }
     ];
 
-    const mgIndicators = mgSlides
-        .map((_, index) => `
-            <button type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}"
-                class="${index === 0 ? 'active' : ''}" ${index === 0 ? 'aria-current="true"' : ''}
-                aria-label="Slide ${index + 1}"></button>`)
-        .join('');
+    const makeGallery = (project) => {
+        if (!project.gallery) {
+            return '';
+        }
 
-    const mgItems = mgSlides
-        .map((slide, index) => `
+        const slides = project.gallery.map((slide, index) => `
             <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                <a href="${slide.full}" class="modal-gallery-item" data-lightbox="mg-playstation" data-index="${index}" data-title="${slide.title}">
-                    <img src="${slide.src}" alt="${slide.alt}" class="img-fluid" ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>
+                <a href="${slide.full}" target="_blank" rel="noopener noreferrer"
+                   aria-label="Buka gambar ukuran penuh" data-id-aria-label="Buka gambar ukuran penuh" data-en-aria-label="Open full-size image">
+                    <img src="${slide.image}" alt="${slide.title.id}" data-id-alt="${slide.title.id}" data-en-alt="${slide.title.en}"
+                         ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>
                 </a>
                 <div class="carousel-caption d-block">
-                    <h6 class="fw-bold">${slide.title}</h6>
-                    <p class="mb-0">${slide.desc}</p>
+                    <h6 data-id="${slide.title.id}" data-en="${slide.title.en}">${slide.title.id}</h6>
+                    <p data-id="${slide.description.id}" data-en="${slide.description.en}">${slide.description.id}</p>
                 </div>
-            </div>`)
-        .join('');
+            </div>
+        `).join('');
 
-    const mgThumbs = mgSlides
-        .map((slide, index) => `
-            <button type="button" class="project-thumb ${index === 0 ? 'is-active' : ''}" data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}" aria-label="Lihat ${slide.title}">
-                <img src="${slide.thumb}" alt="${slide.alt}" loading="lazy" decoding="async">
-            </button>`)
-        .join('');
+        const indicators = project.gallery.map((_, index) => `
+            <button type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}"
+                    class="${index === 0 ? 'active' : ''}" ${index === 0 ? 'aria-current="true"' : ''}
+                    aria-label="Slide ${index + 1}"></button>
+        `).join('');
 
-    const modalsMarkup = `
-    <div class="modal fade" id="mgPlaystationModal" tabindex="-1" aria-labelledby="mgPlaystationModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="mgPlaystationModalLabel">MG-Playstation</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        const thumbs = project.gallery.map((slide, index) => `
+            <button type="button" class="project-thumb ${index === 0 ? 'is-active' : ''}"
+                    data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}"
+                    aria-label="Lihat ${slide.title.id}" data-id-aria-label="Lihat ${slide.title.id}" data-en-aria-label="View ${slide.title.en}">
+                <img src="${slide.thumb}" alt="" loading="lazy" decoding="async">
+            </button>
+        `).join('');
+
+        return `
+            <div class="modal-stack">
+                <span class="modal-stack__label" data-id="Tampilan solusi" data-en="Solution gallery">Tampilan solusi</span>
+                <div id="mgPlaystationCarousel" class="carousel slide project-carousel" data-bs-ride="false">
+                    <div class="carousel-indicators">${indicators}</div>
+                    <div class="carousel-inner">${slides}</div>
+                    <button class="carousel-control-prev" type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide="prev"
+                            aria-label="Sebelumnya" data-id-aria-label="Sebelumnya" data-en-aria-label="Previous">
+                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    </button>
+                    <button class="carousel-control-next" type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide="next"
+                            aria-label="Berikutnya" data-id-aria-label="Berikutnya" data-en-aria-label="Next">
+                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    </button>
                 </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Studi Kasus</h6>
-                    <p class="mb-3">Aplikasi ini dirancang untuk mendukung pengelolaan rental PlayStation, mulai dari pencatatan transaksi, manajemen pelanggan, hingga laporan keuangan. Sistem juga dilengkapi landing page terintegrasi untuk kebutuhan promosi dan pemesanan online.</p>
-                    <h6 class="fw-bold mb-2">Screenshot</h6>
-                    <div id="mgPlaystationCarousel" class="carousel slide project-carousel mb-3" data-bs-ride="false" data-bs-interval="4000" data-bs-pause="hover">
-                        <div class="carousel-indicators">
-                            ${mgIndicators}
+                <div class="project-thumbs">${thumbs}</div>
+            </div>
+        `;
+    };
+
+    const modalMarkup = projectData.map((project) => `
+        <div class="modal fade" id="${project.id}" tabindex="-1" aria-labelledby="${project.id}Label" aria-hidden="true">
+            <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <div class="modal-title-wrap">
+                            <span class="modal-eyebrow" data-id="Ringkasan proyek" data-en="Project overview">Ringkasan proyek</span>
+                            <h2 class="modal-title" id="${project.id}Label">${project.title}</h2>
                         </div>
-                        <div class="carousel-inner">
-                            ${mgItems}
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Tutup"
+                                data-id-aria-label="Tutup" data-en-aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <p class="modal-description" data-id="${project.description.id}" data-en="${project.description.en}">
+                            ${project.description.id}
+                        </p>
+                        ${makeGallery(project)}
+                        <div class="modal-stack">
+                            <span class="modal-stack__label" data-id="Stack teknologi" data-en="Technology stack">Stack teknologi</span>
+                            <div class="tag-list">
+                                ${project.tags.map((tag) => `<span>${tag}</span>`).join('')}
+                            </div>
                         </div>
-                        <button class="carousel-control-prev" type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide="prev" aria-label="Previous slide">
-                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        </button>
-                        <button class="carousel-control-next" type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide="next" aria-label="Next slide">
-                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        </button>
                     </div>
-                    <div class="project-thumbs mb-3">${mgThumbs}</div>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>Laravel 10</li>
-                        <li>Filament Admin Panel</li>
-                        <li>MySQL</li>
-                        <li>Bootstrap 5</li>
-                    </ul>
                 </div>
             </div>
         </div>
-    </div>
+    `).join('');
 
-    <div class="modal fade" id="timelineTodoModal" tabindex="-1" aria-labelledby="timelineTodoModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="timelineTodoModalLabel">Timeline-Todo</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi pencatatan tugas dan kegiatan harian yang membantu pengguna mengelola, menjadwalkan, dan memantau progres aktivitas dengan lebih efisien.</p>
-                    <h6 class="fw-bold mb-2">Screenshot</h6>
-                    <div class="text-center mb-3">
-                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Timeline-Todo" alt="Screenshot Timeline-Todo" class="img-fluid">
-                    </div>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>Laravel</li>
-                        <li>Bootstrap 5</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    document.body.insertAdjacentHTML('beforeend', modalMarkup);
 
-    <div class="modal fade" id="posModal" tabindex="-1" aria-labelledby="posModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="posModalLabel">Point of Sales</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi Point of Sales yang dirancang untuk membantu toko atau bisnis mengelola transaksi penjualan, stok barang, dan laporan keuangan secara digital.</p>
-                    <h6 class="fw-bold mb-2">Screenshot</h6>
-                    <div class="text-center mb-3">
-                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Point+of+Sales" alt="Screenshot POS" class="img-fluid">
-                    </div>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>Laravel</li>
-                        <li>Bootstrap 5</li>
-                        <li>MySQL</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    const getSavedLanguage = () => {
+        try {
+            const savedLanguage = window.localStorage.getItem(STORAGE_KEY);
+            return SUPPORTED_LANGUAGES.includes(savedLanguage) ? savedLanguage : 'id';
+        } catch {
+            return 'id';
+        }
+    };
 
-    <div class="modal fade" id="filmModal" tabindex="-1" aria-labelledby="filmModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="filmModalLabel">Web Pencari Film</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi web untuk mencari informasi film, menampilkan detail, serta menyediakan fitur pencarian berdasarkan judul atau genre dengan memanfaatkan data dari API eksternal.</p>
-                    <h6 class="fw-bold mb-2">Screenshot</h6>
-                    <div class="text-center mb-3">
-                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Web+Pencari+Film" alt="Screenshot Web Pencari Film" class="img-fluid">
-                    </div>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>React</li>
-                        <li>CSS</li>
-                        <li>API Film (OMDb/TMDB)</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    const saveLanguage = (language) => {
+        try {
+            window.localStorage.setItem(STORAGE_KEY, language);
+        } catch {
+            // The selected language still works for this page view.
+        }
+    };
 
-    <div class="modal fade" id="linktreeModal" tabindex="-1" aria-labelledby="linktreeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="linktreeModalLabel">Custom Link Tree</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Aplikasi Link Tree sederhana yang menampilkan berbagai tautan penting dalam satu halaman, cocok untuk profil media sosial maupun portofolio online.</p>
-                    <h6 class="fw-bold mb-2">Screenshot</h6>
-                    <div class="text-center mb-3">
-                        <img src="https://dummyimage.com/600x350/dfe7f2/304256&text=Custom+Link+Tree" alt="Screenshot Custom Link Tree" class="img-fluid">
-                    </div>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>HTML</li>
-                        <li>CSS</li>
-                        <li>Bootstrap 5</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+    const updateLanguage = (language, announce = false) => {
+        if (!SUPPORTED_LANGUAGES.includes(language)) {
+            language = 'id';
+        }
 
-    <div class="modal fade" id="asllogistikModal" tabindex="-1" aria-labelledby="asllogistikModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="asllogistikModalLabel">PT Artalapan Strategi Logistik</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Website company profile untuk PT Artalapan Strategi Logistik yang bergerak di bidang forwarding, dengan fokus pada tampilan profesional dan penyajian informasi perusahaan yang jelas.</p>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>WordPress</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>
+        document.documentElement.lang = language;
+        document.title = language === 'id'
+            ? 'Rohmad Aditya | Fullstack Laravel Developer'
+            : 'Rohmad Aditya | Fullstack Laravel Developer';
 
-    <div class="modal fade" id="daemanindoagenciesModal" tabindex="-1" aria-labelledby="daemanindoagenciesModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="daemanindoagenciesModalLabel">Daemanindo Agencies</h5>
-                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                </div>
-                <div class="modal-body">
-                    <h6 class="fw-bold mb-2">Deskripsi</h6>
-                    <p class="mb-3">Website company profile untuk Daemanindo Agencies yang bergerak di bidang logistik di wilayah Dili, Timor Leste, dengan pendekatan visual yang formal dan navigasi yang mudah dipahami.</p>
-                    <h6 class="fw-bold mb-2">Tech Stack</h6>
-                    <ul class="mb-0">
-                        <li>WordPress</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </div>`;
+        const metaDescription = document.querySelector('meta[name="description"]');
+        if (metaDescription) {
+            metaDescription.content = language === 'id'
+                ? 'Portfolio Rohmad Aditya, Fullstack Laravel Developer untuk website perusahaan dan sistem web yang profesional serta siap digunakan.'
+                : 'Portfolio of Rohmad Aditya, a Fullstack Laravel Developer building professional company websites and ready-to-use web systems.';
+        }
 
-    document.body.insertAdjacentHTML('beforeend', modalsMarkup);
+        document.querySelectorAll(`[data-${language}]`).forEach((element) => {
+            element.textContent = element.getAttribute(`data-${language}`);
+        });
 
-    const lightboxMarkup = `
-    <div class="lightbox-overlay" id="imageLightbox" aria-hidden="true">
-        <div class="lightbox-dialog">
-            <button type="button" class="lightbox-nav lightbox-prev" aria-label="Previous image">&#8249;</button>
-            <button type="button" class="lightbox-nav lightbox-next" aria-label="Next image">&#8250;</button>
-            <button type="button" class="lightbox-close" aria-label="Close preview">&times;</button>
-            <img src="" alt="" class="lightbox-image">
-        </div>
-    </div>`;
+        document.querySelectorAll(`[data-${language}-html]`).forEach((element) => {
+            element.innerHTML = element.getAttribute(`data-${language}-html`);
+        });
 
-    document.body.insertAdjacentHTML('beforeend', lightboxMarkup);
+        ['aria-label', 'alt', 'title'].forEach((attribute) => {
+            document.querySelectorAll(`[data-${language}-${attribute}]`).forEach((element) => {
+                element.setAttribute(attribute, element.getAttribute(`data-${language}-${attribute}`));
+            });
+        });
 
-    const lightbox = document.getElementById('imageLightbox');
-    const lightboxImage = lightbox.querySelector('.lightbox-image');
-    const lightboxClose = lightbox.querySelector('.lightbox-close');
-    const lightboxPrev = lightbox.querySelector('.lightbox-prev');
-    const lightboxNext = lightbox.querySelector('.lightbox-next');
-    const carouselElement = document.getElementById('mgPlaystationCarousel');
-    const carousel = bootstrap.Carousel.getOrCreateInstance(carouselElement);
-    const thumbButtons = Array.from(document.querySelectorAll('.project-thumb'));
-    const mgModal = document.getElementById('mgPlaystationModal');
-    let currentLightboxIndex = 0;
+        document.querySelectorAll('.language-button').forEach((button) => {
+            const isActive = button.dataset.language === language;
+            button.classList.toggle('is-active', isActive);
+            button.setAttribute('aria-pressed', String(isActive));
+        });
 
-    const syncActiveThumb = (activeIndex) => {
-        thumbButtons.forEach((button, index) => {
-            button.classList.toggle('is-active', index === activeIndex);
+        saveLanguage(language);
+
+        if (announce) {
+            const status = document.getElementById('languageStatus');
+            if (status) {
+                status.textContent = language === 'id'
+                    ? 'Bahasa diubah ke Bahasa Indonesia.'
+                    : 'Language changed to English.';
+            }
+        }
+    };
+
+    document.querySelectorAll('.language-button').forEach((button) => {
+        button.addEventListener('click', () => {
+            updateLanguage(button.dataset.language, true);
+        });
+    });
+
+    updateLanguage(getSavedLanguage());
+
+    const navigationLinks = Array.from(document.querySelectorAll('.section-nav__link'));
+    const sections = navigationLinks
+        .map((link) => document.getElementById(link.dataset.section))
+        .filter(Boolean);
+
+    const setActiveSection = (sectionId) => {
+        navigationLinks.forEach((link) => {
+            const isActive = link.dataset.section === sectionId;
+            link.classList.toggle('is-active', isActive);
+            if (isActive) {
+                link.setAttribute('aria-current', 'location');
+            } else {
+                link.removeAttribute('aria-current');
+            }
         });
     };
 
-    const openLightboxAt = (index) => {
-        const slide = mgSlides[index];
-        if (!slide) {
+    if ('IntersectionObserver' in window) {
+        const sectionObserver = new IntersectionObserver((entries) => {
+            const visibleEntries = entries
+                .filter((entry) => entry.isIntersecting)
+                .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+
+            if (visibleEntries[0]) {
+                setActiveSection(visibleEntries[0].target.id);
+            }
+        }, {
+            rootMargin: '-18% 0px -58% 0px',
+            threshold: [0, 0.15, 0.4]
+        });
+
+        sections.forEach((section) => sectionObserver.observe(section));
+    }
+
+    navigationLinks.forEach((link) => {
+        link.addEventListener('click', () => setActiveSection(link.dataset.section));
+    });
+
+    const supportsFinePointer = window.matchMedia('(hover: hover) and (pointer: fine)');
+    const reducesMotion = window.matchMedia('(prefers-reduced-motion: reduce)');
+    let pointerFrame = null;
+
+    const updateSpotlight = (event) => {
+        if (!supportsFinePointer.matches || reducesMotion.matches) {
             return;
         }
 
-        currentLightboxIndex = index;
-        lightboxImage.src = slide.full;
-        lightboxImage.alt = slide.alt;
-        lightbox.classList.add('is-open');
-        lightbox.setAttribute('aria-hidden', 'false');
+        if (pointerFrame) {
+            window.cancelAnimationFrame(pointerFrame);
+        }
+
+        pointerFrame = window.requestAnimationFrame(() => {
+            document.documentElement.style.setProperty('--mouse-x', `${event.clientX}px`);
+            document.documentElement.style.setProperty('--mouse-y', `${event.clientY}px`);
+        });
     };
 
-    const closeLightbox = () => {
-        lightbox.classList.remove('is-open');
-        lightbox.setAttribute('aria-hidden', 'true');
-        lightboxImage.src = '';
-        lightboxImage.alt = '';
-    };
+    window.addEventListener('pointermove', updateSpotlight, { passive: true });
 
-    const showAdjacentLightboxImage = (direction) => {
-        const total = mgSlides.length;
-        currentLightboxIndex = (currentLightboxIndex + direction + total) % total;
-        openLightboxAt(currentLightboxIndex);
-    };
+    const carouselElement = document.getElementById('mgPlaystationCarousel');
+    const thumbButtons = Array.from(document.querySelectorAll('.project-thumbs .project-thumb'));
 
-    carouselElement.addEventListener('slid.bs.carousel', (event) => {
-        syncActiveThumb(event.to);
-    });
-
-    document.addEventListener('click', (event) => {
-        const trigger = event.target.closest('[data-lightbox]');
-        if (trigger) {
-            event.preventDefault();
-            const currentIndex = Number(trigger.getAttribute('data-index'));
-            openLightboxAt(currentIndex >= 0 ? currentIndex : 0);
-            return;
-        }
-
-        if (event.target === lightbox || event.target === lightboxClose) {
-            closeLightbox();
-            return;
-        }
-
-        if (event.target === lightboxPrev) {
-            showAdjacentLightboxImage(-1);
-            return;
-        }
-
-        if (event.target === lightboxNext) {
-            showAdjacentLightboxImage(1);
-        }
-    });
-
-    document.addEventListener('keydown', (event) => {
-        if (!lightbox.classList.contains('is-open')) {
-            return;
-        }
-
-        if (event.key === 'Escape') {
-            closeLightbox();
-        }
-
-        if (event.key === 'ArrowLeft') {
-            showAdjacentLightboxImage(-1);
-        }
-
-        if (event.key === 'ArrowRight') {
-            showAdjacentLightboxImage(1);
-        }
-    });
-
-    mgModal.addEventListener('shown.bs.modal', () => {
-        carousel.cycle();
-    });
-
-    mgModal.addEventListener('hide.bs.modal', () => {
-        carousel.pause();
-        closeLightbox();
-    });
-
-    syncActiveThumb(0);
+    if (carouselElement) {
+        carouselElement.addEventListener('slid.bs.carousel', (event) => {
+            thumbButtons.forEach((button, index) => {
+                button.classList.toggle('is-active', index === event.to);
+            });
+        });
+    }
 });
