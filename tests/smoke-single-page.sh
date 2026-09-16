@@ -22,16 +22,16 @@ for section in about services projects contact; do
     assert_contains index.html "id=\"$section\"" "Missing #$section section"
 done
 
-for modal in lilyBouquetModal mpkuDashboardModal aslErpModal mitraDjayaModal smtCatalogModal sitiKhodijahHisModal smtQuotationModal daemanindoagenciesModal restoBuAisModal asllogistikModal synergyTangguhModal popeyeProfileModal popeyeErpModal surabayaMandiriModal moneyFinModal mgPlaystationModal timelineTodoModal posModal filmModal linktreeModal; do
+for modal in lilyBouquetModal mpkuDashboardModal aslErpModal mitraDjayaModal smtCatalogModal sitiKhodijahHisModal smtQuotationModal daemanindoagenciesModal restoBuAisModal asllogistikModal synergyTangguhModal popeyeProfileModal popeyeErpModal sriMutiaraAlamErpModal surabayaMandiriModal moneyFinModal mgPlaystationModal timelineTodoModal posModal filmModal linktreeModal; do
     assert_contains index.html "data-bs-target=\"#$modal\"" "Missing trigger for #$modal"
     assert_contains project.html "data-bs-target=\"#$modal\"" "Missing archive trigger for #$modal"
     assert_contains assets/js/modals.js "id: '$modal'" "Missing generated modal #$modal"
 done
 
 project_count="$(rg -c '<(button|a).*class="project-card' index.html)"
-[[ "$project_count" -eq 20 ]] || fail "Expected 20 project cards, found $project_count"
+[[ "$project_count" -eq 21 ]] || fail "Expected 21 project cards, found $project_count"
 archive_count="$(rg -c '<button type="button" class="project-card' project.html)"
-[[ "$archive_count" -eq 20 ]] || fail "Expected 20 archive cards, found $archive_count"
+[[ "$archive_count" -eq 21 ]] || fail "Expected 21 archive cards, found $archive_count"
 for category in client-projects saas-projects concept-projects; do
     assert_contains index.html "href=\"project.html#$category\"" "Missing archive link for $category"
     assert_contains project.html "id=\"$category\"" "Missing archive category $category"

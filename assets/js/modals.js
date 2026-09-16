@@ -10,7 +10,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya membangun landing page Lily Bouquet beserta dashboard admin operasional. Admin dapat mengelola konten yang tampil di landing page sekaligus memantau penjualan dan laporan dalam satu sistem.',
                 en: 'I built the Lily Bouquet landing page and operational admin dashboard. Admins can manage the landing page content while tracking sales and reports in one system.'
             },
-            website: 'https://lily-bouquet.com/'
+            website: 'https://lily-bouquet.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/lily-bouquet/landing.png',
+                    full: 'assets/projects/lily-bouquet/landing.png',
+                    thumb: 'assets/projects/lily-bouquet/landing.png',
+                    title: { id: 'Landing Page', en: 'Landing Page' },
+                    description: { id: 'Halaman utama memperkenalkan Lily Bouquet dan mengarahkan pengunjung ke katalog.', en: 'The homepage introduces Lily Bouquet and guides visitors to the catalog.' }
+                },
+                {
+                    image: 'assets/projects/lily-bouquet/dashboard.png',
+                    full: 'assets/projects/lily-bouquet/dashboard.png',
+                    thumb: 'assets/projects/lily-bouquet/dashboard.png',
+                    title: { id: 'Dashboard Operasional', en: 'Operations Dashboard' },
+                    description: { id: 'Dashboard admin merangkum penjualan, penerimaan, dan aktivitas operasional.', en: 'The admin dashboard summarizes sales, payments, and operational activity.' }
+                },
+                {
+                    image: 'assets/projects/lily-bouquet/catalog.png',
+                    full: 'assets/projects/lily-bouquet/catalog.png',
+                    thumb: 'assets/projects/lily-bouquet/catalog.png',
+                    title: { id: 'Katalog Produk', en: 'Product Catalog' },
+                    description: { id: 'Katalog membantu pengunjung menjelajahi dan menyaring pilihan rangkaian bunga.', en: 'The catalog helps visitors explore and filter floral arrangements.' }
+                }
+            ]
         },
         {
             id: 'moneyFinModal',
@@ -104,6 +128,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya mengembangkan dashboard untuk memusatkan hasil audit dan management letter rumah sakit. Platform ini membantu pimpinan dan anggota dewan memantau indikator kinerja, rekomendasi manajemen, dan progres organisasi secara transparan sehingga pelaporan dan pengambilan keputusan strategis menjadi lebih efektif.',
                 en: 'I developed a dashboard that centralizes hospital audit results and management letters. It helps leadership and board members monitor performance indicators, management recommendations, and organizational progress transparently, making reporting and strategic decision-making more effective.'
             },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/mpku-dashboard/dashboard.png',
+                    full: 'assets/projects/mpku-dashboard/dashboard.png',
+                    thumb: 'assets/projects/mpku-dashboard/dashboard.png',
+                    title: { id: 'Dashboard MPKU', en: 'MPKU Dashboard' },
+                    description: { id: 'Dashboard audit rumah sakit dengan filter dan ringkasan laporan keuangan.', en: 'Hospital audit dashboard with filters and a financial report summary.' }
+                }
+            ]
         },
         {
             id: 'aslErpModal',
@@ -153,7 +187,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya menangani perencanaan struktur, tampilan, dan implementasi website PT Artalapan Strategi Logistik secara end-to-end. Website ini dirancang untuk memperkuat citra profesional perusahaan forwarding serta menyajikan profil, layanan, dan informasi penting dengan alur yang mudah dipahami.',
                 en: 'I handled the structure, visual direction, and implementation of the PT Artalapan Strategi Logistik website end-to-end. The site presents the forwarding company professionally while making its profile, services, and essential information easy to understand.'
             },
-            website: 'https://asllogistik.com/'
+            website: 'https://asllogistik.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/asl-company-profile/landing.png',
+                    full: 'assets/projects/asl-company-profile/landing.png',
+                    thumb: 'assets/projects/asl-company-profile/landing.png',
+                    title: { id: 'Beranda', en: 'Homepage' },
+                    description: { id: 'Halaman utama menampilkan profil singkat dan layanan freight forwarding ASL Logistik.', en: 'The homepage introduces ASL Logistik and its freight-forwarding services.' }
+                },
+                {
+                    image: 'assets/projects/asl-company-profile/tracking.png',
+                    full: 'assets/projects/asl-company-profile/tracking.png',
+                    thumb: 'assets/projects/asl-company-profile/tracking.png',
+                    title: { id: 'Lacak Pengiriman', en: 'Shipment Tracking' },
+                    description: { id: 'Halaman pelacakan menyediakan pencarian pengiriman berdasarkan nomor resi.', en: 'The tracking page lets visitors look up a shipment by tracking number.' }
+                },
+                {
+                    image: 'assets/projects/asl-company-profile/projects.png',
+                    full: 'assets/projects/asl-company-profile/projects.png',
+                    thumb: 'assets/projects/asl-company-profile/projects.png',
+                    title: { id: 'Proyek', en: 'Projects' },
+                    description: { id: 'Galeri proyek menampilkan dokumentasi kegiatan kargo dan konstruksi.', en: 'The project gallery showcases cargo and construction work.' }
+                }
+            ]
         },
         {
             id: 'daemanindoagenciesModal',
@@ -188,7 +246,17 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya membangun website company profile untuk PT Popeye Trans Logistik guna menyajikan layanan kargo, transportasi, pindahan, logistik, distribusi, general supplier, serta ekspor-impor secara terstruktur dan profesional.',
                 en: 'I built the PT Popeye Trans Logistik company profile website to present its cargo, transportation, relocation, logistics, distribution, general supplier, and export-import services in a structured and professional way.'
             },
-            website: 'https://popeye-logistik.com/'
+            website: 'https://popeye-logistik.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/popeye-company-profile/landing.png',
+                    full: 'assets/projects/popeye-company-profile/landing.png',
+                    thumb: 'assets/projects/popeye-company-profile/landing.png',
+                    title: { id: 'Beranda Company Profile', en: 'Company Profile Homepage' },
+                    description: { id: 'Halaman utama memperkenalkan layanan logistik Popeye Trans Logistik.', en: 'The homepage introduces Popeye Trans Logistik’s logistics services.' }
+                }
+            ]
         },
         {
             id: 'popeyeErpModal',
@@ -197,6 +265,34 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya berkontribusi dalam pengembangan ERP yang memusatkan proses operasional dan transaksi perusahaan transportasi serta logistik. Arsitektur fleksibelnya memungkinkan tata letak invoice, struktur dokumen, dan format ekspor disesuaikan secara dinamis dengan standar bisnis setiap pelanggan.',
                 en: 'I contributed to an ERP that centralizes operational and transactional processes for a transportation and logistics company. Its flexible architecture allows invoice layouts, document structures, and export formats to be dynamically tailored to each customer’s business standards.'
             },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/popeye-erp/dashboard.png',
+                    full: 'assets/projects/popeye-erp/dashboard.png',
+                    thumb: 'assets/projects/popeye-erp/dashboard.png',
+                    title: { id: 'Dashboard ERP Popeye', en: 'Popeye ERP Dashboard' },
+                    description: { id: 'Beranda ERP menampilkan navigasi operasional dan ringkasan grafik penjualan.', en: 'The ERP homepage shows operational navigation and sales charts.' }
+                }
+            ]
+        },
+        {
+            id: 'sriMutiaraAlamErpModal',
+            title: 'PT Sri Mutiara Alam — ERP System',
+            description: {
+                id: 'Saya berkontribusi dalam pengembangan ERP PT Sri Mutiara Alam untuk menyatukan proses operasional dan transaksi dalam satu sistem. Modul laporan keuangan yang ditampilkan merupakan salah satu bagian dari ERP tersebut, dengan akses ke laba rugi, neraca, neraca saldo, dan buku besar.',
+                en: 'I contributed to the PT Sri Mutiara Alam ERP, which brings operational and transactional processes together in one system. The financial reporting screen shown here is one part of the ERP, with access to profit and loss, balance sheets, trial balances, and ledgers.'
+            },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/sri-mutiara-alam-erp/financial-reports.png',
+                    full: 'assets/projects/sri-mutiara-alam-erp/financial-reports.png',
+                    thumb: 'assets/projects/sri-mutiara-alam-erp/financial-reports.png',
+                    title: { id: 'Laporan Keuangan', en: 'Financial Reports' },
+                    description: { id: 'Daftar laporan keuangan yang tersedia pada modul ERP.', en: 'The available financial reports in the ERP module.' }
+                }
+            ]
         },
         {
             id: 'surabayaMandiriModal',
@@ -280,18 +376,18 @@ document.addEventListener('DOMContentLoaded', () => {
             <div class="modal-stack">
                 <span class="modal-stack__label" data-id="Tampilan solusi" data-en="Solution gallery">Tampilan solusi</span>
                 <div id="${carouselId}" class="carousel slide project-carousel${project.galleryFit === 'contain' ? ' project-carousel--contain' : ''}" data-bs-ride="false">
-                    <div class="carousel-indicators">${indicators}</div>
+                    ${project.gallery.length > 1 ? `<div class="carousel-indicators">${indicators}</div>` : ''}
                     <div class="carousel-inner">${slides}</div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev"
+                    ${project.gallery.length > 1 ? `<button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev"
                             aria-label="Sebelumnya" data-id-aria-label="Sebelumnya" data-en-aria-label="Previous">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </button>
                     <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next"
                             aria-label="Berikutnya" data-id-aria-label="Berikutnya" data-en-aria-label="Next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    </button>
+                    </button>` : ''}
                 </div>
-                <div class="project-thumbs">${thumbs}</div>
+                ${project.gallery.length > 1 ? `<div class="project-thumbs">${thumbs}</div>` : ''}
             </div>
         `;
     };
