@@ -384,22 +384,37 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     };
 
-    if ('IntersectionObserver' in window) {
-        const sectionObserver = new IntersectionObserver((entries) => {
-            const visibleEntries = entries
-                .filter((entry) => entry.isIntersecting)
-                .sort((a, b) => b.intersectionRatio - a.intersectionRatio);
+    const updateActiveSection = () => {
+        // Use a stable point in the viewport so long sections (especially
+        // Projects) remain active while the user scrolls through their content.
+        const marker = window.innerHeight * 0.3;
+        const isAtPageEnd = window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 2;
+        const currentSection = isAtPageEnd
+            ? sections.at(-1)
+            : sections
+                .filter((section) => section.getBoundingClientRect().top <= marker)
+                .at(-1) || sections[0];
 
-            if (visibleEntries[0]) {
-                setActiveSection(visibleEntries[0].target.id);
-            }
-        }, {
-            rootMargin: '-18% 0px -58% 0px',
-            threshold: [0, 0.15, 0.4]
+        if (currentSection) {
+            setActiveSection(currentSection.id);
+        }
+    };
+
+    let activeSectionFrame = null;
+    const scheduleActiveSectionUpdate = () => {
+        if (activeSectionFrame) {
+            return;
+        }
+
+        activeSectionFrame = window.requestAnimationFrame(() => {
+            activeSectionFrame = null;
+            updateActiveSection();
         });
+    };
 
-        sections.forEach((section) => sectionObserver.observe(section));
-    }
+    window.addEventListener('scroll', scheduleActiveSectionUpdate, { passive: true });
+    window.addEventListener('resize', scheduleActiveSectionUpdate);
+    updateActiveSection();
 
     navigationLinks.forEach((link) => {
         link.addEventListener('click', () => setActiveSection(link.dataset.section));
