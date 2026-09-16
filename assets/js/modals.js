@@ -146,6 +146,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya berkontribusi dalam pengembangan ERP khusus freight forwarding yang mengintegrasikan quotation, pelaksanaan job, invoicing, dan operasional gudang. Sistem terpusat ini mengurangi pekerjaan manual, meningkatkan visibilitas data, dan memperkuat koordinasi tim operasional, gudang, serta keuangan.',
                 en: 'I contributed to a custom freight-forwarding ERP integrating quotations, job execution, invoicing, and warehouse operations. This centralized system reduces manual work, improves data visibility, and strengthens coordination across operations, warehouse, and finance teams.'
             },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/asl-erp/dashboard.png',
+                    full: 'assets/projects/asl-erp/dashboard.png',
+                    thumb: 'assets/projects/asl-erp/dashboard.png',
+                    title: { id: 'Dashboard ERP ASL', en: 'ASL ERP Dashboard' },
+                    description: { id: 'Dashboard menampilkan kurs, pemantauan pengguna, aktivitas, dan ringkasan penjualan.', en: 'The dashboard shows exchange rates, user monitoring, activity, and sales summaries.' }
+                }
+            ]
         },
         {
             id: 'mitraDjayaModal',
@@ -154,7 +164,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya membangun website company profile untuk PT Mitra Djaya Trans, perusahaan jasa angkutan dan logistik di Gresik yang melayani transportasi darat, laut, dan udara. Website menyajikan solusi pengiriman perusahaan secara profesional, jelas, dan mudah diakses.',
                 en: 'I built a company profile website for PT Mitra Djaya Trans, a Gresik-based logistics provider serving land, sea, and air transportation needs. The website presents its shipping solutions professionally, clearly, and accessibly.'
             },
-            website: 'https://mitradjayatrans.com/'
+            website: 'https://mitradjayatrans.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/mitra-djaya-trans/landing.png',
+                    full: 'assets/projects/mitra-djaya-trans/landing.png',
+                    thumb: 'assets/projects/mitra-djaya-trans/landing.png',
+                    title: { id: 'Beranda', en: 'Homepage' },
+                    description: { id: 'Halaman utama menampilkan layanan angkutan dan logistik Mitra Djaya Trans.', en: 'The homepage presents Mitra Djaya Trans transportation and logistics services.' }
+                },
+                {
+                    image: 'assets/projects/mitra-djaya-trans/gallery.png',
+                    full: 'assets/projects/mitra-djaya-trans/gallery.png',
+                    thumb: 'assets/projects/mitra-djaya-trans/gallery.png',
+                    title: { id: 'Galeri Armada', en: 'Fleet Gallery' },
+                    description: { id: 'Galeri menampilkan dokumentasi armada kendaraan.', en: 'The gallery showcases the vehicle fleet.' }
+                },
+                {
+                    image: 'assets/projects/mitra-djaya-trans/about.png',
+                    full: 'assets/projects/mitra-djaya-trans/about.png',
+                    thumb: 'assets/projects/mitra-djaya-trans/about.png',
+                    title: { id: 'Tentang Perusahaan', en: 'About the Company' },
+                    description: { id: 'Profil perusahaan menjelaskan layanan, visi, dan misi Mitra Djaya Trans.', en: 'The company profile explains Mitra Djaya Trans services, vision, and mission.' }
+                }
+            ]
         },
         {
             id: 'smtCatalogModal',
@@ -163,6 +197,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya mengembangkan e-Catalog yang memusatkan penawaran produk dari vendor dalam ekosistem pengadaan Surya Medika Timur. Platform ini membantu tim pengadaan rumah sakit mengevaluasi dan membandingkan produk serta harga dengan lebih transparan untuk memperoleh nilai pembelian terbaik.',
                 en: 'I developed an e-Catalog that centralizes vendor product offers within the Surya Medika Timur procurement ecosystem. It enables hospital procurement teams to evaluate and compare products and pricing transparently to identify the best purchasing value.'
             },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/surya-medika-timur-ecatalog/results.png',
+                    full: 'assets/projects/surya-medika-timur-ecatalog/results.png',
+                    thumb: 'assets/projects/surya-medika-timur-ecatalog/results.png',
+                    title: { id: 'Perbandingan Penawaran', en: 'Offer Comparison' },
+                    description: { id: 'Tampilan e-Katalog setelah tipe produk dipilih, dengan peringkat penawaran vendor.', en: 'The e-Catalog after selecting a product type, showing ranked vendor offers.' }
+                },
+                {
+                    image: 'assets/projects/surya-medika-timur-ecatalog/empty-state.png',
+                    full: 'assets/projects/surya-medika-timur-ecatalog/empty-state.png',
+                    thumb: 'assets/projects/surya-medika-timur-ecatalog/empty-state.png',
+                    title: { id: 'Filter e-Katalog', en: 'e-Catalog Filter' },
+                    description: { id: 'Tampilan awal meminta pengguna memilih tipe atau templat sebelum melihat data.', en: 'The initial view prompts users to select a type or template before viewing data.' }
+                }
+            ]
         },
         {
             id: 'sitiKhodijahHisModal',
@@ -179,6 +230,23 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya merancang dan mengimplementasikan modul pengajuan penawaran vendor tanpa login melalui token akses unik, beserta sistem pemeringkatan berdasarkan kategori obat dan jenis produk. Fitur ini mempercepat pengumpulan, perbandingan, dan evaluasi penawaran untuk keputusan pengadaan berbasis data.',
                 en: 'I designed and implemented a login-free vendor quotation module using unique access tokens, together with a ranking system based on drug categories and product types. The features accelerate quotation collection, comparison, and evaluation for data-driven procurement decisions.'
             },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/surya-medika-timur-quotation/list.png',
+                    full: 'assets/projects/surya-medika-timur-quotation/list.png',
+                    thumb: 'assets/projects/surya-medika-timur-quotation/list.png',
+                    title: { id: 'Daftar Form Penawaran', en: 'Quotation Form List' },
+                    description: { id: 'Halaman admin untuk membuat, mencari, dan memantau form penawaran.', en: 'The admin page for creating, searching, and monitoring quotation forms.' }
+                },
+                {
+                    image: 'assets/projects/surya-medika-timur-quotation/detail.png',
+                    full: 'assets/projects/surya-medika-timur-quotation/detail.png',
+                    thumb: 'assets/projects/surya-medika-timur-quotation/detail.png',
+                    title: { id: 'Detail Penawaran Vendor', en: 'Vendor Quotation Details' },
+                    description: { id: 'Tampilan detail penawaran yang sudah dikirim, termasuk ringkasan total dan rincian barang.', en: 'A submitted quotation showing its totals and item details.' }
+                }
+            ]
         },
         {
             id: 'asllogistikModal',
@@ -220,7 +288,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya merancang dan membangun website Daemanindo Agencies secara end-to-end untuk menghadirkan profil digital yang sesuai dengan karakter perusahaan logistik. Struktur konten dan navigasinya dibuat ringkas agar calon pelanggan mudah mengenal perusahaan serta layanan yang tersedia.',
                 en: 'I designed and built the Daemanindo Agencies website end-to-end to create a digital presence suited to a logistics company. Its concise content structure and navigation help prospective customers understand the company and its services.'
             },
-            website: 'https://daemanindoagencies.com/'
+            website: 'https://daemanindoagencies.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/daemanindo-agencies/landing.png',
+                    full: 'assets/projects/daemanindo-agencies/landing.png',
+                    thumb: 'assets/projects/daemanindo-agencies/landing.png',
+                    title: { id: 'Beranda', en: 'Homepage' },
+                    description: { id: 'Halaman utama memperkenalkan Daemanindo Agencies dan layanan logistiknya.', en: 'The homepage introduces Daemanindo Agencies and its logistics services.' }
+                },
+                {
+                    image: 'assets/projects/daemanindo-agencies/services.png',
+                    full: 'assets/projects/daemanindo-agencies/services.png',
+                    thumb: 'assets/projects/daemanindo-agencies/services.png',
+                    title: { id: 'Layanan', en: 'Services' },
+                    description: { id: 'Halaman layanan menampilkan ship agency dan international forwarding.', en: 'The services page features ship agency and international forwarding.' }
+                },
+                {
+                    image: 'assets/projects/daemanindo-agencies/location.png',
+                    full: 'assets/projects/daemanindo-agencies/location.png',
+                    thumb: 'assets/projects/daemanindo-agencies/location.png',
+                    title: { id: 'Lokasi', en: 'Location' },
+                    description: { id: 'Bagian kontak menampilkan lokasi perusahaan pada peta.', en: 'The contact section displays the company location on a map.' }
+                }
+            ]
         },
         {
             id: 'restoBuAisModal',
@@ -237,7 +329,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya mengembangkan website company profile untuk PT Synergy Tangguh Perkasa, penyedia pengadaan barang dan jasa bagi perusahaan, proyek, serta institusi. Penyajian konten menekankan profesionalisme, ketepatan spesifikasi, efisiensi biaya, dan kepastian pengiriman.',
                 en: 'I developed a company profile website for PT Synergy Tangguh Perkasa, a procurement provider serving companies, projects, and institutions. Its content emphasizes professionalism, specification accuracy, cost efficiency, and delivery certainty.'
             },
-            website: 'https://synergiperkasagroup.com/'
+            website: 'https://synergiperkasagroup.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/synergy-tangguh-perkasa/landing.png',
+                    full: 'assets/projects/synergy-tangguh-perkasa/landing.png',
+                    thumb: 'assets/projects/synergy-tangguh-perkasa/landing.png',
+                    title: { id: 'Beranda', en: 'Homepage' },
+                    description: { id: 'Halaman utama memperkenalkan solusi pengadaan Synergy Perkasa Group.', en: 'The homepage introduces Synergy Perkasa Group procurement solutions.' }
+                },
+                {
+                    image: 'assets/projects/synergy-tangguh-perkasa/projects.png',
+                    full: 'assets/projects/synergy-tangguh-perkasa/projects.png',
+                    thumb: 'assets/projects/synergy-tangguh-perkasa/projects.png',
+                    title: { id: 'Galeri Proyek', en: 'Project Gallery' },
+                    description: { id: 'Galeri menampilkan dokumentasi produk, armada, dan kegiatan proyek.', en: 'The gallery shows products, vehicles, and project activities.' }
+                },
+                {
+                    image: 'assets/projects/synergy-tangguh-perkasa/legalities.png',
+                    full: 'assets/projects/synergy-tangguh-perkasa/legalities.png',
+                    thumb: 'assets/projects/synergy-tangguh-perkasa/legalities.png',
+                    title: { id: 'Legalitas Perusahaan', en: 'Company Documents' },
+                    description: { id: 'Bagian website yang menampilkan dokumen pendukung perusahaan.', en: 'A website section displaying company supporting documents.' }
+                }
+            ]
         },
         {
             id: 'popeyeProfileModal',
@@ -301,7 +417,31 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Website company profile PT Surabaya Mandiri Logistik menyajikan layanan pemasokan material bangunan, transportasi, dan pergudangan dalam satu profil perusahaan yang mudah dijelajahi.',
                 en: 'The PT Surabaya Mandiri Logistik company profile website presents building materials supply, transportation, and warehousing services in an easy-to-navigate company profile.'
             },
-            website: 'https://surabayamandirilogistik.com/'
+            website: 'https://surabayamandirilogistik.com/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/surabaya-mandiri-logistik/landing.png',
+                    full: 'assets/projects/surabaya-mandiri-logistik/landing.png',
+                    thumb: 'assets/projects/surabaya-mandiri-logistik/landing.png',
+                    title: { id: 'Beranda', en: 'Homepage' },
+                    description: { id: 'Halaman utama memperkenalkan layanan pemasokan, transportasi, dan pergudangan.', en: 'The homepage introduces supply, transportation, and warehousing services.' }
+                },
+                {
+                    image: 'assets/projects/surabaya-mandiri-logistik/gallery.png',
+                    full: 'assets/projects/surabaya-mandiri-logistik/gallery.png',
+                    thumb: 'assets/projects/surabaya-mandiri-logistik/gallery.png',
+                    title: { id: 'Galeri Pengiriman', en: 'Shipment Gallery' },
+                    description: { id: 'Galeri mendokumentasikan armada, aktivitas pengiriman, dan operasional.', en: 'The gallery documents the fleet, shipments, and operations.' }
+                },
+                {
+                    image: 'assets/projects/surabaya-mandiri-logistik/about.png',
+                    full: 'assets/projects/surabaya-mandiri-logistik/about.png',
+                    thumb: 'assets/projects/surabaya-mandiri-logistik/about.png',
+                    title: { id: 'Tentang Perusahaan', en: 'About the Company' },
+                    description: { id: 'Halaman profil perusahaan menampilkan gambaran bisnis, visi, dan misi.', en: 'The company profile presents its business, vision, and mission.' }
+                }
+            ]
         },
         {
             id: 'timelineTodoModal',
