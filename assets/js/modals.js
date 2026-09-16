@@ -338,15 +338,20 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         document.documentElement.lang = language;
-        document.title = language === 'id'
-            ? 'Rohmad Aditya | Fullstack Laravel Developer'
+        const isProjectArchive = document.body.dataset.page === 'projects';
+        document.title = isProjectArchive
+            ? (language === 'id' ? 'Semua Proyek | Rohmad Aditya' : 'All Projects | Rohmad Aditya')
             : 'Rohmad Aditya | Fullstack Laravel Developer';
 
         const metaDescription = document.querySelector('meta[name="description"]');
         if (metaDescription) {
-            metaDescription.content = language === 'id'
-                ? 'Portfolio Rohmad Aditya, Fullstack Laravel Developer untuk website perusahaan dan sistem web yang profesional serta siap digunakan.'
-                : 'Portfolio of Rohmad Aditya, a Fullstack Laravel Developer building professional company websites and ready-to-use web systems.';
+            metaDescription.content = isProjectArchive
+                ? (language === 'id'
+                    ? 'Semua proyek Rohmad Aditya: website klien, produk SaaS, dan proyek konsep.'
+                    : 'All projects by Rohmad Aditya: client websites, SaaS products, and concept projects.')
+                : (language === 'id'
+                    ? 'Portfolio Rohmad Aditya, Fullstack Laravel Developer untuk website perusahaan dan sistem web yang profesional serta siap digunakan.'
+                    : 'Portfolio of Rohmad Aditya, a Fullstack Laravel Developer building professional company websites and ready-to-use web systems.');
         }
 
         document.querySelectorAll(`[data-${language}]`).forEach((element) => {

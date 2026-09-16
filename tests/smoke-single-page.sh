@@ -14,7 +14,7 @@ assert_contains() {
     rg -q --fixed-strings "$pattern" "$file" || fail "$message"
 }
 
-for required_file in index.html assets/css/style.css assets/js/modals.js assets/logo-ra.png; do
+for required_file in index.html project.html assets/css/style.css assets/js/modals.js assets/logo-ra.png; do
     [[ -f "$required_file" ]] || fail "Missing $required_file"
 done
 
@@ -24,11 +24,19 @@ done
 
 for modal in lilyBouquetModal mpkuDashboardModal aslErpModal mitraDjayaModal smtCatalogModal sitiKhodijahHisModal smtQuotationModal daemanindoagenciesModal restoBuAisModal asllogistikModal synergyTangguhModal popeyeProfileModal popeyeErpModal surabayaMandiriModal moneyFinModal mgPlaystationModal timelineTodoModal posModal filmModal linktreeModal; do
     assert_contains index.html "data-bs-target=\"#$modal\"" "Missing trigger for #$modal"
+    assert_contains project.html "data-bs-target=\"#$modal\"" "Missing archive trigger for #$modal"
     assert_contains assets/js/modals.js "id: '$modal'" "Missing generated modal #$modal"
 done
 
 project_count="$(rg -c '<(button|a).*class="project-card' index.html)"
 [[ "$project_count" -eq 20 ]] || fail "Expected 20 project cards, found $project_count"
+archive_count="$(rg -c '<button type="button" class="project-card' project.html)"
+[[ "$archive_count" -eq 20 ]] || fail "Expected 20 archive cards, found $archive_count"
+for category in client-projects saas-projects concept-projects; do
+    assert_contains index.html "href=\"project.html#$category\"" "Missing archive link for $category"
+    assert_contains project.html "id=\"$category\"" "Missing archive category $category"
+done
+assert_contains assets/css/style.css '.project-group--preview > .project-card:nth-of-type(n + 6)' 'Missing five-card preview limit'
 
 assert_contains index.html 'data-language="id"' 'Missing Indonesian language control'
 assert_contains index.html 'data-language="en"' 'Missing English language control'
@@ -64,7 +72,6 @@ while IFS=':' read -r page section; do
 done <<'REDIRECTS'
 about.html:about
 service.html:services
-project.html:projects
 contact.html:contact
 REDIRECTS
 
