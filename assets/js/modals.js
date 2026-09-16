@@ -506,11 +506,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const slides = project.gallery.map((slide, index) => `
             <div class="carousel-item ${index === 0 ? 'active' : ''}">
-                <a href="${slide.full}" target="_blank" rel="noopener noreferrer"
-                   aria-label="Buka gambar ukuran penuh" data-id-aria-label="Buka gambar ukuran penuh" data-en-aria-label="Open full-size image">
-                    <img src="${slide.image}" alt="${slide.title.id}" data-id-alt="${slide.title.id}" data-en-alt="${slide.title.en}"
-                         ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>
-                </a>
+                <img src="${slide.image}" alt="${slide.title.id}" data-id-alt="${slide.title.id}" data-en-alt="${slide.title.en}"
+                     ${index === 0 ? 'fetchpriority="high"' : 'loading="lazy" decoding="async"'}>
                 <div class="carousel-caption d-block">
                     <h6 data-id="${slide.title.id}" data-en="${slide.title.en}">${slide.title.id}</h6>
                     <p data-id="${slide.description.id}" data-en="${slide.description.en}">${slide.description.id}</p>
@@ -534,7 +531,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         return `
             <div class="modal-stack">
-                <span class="modal-stack__label" data-id="Tampilan solusi" data-en="Solution gallery">Tampilan solusi</span>
+                <span class="modal-stack__label" data-id="Tangkapan Layar" data-en="Screenshot Images">Tangkapan Layar</span>
                 <div id="${carouselId}" class="carousel slide project-carousel${['contain', 'portrait'].includes(project.galleryFit) ? ' project-carousel--contain' : ''}${project.galleryFit === 'portrait' ? ' project-carousel--portrait' : ''}" data-bs-ride="false">
                     ${project.gallery.length > 1 ? `<div class="carousel-indicators">${indicators}</div>` : ''}
                     <div class="carousel-inner">${slides}</div>
@@ -572,15 +569,15 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="modal-description" data-id="${project.description.id}" data-en="${project.description.en}">
                             ${project.description.id}
                         </p>
-                        ${project.website ? `<a class="secondary-action modal-website-link" href="${project.website}" target="_blank" rel="noopener noreferrer">
-                            <span data-id="Kunjungi website" data-en="Visit website">Kunjungi website</span>
-                            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
-                        </a>` : ''}
                         ${makeGallery(project)}
                         <div class="modal-stack">
                             <span class="modal-stack__label" data-id="Detail proyek" data-en="Project details">Detail proyek</span>
                             <div class="tag-list">${badges}</div>
                         </div>
+                        ${project.website ? `<a class="secondary-action modal-website-link" href="${project.website}" target="_blank" rel="noopener noreferrer">
+                            <span data-id="Kunjungi website" data-en="Visit website">Kunjungi website</span>
+                            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                        </a>` : ''}
                     </div>
                 </div>
             </div>

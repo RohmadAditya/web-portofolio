@@ -44,6 +44,10 @@ assert_contains assets/css/style.css '.project-group--preview > .project-card:nt
 assert_contains index.html 'data-language="id"' 'Missing Indonesian language control'
 assert_contains index.html 'data-language="en"' 'Missing English language control'
 assert_contains assets/js/modals.js "const STORAGE_KEY = 'ra-dev-language'" 'Missing language persistence key'
+assert_contains assets/js/modals.js 'data-id="Tangkapan Layar" data-en="Screenshot Images"' 'Missing bilingual screenshot label'
+if rg -q 'href="\$\{slide\.full\}"|Buka gambar ukuran penuh' assets/js/modals.js; then
+    fail 'Project screenshots should not open in a new tab'
+fi
 assert_contains index.html 'Fullstack Laravel Developer' 'Missing updated professional positioning'
 assert_contains index.html 'Mari bicarakan kebutuhan digital perusahaan Anda.' 'Missing updated contact message'
 assert_contains index.html 'mailto:rohmadaditya21@gmail.com' 'Missing email link'
