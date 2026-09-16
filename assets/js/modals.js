@@ -16,8 +16,8 @@ document.addEventListener('DOMContentLoaded', () => {
             id: 'moneyFinModal',
             title: 'MoneyFin — SaaS',
             description: {
-                id: 'MoneyFin adalah platform SaaS production untuk pengelolaan keuangan secara terpusat melalui alur pencatatan dan pemantauan yang praktis.',
-                en: 'MoneyFin is a production SaaS platform for centralized financial management through practical recording and monitoring workflows.'
+                id: 'MoneyFin adalah platform SaaS untuk pengelolaan keuangan pribadi secara terpusat melalui alur pencatatan dan pemantauan yang praktis.',
+                en: 'MoneyFin is a SaaS platform for centralized financial management through practical recording and monitoring workflows.'
             },
             website: 'https://moneyfin.rohmadaditya.my.id/',
             galleryFit: 'contain',
