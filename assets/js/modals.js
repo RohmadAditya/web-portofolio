@@ -14,23 +14,23 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/lily-bouquet/landing.png',
-                    full: 'assets/projects/lily-bouquet/landing.png',
-                    thumb: 'assets/projects/lily-bouquet/landing.png',
+                    image: 'assets/projects/lily-bouquet/landing.webp',
+                    full: 'assets/projects/lily-bouquet/landing.webp',
+                    thumb: 'assets/projects/lily-bouquet/landing.webp',
                     title: { id: 'Landing Page', en: 'Landing Page' },
                     description: { id: 'Halaman utama memperkenalkan Lily Bouquet dan mengarahkan pengunjung ke katalog.', en: 'The homepage introduces Lily Bouquet and guides visitors to the catalog.' }
                 },
                 {
-                    image: 'assets/projects/lily-bouquet/dashboard.png',
-                    full: 'assets/projects/lily-bouquet/dashboard.png',
-                    thumb: 'assets/projects/lily-bouquet/dashboard.png',
+                    image: 'assets/projects/lily-bouquet/dashboard.webp',
+                    full: 'assets/projects/lily-bouquet/dashboard.webp',
+                    thumb: 'assets/projects/lily-bouquet/dashboard.webp',
                     title: { id: 'Dashboard Operasional', en: 'Operations Dashboard' },
                     description: { id: 'Dashboard admin merangkum penjualan, penerimaan, dan aktivitas operasional.', en: 'The admin dashboard summarizes sales, payments, and operational activity.' }
                 },
                 {
-                    image: 'assets/projects/lily-bouquet/catalog.png',
-                    full: 'assets/projects/lily-bouquet/catalog.png',
-                    thumb: 'assets/projects/lily-bouquet/catalog.png',
+                    image: 'assets/projects/lily-bouquet/catalog.webp',
+                    full: 'assets/projects/lily-bouquet/catalog.webp',
+                    thumb: 'assets/projects/lily-bouquet/catalog.webp',
                     title: { id: 'Katalog Produk', en: 'Product Catalog' },
                     description: { id: 'Katalog membantu pengunjung menjelajahi dan menyaring pilihan rangkaian bunga.', en: 'The catalog helps visitors explore and filter floral arrangements.' }
                 }
@@ -47,16 +47,16 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/moneyfin/landing.png',
-                    full: 'assets/projects/moneyfin/landing.png',
-                    thumb: 'assets/projects/moneyfin/landing.png',
+                    image: 'assets/projects/moneyfin/landing.webp',
+                    full: 'assets/projects/moneyfin/landing.webp',
+                    thumb: 'assets/projects/moneyfin/landing.webp',
                     title: { id: 'Landing Page', en: 'Landing Page' },
                     description: { id: 'Halaman utama MoneyFin memperkenalkan pengelolaan keuangan yang sederhana.', en: 'The MoneyFin landing page introduces a simpler way to manage finances.' }
                 },
                 {
-                    image: 'assets/projects/moneyfin/dashboard.png',
-                    full: 'assets/projects/moneyfin/dashboard.png',
-                    thumb: 'assets/projects/moneyfin/dashboard.png',
+                    image: 'assets/projects/moneyfin/dashboard.webp',
+                    full: 'assets/projects/moneyfin/dashboard.webp',
+                    thumb: 'assets/projects/moneyfin/dashboard.webp',
                     title: { id: 'Dashboard Keuangan', en: 'Financial Dashboard' },
                     description: { id: 'Dashboard menampilkan ringkasan saldo, arus kas, anggaran, dan target.', en: 'The dashboard summarizes balances, cash flow, budgets, and goals.' }
                 }
@@ -72,49 +72,49 @@ document.addEventListener('DOMContentLoaded', () => {
             gallery: [
                 {
                     image: 'assets/projects/mg-playstation/slide-01.jpg',
-                    full: 'assets/projects/mg-playstation/mg-01.png',
+                    full: 'assets/projects/mg-playstation/mg-01.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-01.jpg',
                     title: { id: 'Penawaran Utama', en: 'Primary Offer' },
                     description: { id: 'Bagian pembuka menyampaikan layanan rental dengan cepat dan mengarahkan pelanggan untuk memeriksa ketersediaan.', en: 'The opening section communicates the rental offer quickly and guides customers toward checking availability.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-02.jpg',
-                    full: 'assets/projects/mg-playstation/mg-02.png',
+                    full: 'assets/projects/mg-playstation/mg-02.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-02.jpg',
                     title: { id: 'Fasilitas', en: 'Facilities' },
                     description: { id: 'Informasi fasilitas disusun ringkas agar pelanggan mudah memahami pengalaman rental yang ditawarkan.', en: 'Facility information is organized clearly so customers can understand the rental experience at a glance.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-03.jpg',
-                    full: 'assets/projects/mg-playstation/mg-03.png',
+                    full: 'assets/projects/mg-playstation/mg-03.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-03.jpg',
                     title: { id: 'Informasi Harga', en: 'Pricing Information' },
                     description: { id: 'Paket dan harga dibuat mudah dipindai sehingga pelanggan dapat membandingkan pilihan tanpa kebingungan.', en: 'Packages and pricing are easy to scan, helping customers compare their options without unnecessary friction.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-04.jpg',
-                    full: 'assets/projects/mg-playstation/mg-04.png',
+                    full: 'assets/projects/mg-playstation/mg-04.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-04.jpg',
                     title: { id: 'Ketersediaan Unit', en: 'Unit Availability' },
                     description: { id: 'Status unit ditampilkan secara visual agar pelanggan dapat mengetahui pilihan yang tersedia sebelum memesan.', en: 'Visual unit statuses let customers see what is available before making a booking.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-05.jpg',
-                    full: 'assets/projects/mg-playstation/mg-05.png',
+                    full: 'assets/projects/mg-playstation/mg-05.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-05.jpg',
                     title: { id: 'Katalog Game', en: 'Game Catalog' },
                     description: { id: 'Game unggulan ditampilkan untuk memperjelas pilihan hiburan sekaligus memperkuat daya tarik layanan.', en: 'Featured games make the entertainment options clearer and strengthen the overall service offer.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-06.jpg',
-                    full: 'assets/projects/mg-playstation/mg-06.png',
+                    full: 'assets/projects/mg-playstation/mg-06.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-06.jpg',
                     title: { id: 'Kontak dan Lokasi', en: 'Contact and Location' },
                     description: { id: 'Alamat, kontak, dan peta ditempatkan dalam satu bagian untuk memudahkan pelanggan menghubungi atau mengunjungi lokasi.', en: 'Address, contact details, and a map are grouped together to make reaching or visiting the business easier.' }
                 },
                 {
                     image: 'assets/projects/mg-playstation/slide-07.jpg',
-                    full: 'assets/projects/mg-playstation/mg-07.png',
+                    full: 'assets/projects/mg-playstation/mg-07.webp',
                     thumb: 'assets/projects/mg-playstation/thumb-07.jpg',
                     title: { id: 'Panel Admin', en: 'Admin Panel' },
                     description: { id: 'Panel admin memusatkan pengelolaan pelanggan, unit, transaksi, dan laporan agar operasional lebih teratur.', en: 'The admin panel centralizes customers, units, transactions, and reports to keep daily operations organized.' }
@@ -131,9 +131,9 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/mpku-dashboard/dashboard.png',
-                    full: 'assets/projects/mpku-dashboard/dashboard.png',
-                    thumb: 'assets/projects/mpku-dashboard/dashboard.png',
+                    image: 'assets/projects/mpku-dashboard/dashboard.webp',
+                    full: 'assets/projects/mpku-dashboard/dashboard.webp',
+                    thumb: 'assets/projects/mpku-dashboard/dashboard.webp',
                     title: { id: 'Dashboard MPKU', en: 'MPKU Dashboard' },
                     description: { id: 'Dashboard audit rumah sakit dengan filter dan ringkasan laporan keuangan.', en: 'Hospital audit dashboard with filters and a financial report summary.' }
                 }
@@ -149,9 +149,9 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/asl-erp/dashboard.png',
-                    full: 'assets/projects/asl-erp/dashboard.png',
-                    thumb: 'assets/projects/asl-erp/dashboard.png',
+                    image: 'assets/projects/asl-erp/dashboard.webp',
+                    full: 'assets/projects/asl-erp/dashboard.webp',
+                    thumb: 'assets/projects/asl-erp/dashboard.webp',
                     title: { id: 'Dashboard ERP ASL', en: 'ASL ERP Dashboard' },
                     description: { id: 'Dashboard menampilkan kurs, pemantauan pengguna, aktivitas, dan ringkasan penjualan.', en: 'The dashboard shows exchange rates, user monitoring, activity, and sales summaries.' }
                 }
@@ -168,23 +168,23 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/mitra-djaya-trans/landing.png',
-                    full: 'assets/projects/mitra-djaya-trans/landing.png',
-                    thumb: 'assets/projects/mitra-djaya-trans/landing.png',
+                    image: 'assets/projects/mitra-djaya-trans/landing.webp',
+                    full: 'assets/projects/mitra-djaya-trans/landing.webp',
+                    thumb: 'assets/projects/mitra-djaya-trans/landing.webp',
                     title: { id: 'Beranda', en: 'Homepage' },
                     description: { id: 'Halaman utama menampilkan layanan angkutan dan logistik Mitra Djaya Trans.', en: 'The homepage presents Mitra Djaya Trans transportation and logistics services.' }
                 },
                 {
-                    image: 'assets/projects/mitra-djaya-trans/gallery.png',
-                    full: 'assets/projects/mitra-djaya-trans/gallery.png',
-                    thumb: 'assets/projects/mitra-djaya-trans/gallery.png',
+                    image: 'assets/projects/mitra-djaya-trans/gallery.webp',
+                    full: 'assets/projects/mitra-djaya-trans/gallery.webp',
+                    thumb: 'assets/projects/mitra-djaya-trans/gallery.webp',
                     title: { id: 'Galeri Armada', en: 'Fleet Gallery' },
                     description: { id: 'Galeri menampilkan dokumentasi armada kendaraan.', en: 'The gallery showcases the vehicle fleet.' }
                 },
                 {
-                    image: 'assets/projects/mitra-djaya-trans/about.png',
-                    full: 'assets/projects/mitra-djaya-trans/about.png',
-                    thumb: 'assets/projects/mitra-djaya-trans/about.png',
+                    image: 'assets/projects/mitra-djaya-trans/about.webp',
+                    full: 'assets/projects/mitra-djaya-trans/about.webp',
+                    thumb: 'assets/projects/mitra-djaya-trans/about.webp',
                     title: { id: 'Tentang Perusahaan', en: 'About the Company' },
                     description: { id: 'Profil perusahaan menjelaskan layanan, visi, dan misi Mitra Djaya Trans.', en: 'The company profile explains Mitra Djaya Trans services, vision, and mission.' }
                 }
@@ -200,16 +200,16 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/surya-medika-timur-ecatalog/results.png',
-                    full: 'assets/projects/surya-medika-timur-ecatalog/results.png',
-                    thumb: 'assets/projects/surya-medika-timur-ecatalog/results.png',
+                    image: 'assets/projects/surya-medika-timur-ecatalog/results.webp',
+                    full: 'assets/projects/surya-medika-timur-ecatalog/results.webp',
+                    thumb: 'assets/projects/surya-medika-timur-ecatalog/results.webp',
                     title: { id: 'Perbandingan Penawaran', en: 'Offer Comparison' },
                     description: { id: 'Tampilan e-Katalog setelah tipe produk dipilih, dengan peringkat penawaran vendor.', en: 'The e-Catalog after selecting a product type, showing ranked vendor offers.' }
                 },
                 {
-                    image: 'assets/projects/surya-medika-timur-ecatalog/empty-state.png',
-                    full: 'assets/projects/surya-medika-timur-ecatalog/empty-state.png',
-                    thumb: 'assets/projects/surya-medika-timur-ecatalog/empty-state.png',
+                    image: 'assets/projects/surya-medika-timur-ecatalog/empty-state.webp',
+                    full: 'assets/projects/surya-medika-timur-ecatalog/empty-state.webp',
+                    thumb: 'assets/projects/surya-medika-timur-ecatalog/empty-state.webp',
                     title: { id: 'Filter e-Katalog', en: 'e-Catalog Filter' },
                     description: { id: 'Tampilan awal meminta pengguna memilih tipe atau templat sebelum melihat data.', en: 'The initial view prompts users to select a type or template before viewing data.' }
                 }
@@ -222,6 +222,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya berkontribusi dalam pengembangan ulang Hospital Information System dari awal untuk memodernisasi operasional rumah sakit. Sistem terintegrasi ini mendukung layanan pasien, rekam medis, farmasi, billing, dan alur administrasi sekaligus meningkatkan skalabilitas, keandalan, dan kemudahan pemeliharaan.',
                 en: 'I contributed to rebuilding the Hospital Information System from the ground up to modernize hospital operations. The integrated platform supports patient services, medical records, pharmacy, billing, and administrative workflows while improving scalability, reliability, and maintainability.'
             },
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/siti-khodijah-his/portal.webp',
+                    full: 'assets/projects/siti-khodijah-his/portal.webp',
+                    thumb: 'assets/projects/siti-khodijah-his/portal.webp',
+                    title: { id: 'Modul Master HIS', en: 'HIS Master Module' },
+                    description: { id: 'Tampilan module master sistem informasi rumah sakit.', en: 'The hospital information system master module.' }
+                }
+            ]
         },
         {
             id: 'smtQuotationModal',
@@ -233,16 +243,16 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/surya-medika-timur-quotation/list.png',
-                    full: 'assets/projects/surya-medika-timur-quotation/list.png',
-                    thumb: 'assets/projects/surya-medika-timur-quotation/list.png',
+                    image: 'assets/projects/surya-medika-timur-quotation/list.webp',
+                    full: 'assets/projects/surya-medika-timur-quotation/list.webp',
+                    thumb: 'assets/projects/surya-medika-timur-quotation/list.webp',
                     title: { id: 'Daftar Form Penawaran', en: 'Quotation Form List' },
                     description: { id: 'Halaman admin untuk membuat, mencari, dan memantau form penawaran.', en: 'The admin page for creating, searching, and monitoring quotation forms.' }
                 },
                 {
-                    image: 'assets/projects/surya-medika-timur-quotation/detail.png',
-                    full: 'assets/projects/surya-medika-timur-quotation/detail.png',
-                    thumb: 'assets/projects/surya-medika-timur-quotation/detail.png',
+                    image: 'assets/projects/surya-medika-timur-quotation/detail.webp',
+                    full: 'assets/projects/surya-medika-timur-quotation/detail.webp',
+                    thumb: 'assets/projects/surya-medika-timur-quotation/detail.webp',
                     title: { id: 'Detail Penawaran Vendor', en: 'Vendor Quotation Details' },
                     description: { id: 'Tampilan detail penawaran yang sudah dikirim, termasuk ringkasan total dan rincian barang.', en: 'A submitted quotation showing its totals and item details.' }
                 }
@@ -259,23 +269,23 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/asl-company-profile/landing.png',
-                    full: 'assets/projects/asl-company-profile/landing.png',
-                    thumb: 'assets/projects/asl-company-profile/landing.png',
+                    image: 'assets/projects/asl-company-profile/landing.webp',
+                    full: 'assets/projects/asl-company-profile/landing.webp',
+                    thumb: 'assets/projects/asl-company-profile/landing.webp',
                     title: { id: 'Beranda', en: 'Homepage' },
                     description: { id: 'Halaman utama menampilkan profil singkat dan layanan freight forwarding ASL Logistik.', en: 'The homepage introduces ASL Logistik and its freight-forwarding services.' }
                 },
                 {
-                    image: 'assets/projects/asl-company-profile/tracking.png',
-                    full: 'assets/projects/asl-company-profile/tracking.png',
-                    thumb: 'assets/projects/asl-company-profile/tracking.png',
+                    image: 'assets/projects/asl-company-profile/tracking.webp',
+                    full: 'assets/projects/asl-company-profile/tracking.webp',
+                    thumb: 'assets/projects/asl-company-profile/tracking.webp',
                     title: { id: 'Lacak Pengiriman', en: 'Shipment Tracking' },
                     description: { id: 'Halaman pelacakan menyediakan pencarian pengiriman berdasarkan nomor resi.', en: 'The tracking page lets visitors look up a shipment by tracking number.' }
                 },
                 {
-                    image: 'assets/projects/asl-company-profile/projects.png',
-                    full: 'assets/projects/asl-company-profile/projects.png',
-                    thumb: 'assets/projects/asl-company-profile/projects.png',
+                    image: 'assets/projects/asl-company-profile/projects.webp',
+                    full: 'assets/projects/asl-company-profile/projects.webp',
+                    thumb: 'assets/projects/asl-company-profile/projects.webp',
                     title: { id: 'Proyek', en: 'Projects' },
                     description: { id: 'Galeri proyek menampilkan dokumentasi kegiatan kargo dan konstruksi.', en: 'The project gallery showcases cargo and construction work.' }
                 }
@@ -292,23 +302,23 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/daemanindo-agencies/landing.png',
-                    full: 'assets/projects/daemanindo-agencies/landing.png',
-                    thumb: 'assets/projects/daemanindo-agencies/landing.png',
+                    image: 'assets/projects/daemanindo-agencies/landing.webp',
+                    full: 'assets/projects/daemanindo-agencies/landing.webp',
+                    thumb: 'assets/projects/daemanindo-agencies/landing.webp',
                     title: { id: 'Beranda', en: 'Homepage' },
                     description: { id: 'Halaman utama memperkenalkan Daemanindo Agencies dan layanan logistiknya.', en: 'The homepage introduces Daemanindo Agencies and its logistics services.' }
                 },
                 {
-                    image: 'assets/projects/daemanindo-agencies/services.png',
-                    full: 'assets/projects/daemanindo-agencies/services.png',
-                    thumb: 'assets/projects/daemanindo-agencies/services.png',
+                    image: 'assets/projects/daemanindo-agencies/services.webp',
+                    full: 'assets/projects/daemanindo-agencies/services.webp',
+                    thumb: 'assets/projects/daemanindo-agencies/services.webp',
                     title: { id: 'Layanan', en: 'Services' },
                     description: { id: 'Halaman layanan menampilkan ship agency dan international forwarding.', en: 'The services page features ship agency and international forwarding.' }
                 },
                 {
-                    image: 'assets/projects/daemanindo-agencies/location.png',
-                    full: 'assets/projects/daemanindo-agencies/location.png',
-                    thumb: 'assets/projects/daemanindo-agencies/location.png',
+                    image: 'assets/projects/daemanindo-agencies/location.webp',
+                    full: 'assets/projects/daemanindo-agencies/location.webp',
+                    thumb: 'assets/projects/daemanindo-agencies/location.webp',
                     title: { id: 'Lokasi', en: 'Location' },
                     description: { id: 'Bagian kontak menampilkan lokasi perusahaan pada peta.', en: 'The contact section displays the company location on a map.' }
                 }
@@ -321,6 +331,16 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Sebagai Full Stack Developer, saya mengembangkan aplikasi Point of Sale berbasis web untuk pengelolaan pesanan, pemrosesan transaksi, administrasi menu, dan laporan penjualan. Sistem ini menyederhanakan alur kerja harian, meningkatkan akurasi transaksi, dan menyajikan insight bisnis melalui dashboard.',
                 en: 'As the Full Stack Developer, I built a web-based Point of Sale application for order management, transaction processing, menu administration, and sales reporting. It streamlines daily workflows, improves transaction accuracy, and provides business insights through a dashboard.'
             },
+            galleryFit: 'portrait',
+            gallery: [
+                {
+                    image: 'assets/projects/resto-bu-ais/pos-mobile.webp',
+                    full: 'assets/projects/resto-bu-ais/pos-mobile.webp',
+                    thumb: 'assets/projects/resto-bu-ais/pos-mobile.webp',
+                    title: { id: 'Menu Transaksi Kasir', en: 'Cashier Transactions Menu' },
+                    description: { id: 'Tampilan menu aplikasi POS Resto Bu Ais pada layar potret.', en: 'The Resto Bu Ais POS application menu on a portrait screen.' }
+                }
+            ]
         },
         {
             id: 'synergyTangguhModal',
@@ -333,23 +353,23 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/synergy-tangguh-perkasa/landing.png',
-                    full: 'assets/projects/synergy-tangguh-perkasa/landing.png',
-                    thumb: 'assets/projects/synergy-tangguh-perkasa/landing.png',
+                    image: 'assets/projects/synergy-tangguh-perkasa/landing.webp',
+                    full: 'assets/projects/synergy-tangguh-perkasa/landing.webp',
+                    thumb: 'assets/projects/synergy-tangguh-perkasa/landing.webp',
                     title: { id: 'Beranda', en: 'Homepage' },
                     description: { id: 'Halaman utama memperkenalkan solusi pengadaan Synergy Perkasa Group.', en: 'The homepage introduces Synergy Perkasa Group procurement solutions.' }
                 },
                 {
-                    image: 'assets/projects/synergy-tangguh-perkasa/projects.png',
-                    full: 'assets/projects/synergy-tangguh-perkasa/projects.png',
-                    thumb: 'assets/projects/synergy-tangguh-perkasa/projects.png',
+                    image: 'assets/projects/synergy-tangguh-perkasa/projects.webp',
+                    full: 'assets/projects/synergy-tangguh-perkasa/projects.webp',
+                    thumb: 'assets/projects/synergy-tangguh-perkasa/projects.webp',
                     title: { id: 'Galeri Proyek', en: 'Project Gallery' },
                     description: { id: 'Galeri menampilkan dokumentasi produk, armada, dan kegiatan proyek.', en: 'The gallery shows products, vehicles, and project activities.' }
                 },
                 {
-                    image: 'assets/projects/synergy-tangguh-perkasa/legalities.png',
-                    full: 'assets/projects/synergy-tangguh-perkasa/legalities.png',
-                    thumb: 'assets/projects/synergy-tangguh-perkasa/legalities.png',
+                    image: 'assets/projects/synergy-tangguh-perkasa/legalities.webp',
+                    full: 'assets/projects/synergy-tangguh-perkasa/legalities.webp',
+                    thumb: 'assets/projects/synergy-tangguh-perkasa/legalities.webp',
                     title: { id: 'Legalitas Perusahaan', en: 'Company Documents' },
                     description: { id: 'Bagian website yang menampilkan dokumen pendukung perusahaan.', en: 'A website section displaying company supporting documents.' }
                 }
@@ -366,9 +386,9 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/popeye-company-profile/landing.png',
-                    full: 'assets/projects/popeye-company-profile/landing.png',
-                    thumb: 'assets/projects/popeye-company-profile/landing.png',
+                    image: 'assets/projects/popeye-company-profile/landing.webp',
+                    full: 'assets/projects/popeye-company-profile/landing.webp',
+                    thumb: 'assets/projects/popeye-company-profile/landing.webp',
                     title: { id: 'Beranda Company Profile', en: 'Company Profile Homepage' },
                     description: { id: 'Halaman utama memperkenalkan layanan logistik Popeye Trans Logistik.', en: 'The homepage introduces Popeye Trans Logistik’s logistics services.' }
                 }
@@ -384,9 +404,9 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/popeye-erp/dashboard.png',
-                    full: 'assets/projects/popeye-erp/dashboard.png',
-                    thumb: 'assets/projects/popeye-erp/dashboard.png',
+                    image: 'assets/projects/popeye-erp/dashboard.webp',
+                    full: 'assets/projects/popeye-erp/dashboard.webp',
+                    thumb: 'assets/projects/popeye-erp/dashboard.webp',
                     title: { id: 'Dashboard ERP Popeye', en: 'Popeye ERP Dashboard' },
                     description: { id: 'Beranda ERP menampilkan navigasi operasional dan ringkasan grafik penjualan.', en: 'The ERP homepage shows operational navigation and sales charts.' }
                 }
@@ -402,9 +422,9 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/sri-mutiara-alam-erp/financial-reports.png',
-                    full: 'assets/projects/sri-mutiara-alam-erp/financial-reports.png',
-                    thumb: 'assets/projects/sri-mutiara-alam-erp/financial-reports.png',
+                    image: 'assets/projects/sri-mutiara-alam-erp/financial-reports.webp',
+                    full: 'assets/projects/sri-mutiara-alam-erp/financial-reports.webp',
+                    thumb: 'assets/projects/sri-mutiara-alam-erp/financial-reports.webp',
                     title: { id: 'Laporan Keuangan', en: 'Financial Reports' },
                     description: { id: 'Daftar laporan keuangan yang tersedia pada modul ERP.', en: 'The available financial reports in the ERP module.' }
                 }
@@ -421,23 +441,23 @@ document.addEventListener('DOMContentLoaded', () => {
             galleryFit: 'contain',
             gallery: [
                 {
-                    image: 'assets/projects/surabaya-mandiri-logistik/landing.png',
-                    full: 'assets/projects/surabaya-mandiri-logistik/landing.png',
-                    thumb: 'assets/projects/surabaya-mandiri-logistik/landing.png',
+                    image: 'assets/projects/surabaya-mandiri-logistik/landing.webp',
+                    full: 'assets/projects/surabaya-mandiri-logistik/landing.webp',
+                    thumb: 'assets/projects/surabaya-mandiri-logistik/landing.webp',
                     title: { id: 'Beranda', en: 'Homepage' },
                     description: { id: 'Halaman utama memperkenalkan layanan pemasokan, transportasi, dan pergudangan.', en: 'The homepage introduces supply, transportation, and warehousing services.' }
                 },
                 {
-                    image: 'assets/projects/surabaya-mandiri-logistik/gallery.png',
-                    full: 'assets/projects/surabaya-mandiri-logistik/gallery.png',
-                    thumb: 'assets/projects/surabaya-mandiri-logistik/gallery.png',
+                    image: 'assets/projects/surabaya-mandiri-logistik/gallery.webp',
+                    full: 'assets/projects/surabaya-mandiri-logistik/gallery.webp',
+                    thumb: 'assets/projects/surabaya-mandiri-logistik/gallery.webp',
                     title: { id: 'Galeri Pengiriman', en: 'Shipment Gallery' },
                     description: { id: 'Galeri mendokumentasikan armada, aktivitas pengiriman, dan operasional.', en: 'The gallery documents the fleet, shipments, and operations.' }
                 },
                 {
-                    image: 'assets/projects/surabaya-mandiri-logistik/about.png',
-                    full: 'assets/projects/surabaya-mandiri-logistik/about.png',
-                    thumb: 'assets/projects/surabaya-mandiri-logistik/about.png',
+                    image: 'assets/projects/surabaya-mandiri-logistik/about.webp',
+                    full: 'assets/projects/surabaya-mandiri-logistik/about.webp',
+                    thumb: 'assets/projects/surabaya-mandiri-logistik/about.webp',
                     title: { id: 'Tentang Perusahaan', en: 'About the Company' },
                     description: { id: 'Halaman profil perusahaan menampilkan gambaran bisnis, visi, dan misi.', en: 'The company profile presents its business, vision, and mission.' }
                 }
@@ -515,7 +535,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="modal-stack">
                 <span class="modal-stack__label" data-id="Tampilan solusi" data-en="Solution gallery">Tampilan solusi</span>
-                <div id="${carouselId}" class="carousel slide project-carousel${project.galleryFit === 'contain' ? ' project-carousel--contain' : ''}" data-bs-ride="false">
+                <div id="${carouselId}" class="carousel slide project-carousel${['contain', 'portrait'].includes(project.galleryFit) ? ' project-carousel--contain' : ''}${project.galleryFit === 'portrait' ? ' project-carousel--portrait' : ''}" data-bs-ride="false">
                     ${project.gallery.length > 1 ? `<div class="carousel-indicators">${indicators}</div>` : ''}
                     <div class="carousel-inner">${slides}</div>
                     ${project.gallery.length > 1 ? `<button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev"

@@ -36,6 +36,9 @@ for category in client-projects saas-projects concept-projects; do
     assert_contains index.html "href=\"project.html#$category\"" "Missing archive link for $category"
     assert_contains project.html "id=\"$category\"" "Missing archive category $category"
 done
+while IFS= read -r project_asset; do
+    [[ -s "$project_asset" ]] || fail "Missing or empty project image: $project_asset"
+done < <(rg -o --no-filename 'assets/projects/[[:alnum:]_./-]+\.(webp|jpe?g)' index.html project.html assets/js/modals.js | sort -u)
 assert_contains assets/css/style.css '.project-group--preview > .project-card:nth-of-type(n + 6)' 'Missing five-card preview limit'
 
 assert_contains index.html 'data-language="id"' 'Missing Indonesian language control'
