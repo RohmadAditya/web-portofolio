@@ -22,13 +22,13 @@ for section in about services projects contact; do
     assert_contains index.html "id=\"$section\"" "Missing #$section section"
 done
 
-for modal in mpkuDashboardModal aslErpModal mitraDjayaModal smtCatalogModal sitiKhodijahHisModal smtQuotationModal daemanindoagenciesModal restoBuAisModal asllogistikModal synergyTangguhModal popeyeProfileModal popeyeErpModal mgPlaystationModal timelineTodoModal posModal filmModal linktreeModal; do
+for modal in lilyBouquetModal mpkuDashboardModal aslErpModal mitraDjayaModal smtCatalogModal sitiKhodijahHisModal smtQuotationModal daemanindoagenciesModal restoBuAisModal asllogistikModal synergyTangguhModal popeyeProfileModal popeyeErpModal surabayaMandiriModal moneyFinModal mgPlaystationModal timelineTodoModal posModal filmModal linktreeModal; do
     assert_contains index.html "data-bs-target=\"#$modal\"" "Missing trigger for #$modal"
     assert_contains assets/js/modals.js "id: '$modal'" "Missing generated modal #$modal"
 done
 
 project_count="$(rg -c '<(button|a).*class="project-card' index.html)"
-[[ "$project_count" -eq 19 ]] || fail "Expected 19 project cards, found $project_count"
+[[ "$project_count" -eq 20 ]] || fail "Expected 20 project cards, found $project_count"
 
 assert_contains index.html 'data-language="id"' 'Missing Indonesian language control'
 assert_contains index.html 'data-language="en"' 'Missing English language control'

@@ -4,13 +4,30 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const projectData = [
         {
+            id: 'lilyBouquetModal',
+            title: 'Lily Bouquet — Landing Page & Admin Dashboard',
+            description: {
+                id: 'Saya membangun landing page Lily Bouquet beserta dashboard admin operasional. Admin dapat mengelola konten yang tampil di landing page sekaligus memantau penjualan dan laporan dalam satu sistem.',
+                en: 'I built the Lily Bouquet landing page and operational admin dashboard. Admins can manage the landing page content while tracking sales and reports in one system.'
+            },
+            website: 'https://lily-bouquet.com/'
+        },
+        {
+            id: 'moneyFinModal',
+            title: 'MoneyFin — SaaS',
+            description: {
+                id: 'MoneyFin adalah platform SaaS production untuk pengelolaan keuangan secara terpusat melalui alur pencatatan dan pemantauan yang praktis.',
+                en: 'MoneyFin is a production SaaS platform for centralized financial management through practical recording and monitoring workflows.'
+            },
+            website: 'https://moneyfin.rohmadaditya.my.id/'
+        },
+        {
             id: 'mgPlaystationModal',
             title: 'MG-Playstation',
             description: {
                 id: 'Proyek konsep MG-Playstation mengeksplorasi alur rental secara end-to-end, mulai dari landing page dan pemesanan hingga pengelolaan pelanggan, transaksi, ketersediaan unit, dan laporan keuangan dalam satu sistem.',
                 en: 'The MG-Playstation concept project explores an end-to-end rental workflow, from its landing page and booking flow to customer management, transactions, unit availability, and financial reporting in one system.'
             },
-            tags: ['Laravel 10', 'Filament Admin Panel', 'MySQL', 'Bootstrap 5'],
             gallery: [
                 {
                     image: 'assets/projects/mg-playstation/slide-01.jpg',
@@ -70,7 +87,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya mengembangkan dashboard untuk memusatkan hasil audit dan management letter rumah sakit. Platform ini membantu pimpinan dan anggota dewan memantau indikator kinerja, rekomendasi manajemen, dan progres organisasi secara transparan sehingga pelaporan dan pengambilan keputusan strategis menjadi lebih efektif.',
                 en: 'I developed a dashboard that centralizes hospital audit results and management letters. It helps leadership and board members monitor performance indicators, management recommendations, and organizational progress transparently, making reporting and strategic decision-making more effective.'
             },
-            tags: ['May 2026–Present', 'Laravel', 'Information System', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'aslErpModal',
@@ -79,7 +95,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya berkontribusi dalam pengembangan ERP khusus freight forwarding yang mengintegrasikan quotation, pelaksanaan job, invoicing, dan operasional gudang. Sistem terpusat ini mengurangi pekerjaan manual, meningkatkan visibilitas data, dan memperkuat koordinasi tim operasional, gudang, serta keuangan.',
                 en: 'I contributed to a custom freight-forwarding ERP integrating quotations, job execution, invoicing, and warehouse operations. This centralized system reduces manual work, improves data visibility, and strengthens coordination across operations, warehouse, and finance teams.'
             },
-            tags: ['Oct 2025–Present', 'Laravel', 'Bootstrap', 'ERP', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'mitraDjayaModal',
@@ -88,7 +103,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya membangun website company profile untuk PT Mitra Djaya Trans, perusahaan jasa angkutan dan logistik di Gresik yang melayani transportasi darat, laut, dan udara. Website menyajikan solusi pengiriman perusahaan secara profesional, jelas, dan mudah diakses.',
                 en: 'I built a company profile website for PT Mitra Djaya Trans, a Gresik-based logistics provider serving land, sea, and air transportation needs. The website presents its shipping solutions professionally, clearly, and accessibly.'
             },
-            tags: ['May 2026', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
+            website: 'https://mitradjayatrans.com/'
         },
         {
             id: 'smtCatalogModal',
@@ -97,7 +112,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya mengembangkan e-Catalog yang memusatkan penawaran produk dari vendor dalam ekosistem pengadaan Surya Medika Timur. Platform ini membantu tim pengadaan rumah sakit mengevaluasi dan membandingkan produk serta harga dengan lebih transparan untuk memperoleh nilai pembelian terbaik.',
                 en: 'I developed an e-Catalog that centralizes vendor product offers within the Surya Medika Timur procurement ecosystem. It enables hospital procurement teams to evaluate and compare products and pricing transparently to identify the best purchasing value.'
             },
-            tags: ['Apr 2026', 'Laravel', 'Procurement', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'sitiKhodijahHisModal',
@@ -106,7 +120,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya berkontribusi dalam pengembangan ulang Hospital Information System dari awal untuk memodernisasi operasional rumah sakit. Sistem terintegrasi ini mendukung layanan pasien, rekam medis, farmasi, billing, dan alur administrasi sekaligus meningkatkan skalabilitas, keandalan, dan kemudahan pemeliharaan.',
                 en: 'I contributed to rebuilding the Hospital Information System from the ground up to modernize hospital operations. The integrated platform supports patient services, medical records, pharmacy, billing, and administrative workflows while improving scalability, reliability, and maintainability.'
             },
-            tags: ['Apr 2025–Apr 2026', 'Software Development', 'HIS', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'smtQuotationModal',
@@ -115,7 +128,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya merancang dan mengimplementasikan modul pengajuan penawaran vendor tanpa login melalui token akses unik, beserta sistem pemeringkatan berdasarkan kategori obat dan jenis produk. Fitur ini mempercepat pengumpulan, perbandingan, dan evaluasi penawaran untuk keputusan pengadaan berbasis data.',
                 en: 'I designed and implemented a login-free vendor quotation module using unique access tokens, together with a ranking system based on drug categories and product types. The features accelerate quotation collection, comparison, and evaluation for data-driven procurement decisions.'
             },
-            tags: ['Feb–Mar 2026', 'Laravel', 'Procurement', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'asllogistikModal',
@@ -124,7 +136,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya menangani perencanaan struktur, tampilan, dan implementasi website PT Artalapan Strategi Logistik secara end-to-end. Website ini dirancang untuk memperkuat citra profesional perusahaan forwarding serta menyajikan profil, layanan, dan informasi penting dengan alur yang mudah dipahami.',
                 en: 'I handled the structure, visual direction, and implementation of the PT Artalapan Strategi Logistik website end-to-end. The site presents the forwarding company professionally while making its profile, services, and essential information easy to understand.'
             },
-            tags: ['Aug 2025', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
+            website: 'https://asllogistik.com/'
         },
         {
             id: 'daemanindoagenciesModal',
@@ -133,7 +145,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya merancang dan membangun website Daemanindo Agencies secara end-to-end untuk menghadirkan profil digital yang sesuai dengan karakter perusahaan logistik. Struktur konten dan navigasinya dibuat ringkas agar calon pelanggan mudah mengenal perusahaan serta layanan yang tersedia.',
                 en: 'I designed and built the Daemanindo Agencies website end-to-end to create a digital presence suited to a logistics company. Its concise content structure and navigation help prospective customers understand the company and its services.'
             },
-            tags: ['Jan 2026', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
+            website: 'https://daemanindoagencies.com/'
         },
         {
             id: 'restoBuAisModal',
@@ -142,7 +154,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Sebagai Full Stack Developer, saya mengembangkan aplikasi Point of Sale berbasis web untuk pengelolaan pesanan, pemrosesan transaksi, administrasi menu, dan laporan penjualan. Sistem ini menyederhanakan alur kerja harian, meningkatkan akurasi transaksi, dan menyajikan insight bisnis melalui dashboard.',
                 en: 'As the Full Stack Developer, I built a web-based Point of Sale application for order management, transaction processing, menu administration, and sales reporting. It streamlines daily workflows, improves transaction accuracy, and provides business insights through a dashboard.'
             },
-            tags: ['Jan 2026', 'Laravel', 'Bootstrap', 'POS', 'PT Altama Tekno Mandiri']
         },
         {
             id: 'synergyTangguhModal',
@@ -151,7 +162,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya mengembangkan website company profile untuk PT Synergy Tangguh Perkasa, penyedia pengadaan barang dan jasa bagi perusahaan, proyek, serta institusi. Penyajian konten menekankan profesionalisme, ketepatan spesifikasi, efisiensi biaya, dan kepastian pengiriman.',
                 en: 'I developed a company profile website for PT Synergy Tangguh Perkasa, a procurement provider serving companies, projects, and institutions. Its content emphasizes professionalism, specification accuracy, cost efficiency, and delivery certainty.'
             },
-            tags: ['Jul 2025', 'WordPress', 'Procurement', 'PT Altama Tekno Mandiri']
+            website: 'https://synergiperkasagroup.com/'
         },
         {
             id: 'popeyeProfileModal',
@@ -160,7 +171,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya membangun website company profile untuk PT Popeye Trans Logistik guna menyajikan layanan kargo, transportasi, pindahan, logistik, distribusi, general supplier, serta ekspor-impor secara terstruktur dan profesional.',
                 en: 'I built the PT Popeye Trans Logistik company profile website to present its cargo, transportation, relocation, logistics, distribution, general supplier, and export-import services in a structured and professional way.'
             },
-            tags: ['Jun 2025', 'WordPress', 'Company Profile', 'PT Altama Tekno Mandiri']
+            website: 'https://popeye-logistik.com/'
         },
         {
             id: 'popeyeErpModal',
@@ -169,7 +180,15 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Saya berkontribusi dalam pengembangan ERP yang memusatkan proses operasional dan transaksi perusahaan transportasi serta logistik. Arsitektur fleksibelnya memungkinkan tata letak invoice, struktur dokumen, dan format ekspor disesuaikan secara dinamis dengan standar bisnis setiap pelanggan.',
                 en: 'I contributed to an ERP that centralizes operational and transactional processes for a transportation and logistics company. Its flexible architecture allows invoice layouts, document structures, and export formats to be dynamically tailored to each customer’s business standards.'
             },
-            tags: ['Mar–Apr 2025', 'Laravel', 'Bootstrap', 'ERP', 'PT Altama Tekno Mandiri']
+        },
+        {
+            id: 'surabayaMandiriModal',
+            title: 'PT Surabaya Mandiri Logistik — Company Profile',
+            description: {
+                id: 'Website company profile PT Surabaya Mandiri Logistik menyajikan layanan pemasokan material bangunan, transportasi, dan pergudangan dalam satu profil perusahaan yang mudah dijelajahi.',
+                en: 'The PT Surabaya Mandiri Logistik company profile website presents building materials supply, transportation, and warehousing services in an easy-to-navigate company profile.'
+            },
+            website: 'https://surabayamandirilogistik.com/'
         },
         {
             id: 'timelineTodoModal',
@@ -178,7 +197,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Proyek konsep untuk mengeksplorasi alur aplikasi produktivitas berbasis Laravel. Fokusnya adalah menyusun tugas dan jadwal, menentukan prioritas, serta menampilkan progres harian dalam antarmuka yang mudah dipahami.',
                 en: 'A concept project exploring a Laravel-based productivity workflow. It focuses on organizing tasks and schedules, setting priorities, and presenting daily progress through an approachable interface.'
             },
-            tags: ['Laravel', 'Bootstrap 5', 'MySQL']
         },
         {
             id: 'posModal',
@@ -187,7 +205,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Proyek konsep untuk mempelajari kebutuhan utama sistem kasir digital. Alurnya mencakup transaksi penjualan, pengelolaan stok, dan laporan keuangan agar data operasional dapat dikelola dalam satu aplikasi.',
                 en: 'A concept project exploring the core requirements of a digital point-of-sale system, including sales transactions, inventory management, and financial reporting in one application.'
             },
-            tags: ['Laravel', 'Bootstrap 5', 'MySQL']
         },
         {
             id: 'filmModal',
@@ -196,7 +213,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Proyek eksplorasi React dan integrasi API eksternal. Pengguna dapat mencari film, membuka detail, dan menjelajahi konten berdasarkan judul atau genre melalui alur yang sederhana dan responsif.',
                 en: 'An exploration of React and third-party API integration. Users can search for movies, view details, and browse by title or genre through a simple, responsive experience.'
             },
-            tags: ['React', 'CSS', 'Movie API']
         },
         {
             id: 'linktreeModal',
@@ -205,7 +221,6 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'Proyek konsep untuk mengeksplorasi penyajian informasi personal secara ringkas. Halaman ini menggabungkan profil sosial, portfolio, dan tautan penting dalam satu tampilan yang mudah dibuka dari perangkat mobile.',
                 en: 'A concept project exploring a concise way to present personal information. It brings social profiles, portfolio work, and important links into a single mobile-friendly page.'
             },
-            tags: ['HTML', 'CSS', 'Bootstrap 5']
         }
     ];
 
@@ -262,8 +277,12 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
     };
 
-    const modalMarkup = projectData.map((project) => `
-        <div class="modal fade" id="${project.id}" tabindex="-1" aria-labelledby="${project.id}Label" aria-hidden="true">
+    const modalMarkup = projectData.map((project) => {
+        const card = document.querySelector(`[data-bs-target="#${project.id}"]`);
+        const badges = card?.querySelector('.tag-list')?.innerHTML || '';
+
+        return `
+            <div class="modal fade" id="${project.id}" tabindex="-1" aria-labelledby="${project.id}Label" aria-hidden="true">
             <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
                 <div class="modal-content">
                     <div class="modal-header">
@@ -278,18 +297,21 @@ document.addEventListener('DOMContentLoaded', () => {
                         <p class="modal-description" data-id="${project.description.id}" data-en="${project.description.en}">
                             ${project.description.id}
                         </p>
+                        ${project.website ? `<a class="secondary-action modal-website-link" href="${project.website}" target="_blank" rel="noopener noreferrer">
+                            <span data-id="Kunjungi website" data-en="Visit website">Kunjungi website</span>
+                            <i class="bi bi-box-arrow-up-right" aria-hidden="true"></i>
+                        </a>` : ''}
                         ${makeGallery(project)}
                         <div class="modal-stack">
-                            <span class="modal-stack__label" data-id="Stack teknologi" data-en="Technology stack">Stack teknologi</span>
-                            <div class="tag-list">
-                                ${project.tags.map((tag) => `<span>${tag}</span>`).join('')}
-                            </div>
+                            <span class="modal-stack__label" data-id="Detail proyek" data-en="Project details">Detail proyek</span>
+                            <div class="tag-list">${badges}</div>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
-    `).join('');
+            </div>
+        `;
+    }).join('');
 
     document.body.insertAdjacentHTML('beforeend', modalMarkup);
 
