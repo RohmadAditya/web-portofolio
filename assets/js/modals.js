@@ -19,7 +19,24 @@ document.addEventListener('DOMContentLoaded', () => {
                 id: 'MoneyFin adalah platform SaaS production untuk pengelolaan keuangan secara terpusat melalui alur pencatatan dan pemantauan yang praktis.',
                 en: 'MoneyFin is a production SaaS platform for centralized financial management through practical recording and monitoring workflows.'
             },
-            website: 'https://moneyfin.rohmadaditya.my.id/'
+            website: 'https://moneyfin.rohmadaditya.my.id/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/moneyfin/landing.png',
+                    full: 'assets/projects/moneyfin/landing.png',
+                    thumb: 'assets/projects/moneyfin/landing.png',
+                    title: { id: 'Landing Page', en: 'Landing Page' },
+                    description: { id: 'Halaman utama MoneyFin memperkenalkan pengelolaan keuangan yang sederhana.', en: 'The MoneyFin landing page introduces a simpler way to manage finances.' }
+                },
+                {
+                    image: 'assets/projects/moneyfin/dashboard.png',
+                    full: 'assets/projects/moneyfin/dashboard.png',
+                    thumb: 'assets/projects/moneyfin/dashboard.png',
+                    title: { id: 'Dashboard Keuangan', en: 'Financial Dashboard' },
+                    description: { id: 'Dashboard menampilkan ringkasan saldo, arus kas, anggaran, dan target.', en: 'The dashboard summarizes balances, cash flow, budgets, and goals.' }
+                }
+            ]
         },
         {
             id: 'mgPlaystationModal',
@@ -229,6 +246,8 @@ document.addEventListener('DOMContentLoaded', () => {
             return '';
         }
 
+        const carouselId = `${project.id}Carousel`;
+
         const slides = project.gallery.map((slide, index) => `
             <div class="carousel-item ${index === 0 ? 'active' : ''}">
                 <a href="${slide.full}" target="_blank" rel="noopener noreferrer"
@@ -244,14 +263,14 @@ document.addEventListener('DOMContentLoaded', () => {
         `).join('');
 
         const indicators = project.gallery.map((_, index) => `
-            <button type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}"
+            <button type="button" data-bs-target="#${carouselId}" data-bs-slide-to="${index}"
                     class="${index === 0 ? 'active' : ''}" ${index === 0 ? 'aria-current="true"' : ''}
                     aria-label="Slide ${index + 1}"></button>
         `).join('');
 
         const thumbs = project.gallery.map((slide, index) => `
             <button type="button" class="project-thumb ${index === 0 ? 'is-active' : ''}"
-                    data-bs-target="#mgPlaystationCarousel" data-bs-slide-to="${index}"
+                    data-bs-target="#${carouselId}" data-bs-slide-to="${index}"
                     aria-label="Lihat ${slide.title.id}" data-id-aria-label="Lihat ${slide.title.id}" data-en-aria-label="View ${slide.title.en}">
                 <img src="${slide.thumb}" alt="" loading="lazy" decoding="async">
             </button>
@@ -260,14 +279,14 @@ document.addEventListener('DOMContentLoaded', () => {
         return `
             <div class="modal-stack">
                 <span class="modal-stack__label" data-id="Tampilan solusi" data-en="Solution gallery">Tampilan solusi</span>
-                <div id="mgPlaystationCarousel" class="carousel slide project-carousel" data-bs-ride="false">
+                <div id="${carouselId}" class="carousel slide project-carousel${project.galleryFit === 'contain' ? ' project-carousel--contain' : ''}" data-bs-ride="false">
                     <div class="carousel-indicators">${indicators}</div>
                     <div class="carousel-inner">${slides}</div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide="prev"
+                    <button class="carousel-control-prev" type="button" data-bs-target="#${carouselId}" data-bs-slide="prev"
                             aria-label="Sebelumnya" data-id-aria-label="Sebelumnya" data-en-aria-label="Previous">
                         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
                     </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#mgPlaystationCarousel" data-bs-slide="next"
+                    <button class="carousel-control-next" type="button" data-bs-target="#${carouselId}" data-bs-slide="next"
                             aria-label="Berikutnya" data-id-aria-label="Berikutnya" data-en-aria-label="Next">
                         <span class="carousel-control-next-icon" aria-hidden="true"></span>
                     </button>
@@ -468,14 +487,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     window.addEventListener('pointermove', updateSpotlight, { passive: true });
 
-    const carouselElement = document.getElementById('mgPlaystationCarousel');
-    const thumbButtons = Array.from(document.querySelectorAll('.project-thumbs .project-thumb'));
-
-    if (carouselElement) {
+    document.querySelectorAll('.project-carousel').forEach((carouselElement) => {
+        const thumbButtons = Array.from(carouselElement.closest('.modal-stack').querySelectorAll('.project-thumb'));
         carouselElement.addEventListener('slid.bs.carousel', (event) => {
             thumbButtons.forEach((button, index) => {
                 button.classList.toggle('is-active', index === event.to);
             });
         });
-    }
+    });
 });
