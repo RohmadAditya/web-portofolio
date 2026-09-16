@@ -27,8 +27,8 @@ for modal in mpkuDashboardModal aslErpModal mitraDjayaModal smtCatalogModal siti
     assert_contains assets/js/modals.js "id: '$modal'" "Missing generated modal #$modal"
 done
 
-project_count="$(rg -c '<button type="button" class="project-card' index.html)"
-[[ "$project_count" -eq 17 ]] || fail "Expected 17 project cards, found $project_count"
+project_count="$(rg -c '<(button|a).*class="project-card' index.html)"
+[[ "$project_count" -eq 19 ]] || fail "Expected 19 project cards, found $project_count"
 
 assert_contains index.html 'data-language="id"' 'Missing Indonesian language control'
 assert_contains index.html 'data-language="en"' 'Missing English language control'
