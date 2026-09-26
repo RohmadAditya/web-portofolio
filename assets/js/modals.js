@@ -2,6 +2,36 @@ document.addEventListener('DOMContentLoaded', () => {
     const STORAGE_KEY = 'ra-dev-language';
     const SUPPORTED_LANGUAGES = ['id', 'en'];
 
+    const organizeProjectArchive = () => {
+        const archive = document.querySelector('.project-archive');
+        if (!archive || document.body.dataset.page !== 'projects') return;
+
+        const landingGrid = document.querySelector('#landing-page-projects .project-grid');
+        const systemGrid = document.querySelector('#system-projects .project-grid');
+        const saasGrid = document.querySelector('#saas-projects .project-grid');
+        const explorationGrid = document.querySelector('#exploration-projects .project-grid');
+        if (!landingGrid || !systemGrid || !saasGrid || !explorationGrid) return;
+
+        const landingProjects = new Set([
+            '#lilyBouquetModal', '#mitraDjayaModal', '#surabayaMandiriModal',
+            '#daemanindoagenciesModal', '#asllogistikModal', '#synergyTangguhModal',
+            '#popeyeProfileModal'
+        ]);
+        const explorationProjects = new Set([
+            '#mgPlaystationModal', '#timelineTodoModal', '#posModal',
+            '#filmModal', '#linktreeModal'
+        ]);
+        const cards = archive.querySelectorAll('.project-card');
+
+        cards.forEach((card) => {
+            const target = card.getAttribute('data-bs-target');
+            if (landingProjects.has(target)) landingGrid.append(card);
+            else if (target === '#moneyFinModal') saasGrid.append(card);
+            else if (explorationProjects.has(target)) explorationGrid.append(card);
+            else systemGrid.append(card);
+        });
+    };
+
     const projectData = [
         {
             id: 'lilyBouquetModal',
@@ -748,4 +778,6 @@ document.addEventListener('DOMContentLoaded', () => {
             });
         });
     });
+
+    organizeProjectArchive();
 });
