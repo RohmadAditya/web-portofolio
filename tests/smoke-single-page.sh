@@ -32,7 +32,7 @@ project_count="$(rg -c '<(button|a).*class="project-card' index.html)"
 [[ "$project_count" -eq 21 ]] || fail "Expected 21 project cards, found $project_count"
 archive_count="$(rg -c '<button type="button" class="project-card' project.html)"
 [[ "$archive_count" -eq 21 ]] || fail "Expected 21 archive cards, found $archive_count"
-for category in client-projects saas-projects concept-projects; do
+for category in landing-page-projects system-projects saas-projects exploration-projects; do
     assert_contains index.html "href=\"project.html#$category\"" "Missing archive link for $category"
     assert_contains project.html "id=\"$category\"" "Missing archive category $category"
 done
