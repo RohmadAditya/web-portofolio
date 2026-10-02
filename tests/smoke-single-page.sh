@@ -51,7 +51,7 @@ fi
 assert_contains index.html 'Fullstack Laravel Developer' 'Missing updated professional positioning'
 assert_contains index.html 'Mari bicarakan kebutuhan digital perusahaan Anda.' 'Missing updated contact message'
 assert_contains index.html 'mailto:rohmadaditya21@gmail.com' 'Missing email link'
-assert_contains index.html 'https://wa.me/6289531656442' 'Missing WhatsApp link'
+assert_contains index.html 'https://wa.me/628998183329' 'Missing WhatsApp link'
 assert_contains index.html 'href="#main-content"' 'Missing skip link'
 assert_contains assets/css/style.css 'prefers-reduced-motion: reduce' 'Missing reduced-motion support'
 assert_contains assets/css/style.css 'background-color: var(--bg-deep)' 'Missing root overscroll background'
