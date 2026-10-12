@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '#popeyeProfileModal'
         ]);
         const explorationProjects = new Set([
-            '#nusaGardenModal', '#mgPlaystationModal', '#timelineTodoModal', '#posModal',
+            '#verdaLogistikModal', '#transLogikaModal', '#nusaGardenModal', '#mgPlaystationModal', '#timelineTodoModal', '#posModal',
             '#filmModal', '#linktreeModal'
         ]);
         const cards = archive.querySelectorAll('.project-card');
@@ -89,6 +89,44 @@ document.addEventListener('DOMContentLoaded', () => {
                     thumb: 'assets/projects/moneyfin/dashboard.webp',
                     title: { id: 'Dashboard Keuangan', en: 'Financial Dashboard' },
                     description: { id: 'Dashboard menampilkan ringkasan saldo, arus kas, anggaran, dan target.', en: 'The dashboard summarizes balances, cash flow, budgets, and goals.' }
+                }
+            ]
+        },
+        {
+            id: 'verdaLogistikModal',
+            title: 'Verda Logistik — Company Profile',
+            description: {
+                id: 'Eksplorasi template company profile logistik dalam lima halaman responsif. Struktur kontennya menyatukan profil perusahaan, layanan, armada, dan kontak dengan alur yang mudah dipindai.',
+                en: 'A responsive five-page logistics company-profile template exploration. Its content structure brings together the company profile, services, fleet, and contact details in a scannable flow.'
+            },
+            website: 'https://template-logistik-2.rohmadaditya21.workers.dev/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/verda-logistik/landing.webp',
+                    full: 'assets/projects/verda-logistik/landing.webp',
+                    thumb: 'assets/projects/verda-logistik/landing.webp',
+                    title: { id: 'Landing Page', en: 'Landing Page' },
+                    description: { id: 'Halaman utama memperkenalkan positioning logistik darat dan mengarahkan pengunjung ke layanan perusahaan.', en: 'The homepage introduces the road-logistics positioning and guides visitors toward the company services.' }
+                }
+            ]
+        },
+        {
+            id: 'transLogikaModal',
+            title: 'TransLogika Logistics — Company Profile',
+            description: {
+                id: 'Eksplorasi website company profile untuk ekspedisi dan angkutan darat. Halaman menggabungkan layanan, armada, pelacakan kiriman, serta jalur konsultasi pengiriman dalam satu pengalaman yang terarah.',
+                en: 'A company-profile website exploration for a road freight and logistics business. It brings services, fleet, shipment tracking, and a shipping-consultation path into one focused experience.'
+            },
+            website: 'https://template-logistik-1.rohmadaditya21.workers.dev/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/translogika-logistics/landing.webp',
+                    full: 'assets/projects/translogika-logistics/landing.webp',
+                    thumb: 'assets/projects/translogika-logistics/landing.webp',
+                    title: { id: 'Landing Page', en: 'Landing Page' },
+                    description: { id: 'Halaman utama menegaskan layanan angkutan darat dan mengarahkan calon pelanggan untuk berdiskusi tentang pengiriman.', en: 'The homepage emphasizes the road-freight service and guides prospective customers toward a shipping discussion.' }
                 }
             ]
         },
