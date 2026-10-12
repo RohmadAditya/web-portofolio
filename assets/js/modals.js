@@ -18,7 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
             '#popeyeProfileModal'
         ]);
         const explorationProjects = new Set([
-            '#mgPlaystationModal', '#timelineTodoModal', '#posModal',
+            '#nusaGardenModal', '#mgPlaystationModal', '#timelineTodoModal', '#posModal',
             '#filmModal', '#linktreeModal'
         ]);
         const cards = archive.querySelectorAll('.project-card');
@@ -89,6 +89,25 @@ document.addEventListener('DOMContentLoaded', () => {
                     thumb: 'assets/projects/moneyfin/dashboard.webp',
                     title: { id: 'Dashboard Keuangan', en: 'Financial Dashboard' },
                     description: { id: 'Dashboard menampilkan ringkasan saldo, arus kas, anggaran, dan target.', en: 'The dashboard summarizes balances, cash flow, budgets, and goals.' }
+                }
+            ]
+        },
+        {
+            id: 'nusaGardenModal',
+            title: 'NusaGarden — Landscape Company Profile',
+            description: {
+                id: 'Eksplorasi website company profile untuk jasa taman dan kontraktor landscape. Struktur halamannya menggabungkan penawaran layanan, bukti kepercayaan, proyek, serta alur konsultasi yang jelas dalam tampilan bernuansa hijau.',
+                en: 'A company-profile website exploration for a garden and landscape contractor. Its structure brings services, trust signals, project work, and a clear consultation flow into a green-led visual experience.'
+            },
+            website: 'https://demo-template-garden-1.rohmadaditya21.workers.dev/',
+            galleryFit: 'contain',
+            gallery: [
+                {
+                    image: 'assets/projects/nusagarden/landing.webp',
+                    full: 'assets/projects/nusagarden/landing.webp',
+                    thumb: 'assets/projects/nusagarden/landing.webp',
+                    title: { id: 'Landing Page', en: 'Landing Page' },
+                    description: { id: 'Halaman utama memperkenalkan layanan landscape, nilai utama, dan arah konsultasi calon pelanggan.', en: 'The homepage introduces the landscape services, key value points, and consultation path for prospective customers.' }
                 }
             ]
         },
